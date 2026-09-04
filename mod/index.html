@@ -35,9 +35,17 @@ th{background:var(--sunk);font-size:12px;letter-spacing:.08em;color:var(--ink-so
 td.sz{white-space:nowrap;color:var(--ink-mute);font-variant-numeric:tabular-nums}
 td .nm{font-weight:600}
 td .ds{font-size:12.5px;color:var(--ink-mute);line-height:1.5;margin-top:3px;white-space:pre-line}
+td .ds a{color:var(--violet);font-weight:600;text-decoration:none;border-bottom:1px solid var(--violet-soft)}
+td .ds a:hover{border-bottom-color:var(--violet)}
 .dl{display:inline-block;background:var(--violet);color:#fff;text-decoration:none;
   padding:6px 14px;border-radius:7px;font-size:13px;font-weight:600;white-space:nowrap}
 .dl:hover{background:#6844b4}
+/* 附加素材包：次要樣式，跟本體 zip 在視覺上分得開 */
+.dl2{background:transparent;color:var(--violet);border:1px solid var(--violet);
+  margin-top:8px;font-weight:500}
+.dl2:hover{background:var(--violet-soft);color:var(--violet)}
+.dl2 .dlsz{color:var(--ink-mute);font-weight:400;font-size:12px}
+td .dl2+.ds{max-width:19em}
 .note{background:var(--violet-soft);border-left:4px solid var(--violet);
   padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;font-size:14px}
 .note b{display:block;margin-bottom:5px}
@@ -84,24 +92,24 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
 <tbody><tr><td><div class="nm">[官方模組]飯友小人外觀</div><div class="ds">戰場小人外觀 MOD — 克羅蒂、嚎、漢克斯、琥、緹娜、雪拉、雷歐納德、雷特。
 Battle sprite skins for eight characters.
 
-教學 / Guide: https://hslremake.github.io/mod/skin/</div></td><td class="sz">外觀</td><td class="sz">17.9 MB</td><td><a class="dl" href="dl/sample-skin-fanyou.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]字型替換</div><div class="ds">圓潤好讀的粉圓體，替換遊戲全部介面文字。繁中／日文／英文覆蓋 99% 以上。
+教學 / Guide: <a href="https://hslremake.github.io/mod/skin/">https://hslremake.github.io/mod/skin/</a></div></td><td class="sz">外觀</td><td class="sz">17.9 MB</td><td><a class="dl" href="dl/sample-skin-fanyou.zip" download>下載 zip</a><a class="dl dl2" href="dl/sample-skin-fanyou-art.zip" download>素材圖 zip <span class="dlsz">17.7 MB</span></a><div class="ds">80 張戰場小人序列圖 ＋ 8 張半身立繪，照「外觀教學」路線一直接取用</div></td></tr><tr><td><div class="nm">[官方模組]字型替換</div><div class="ds">圓潤好讀的粉圓體，替換遊戲全部介面文字。繁中／日文／英文覆蓋 99% 以上。
 簡體中文僅約 74%，缺字會自動以遊戲原本字型顯示（韓文同理）。
 jf open huninn 2.1 by justfont — SIL OFL 1.1
 
 Rounded, highly readable font replacing all in-game UI text. Over 99% coverage for Traditional Chinese, Japanese and English; about 74% for Simplified Chinese. Missing characters fall back to the game's original font.
 
-教學 / Guide: https://hslremake.github.io/mod/font/</div></td><td class="sz">字型</td><td class="sz">2.8 MB</td><td><a class="dl" href="dl/sample-font-huninn.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]修改主畫面音樂</div><div class="ds">替換主畫面背景音樂。
+教學 / Guide: <a href="https://hslremake.github.io/mod/font/">https://hslremake.github.io/mod/font/</a></div></td><td class="sz">字型</td><td class="sz">2.8 MB</td><td><a class="dl" href="dl/sample-font-huninn.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]修改主畫面音樂</div><div class="ds">替換主畫面背景音樂。
 Replaces the title screen music.
 
-教學 / Guide: https://hslremake.github.io/mod/bgm/</div></td><td class="sz">音樂音效</td><td class="sz">19.6 MB</td><td><a class="dl" href="dl/sample-bgm-title.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]Full Russian language</div><div class="ds">Русская локализация — 俄文語系包 Full Russian localization. Set the game language to English to play in Russian. Untranslated lines stay in English.
+教學 / Guide: <a href="https://hslremake.github.io/mod/bgm/">https://hslremake.github.io/mod/bgm/</a></div></td><td class="sz">音樂音效</td><td class="sz">19.6 MB</td><td><a class="dl" href="dl/sample-bgm-title.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]Full Russian language</div><div class="ds">Русская локализация — 俄文語系包 Full Russian localization. Set the game language to English to play in Russian. Untranslated lines stay in English.
 
-教學 / Guide: https://hslremake.github.io/mod/lang/</div></td><td class="sz">翻譯</td><td class="sz">1.1 MB</td><td><a class="dl" href="dl/sample-lang-ru.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]100%CounterAttack</div><div class="ds">所有角色都能反擊。「修改裝備」分頁的範例包，示範怎麼改動技能與裝備數值。
+教學 / Guide: <a href="https://hslremake.github.io/mod/lang/">https://hslremake.github.io/mod/lang/</a></div></td><td class="sz">翻譯</td><td class="sz">1.1 MB</td><td><a class="dl" href="dl/sample-lang-ru.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]100%CounterAttack</div><div class="ds">所有角色都能反擊。「修改裝備」分頁的範例包，示範怎麼改動技能與裝備數值。
 All characters can counterattack. A sample MOD for the Equipment page.
 
-教學 / Guide: https://hslremake.github.io/mod/equip/</div></td><td class="sz">裝備</td><td class="sz">265 KB</td><td><a class="dl" href="dl/sample-equip-counter.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]黃金首飾+100%偷取機率</div><div class="ds">黃金首飾 ＋100% 偷取機率，並額外增加 300% 回 SP 效果。
+教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">裝備</td><td class="sz">265 KB</td><td><a class="dl" href="dl/sample-equip-counter.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]黃金首飾+100%偷取機率</div><div class="ds">黃金首飾 ＋100% 偷取機率，並額外增加 300% 回 SP 效果。
 Gold accessory with a 100% steal rate and +300% SP recovery.
 
-教學 / Guide: https://hslremake.github.io/mod/equip/</div></td><td class="sz">裝備</td><td class="sz">210 KB</td><td><a class="dl" href="dl/sample-equip-gold.zip" download>下載 zip</a></td></tr></tbody>
+教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">裝備</td><td class="sz">210 KB</td><td><a class="dl" href="dl/sample-equip-gold.zip" download>下載 zip</a></td></tr></tbody>
 </table>
 </div>
 <p style="color:var(--ink-mute);font-size:13px;margin-top:10px">（配音 目前沒有官方範例包，請直接看指南操作。）</p>
