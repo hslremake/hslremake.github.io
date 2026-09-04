@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>幻世錄 MOD 指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#1B1520;--ink-soft:#4A3F52;--ink-mute:#7A6E84;--paper:#FBF7F2;--card:#fff;
+  --sunk:#F2ECE4;--rule:#DED5CB;--violet:#7B54C8;--violet-soft:#EDE4FB;--gold:#C98A16}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:15px/1.7 "IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 72px}
+.hero{background:var(--ink);color:#fff;padding:56px 20px 48px;margin-bottom:40px}
+.hero-in{max-width:920px;margin:0 auto}
+.hero h1{margin:0 0 6px;font-size:34px;letter-spacing:.02em;font-weight:800}
+.hero p{margin:0;color:#C9BFD4;font-size:16px;max-width:44em}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.18em;font-weight:600;margin-bottom:12px}
+h2{font-size:22px;margin:44px 0 4px;font-weight:700}
+h2+.sub{margin:0 0 20px;color:var(--ink-mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
+.card{display:block;background:var(--card);border:1px solid var(--rule);border-radius:12px;
+  padding:18px 20px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:var(--violet);box-shadow:0 4px 16px rgba(123,84,200,.14);transform:translateY(-2px)}
+.card .n{font-size:11px;letter-spacing:.16em;color:var(--violet);font-weight:600}
+.card .t{font-size:18px;font-weight:700;margin:4px 0 5px}
+.card .d{font-size:13.5px;color:var(--ink-mute);line-height:1.55}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;background:var(--card)}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:var(--sunk);font-size:12px;letter-spacing:.08em;color:var(--ink-soft);font-weight:600}
+td.sz{white-space:nowrap;color:var(--ink-mute);font-variant-numeric:tabular-nums}
+td .nm{font-weight:600}
+td .ds{font-size:12.5px;color:var(--ink-mute);line-height:1.5;margin-top:3px;white-space:pre-line}
+.dl{display:inline-block;background:var(--violet);color:#fff;text-decoration:none;
+  padding:6px 14px;border-radius:7px;font-size:13px;font-weight:600;white-space:nowrap}
+.dl:hover{background:#6844b4}
+.note{background:var(--violet-soft);border-left:4px solid var(--violet);
+  padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;font-size:14px}
+.note b{display:block;margin-bottom:5px}
+.note ol{margin:8px 0 0;padding-left:20px}
+.note code{background:#fff;padding:1px 6px;border-radius:4px;font-size:12.5px;
+  font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
+  color:var(--ink-mute);font-size:12.5px}
+.tw{overflow-x:auto}
+@media(max-width:560px){.hero h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-in">
+  <div class="kicker">HSLR · MOD</div>
+  <h1>幻世錄 MOD 指南</h1>
+  <p>遊戲裡就有 MOD 編輯器，換角色外觀、換字型、換音樂、換配音、翻譯文字、改裝備，
+     六類內容全部在同一個介面裡，不需要寫程式，也不用手改設定檔。</p>
+</div></div>
+
+<div class="wrap">
+
+<h2>六類 MOD</h2>
+<p class="sub">每一章都可以單獨看，不必照順序。第一次做建議從「外觀」開始。</p>
+<div class="grid"><a class="card" href="appearance.html"><div class="n">01</div><div class="t">外觀</div><div class="d">換戰場小人、半身像、頭像</div></a><a class="card" href="font.html"><div class="n">02</div><div class="t">字型</div><div class="d">替換整個遊戲介面的文字字型</div></a><a class="card" href="bgm.html"><div class="n">03</div><div class="t">音樂音效</div><div class="d">換背景音樂與音效</div></a><a class="card" href="voice.html"><div class="n">04</div><div class="t">配音</div><div class="d">替換角色語音</div></a><a class="card" href="locale.html"><div class="n">05</div><div class="t">翻譯</div><div class="d">把遊戲文字翻成其他語言</div></a><a class="card" href="equip.html"><div class="n">06</div><div class="t">裝備</div><div class="d">改裝備數值、做新裝備</div></a></div>
+
+<h2 id="downloads">範例包下載</h2>
+<p class="sub">官方做好的成品，拆開來對照指南看最快。</p>
+
+<div class="note">
+<b>這些 zip 是給想學做 MOD 的人拆解用的教材，不是一般玩家的安裝檔。</b>
+只想玩 MOD 的話，請直接在 Steam 創意工坊訂閱，遊戲會自動安裝。
+真的要手動安裝的話：
+<ol>
+<li>解壓縮，會得到一個 MOD 資料夾</li>
+<li>把整個資料夾放進 <code>%USERPROFILE%\AppData\LocalLow\&lt;公司名&gt;\&lt;遊戲名&gt;\Mods\</code></li>
+<li>回遊戲開「模組管理」，勾選後按「套用變更」</li>
+</ol>
+</div>
+
+<div class="tw">
+<table>
+<thead><tr><th>範例包</th><th>對應章節</th><th>大小</th><th></th></tr></thead>
+<tbody><tr><td><div class="nm">[官方模組]飯友小人外觀</div><div class="ds">戰場小人外觀 MOD — 克羅蒂、嚎、漢克斯、琥、緹娜、雪拉、雷歐納德、雷特</div></td><td class="sz">外觀</td><td class="sz">17.9 MB</td><td><a class="dl" href="dl/sample-appearance-fanyou.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]字型替換</div><div class="ds">圓潤好讀的粉圓體，替換遊戲全部介面文字。繁中／日文／英文覆蓋 99% 以上。
+簡體中文僅約 74%，缺字會自動以遊戲原本字型顯示（韓文同理）。
+jf open huninn 2.1 by justfont — SIL OFL 1.1
+
+Rounded, highly readable font replacing all in-game UI text. Over 99% coverage for Traditional Chinese, Japanese and English; about 74% for Simplified Chinese. Missing characters fall back to the game's original font.</div></td><td class="sz">字型</td><td class="sz">2.8 MB</td><td><a class="dl" href="dl/sample-font-huninn.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]修改主畫面音樂</div><div class="ds">替換主畫面音樂</div></td><td class="sz">音樂音效</td><td class="sz">19.6 MB</td><td><a class="dl" href="dl/sample-bgm-title.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]Full Russian language</div><div class="ds">Русская локализация — 俄文語系包 Full Russian localization.  Set the game language to English to play in Russian.  Untranslated lines stay in English.</div></td><td class="sz">翻譯</td><td class="sz">1.1 MB</td><td><a class="dl" href="dl/sample-locale-ru.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]100%CounterAttack</div><div class="ds">All characters can counterattack.</div></td><td class="sz">裝備</td><td class="sz">265 KB</td><td><a class="dl" href="dl/sample-equip-counter.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]黃金首飾+100%偷取機率</div><div class="ds">黃金首飾+100%偷取機率並額外增加300%回SP效果</div></td><td class="sz">裝備</td><td class="sz">210 KB</td><td><a class="dl" href="dl/sample-equip-gold.zip" download>下載 zip</a></td></tr></tbody>
+</table>
+</div>
+<p style="color:var(--ink-mute);font-size:13px;margin-top:10px">（配音 目前沒有官方範例包，請直接看指南操作。）</p>
+
+<footer>
+幻世錄 Remake · MOD 指南　|　本頁與範例包由官方提供，內容對應遊戲內建的 MOD 編輯器。<br>
+字型範例包內含 jf open huninn 2.1 by justfont（SIL OFL 1.1），再散布請保留授權檔。
+</footer>
+
+</div>
+</body>
+</html>
