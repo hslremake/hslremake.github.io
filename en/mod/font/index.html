@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 字型 MOD 指南</title>
+<title>HSLR Font MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/font/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/font/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,242 +446,242 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav hslrnav-cur" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/font/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav hslrnav-cur" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/font/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 字型 MOD</div>
-  <h1>換掉整個遊戲的字</h1>
+  <div class="eyebrow">HSLR · Font MOD</div>
+  <h1>Change every letter in the game</h1>
   <p class="lede">
-    放一個字型檔進素材庫、勾起來、存檔，遊戲介面的所有文字就換成你的字型。字型缺的字會自動退回遊戲原本的字，不會變成空白方塊。
+    Drop a font file into the Asset Library, tick it, save — and every piece of text in the game UI switches to your font. Characters your font is missing fall back to the game's original font, so you never get blank boxes.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>2</b><span>種字型格式</span></div>
-    <div class="stat"><b>1</b><span>個字型 / 包</span></div>
-    <div class="stat"><b>3</b><span>個步驟</span></div>
+    <div class="stat"><b>2</b><span>font formats</span></div>
+    <div class="stat"><b>1</b><span>font per pack</span></div>
+    <div class="stat"><b>3</b><span>steps</span></div>
   </div>
 </header>
 
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s1"><em>01</em>開始之前</a></li>
-      <li><a href="#sLib"><em>02</em>素材庫</a></li>
-      <li><a href="#s8"><em>03</em>換字型</a></li>
-      <li><a href="#s7"><em>04</em>套用與發佈</a></li>
-      <li><a href="#a3"><em>A</em>疑難排解</a></li>
+      <li><a href="#s1"><em>01</em>Before you start</a></li>
+      <li><a href="#sLib"><em>02</em>Asset Library</a></li>
+      <li><a href="#s8"><em>03</em>Changing the font</a></li>
+      <li><a href="#s7"><em>04</em>Apply and publish</a></li>
+      <li><a href="#a3"><em>A</em>Troubleshooting</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="font">
-        <img data-shot="fontPack" alt="字型頁右上角的目標包下拉展開，列出多個官方模組，目前選中「[官方模組]字型替換」，最下方有輸入框與「建立」按鈕">
-        <figcaption><b>目標包</b>上半是既有的包（這裡選的是「[官方模組]字型替換」），下半輸入新名稱按「建立」就是開一個新包。</figcaption>
+        <img data-shot="fontPack" alt="The target package dropdown on the Fonts page, listing several official MODs with [官方模組]字型替換 currently selected, and an input field and Create button at the bottom">
+        <figcaption><b>Target package</b>The top half lists existing packages ([官方模組]字型替換 is selected here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="font">
-        <img data-shot="fontToggle" alt="字型 Mod 頁左上角的開關顯示「已啟用」，左側功能列只有「字型」是實心紅點">
-        <figcaption><b>啟用開關</b>這個包只把「字型」打開了——左側其他項目都還是空心圓。注意下面清單還一個都沒勾：<b>開關打開不等於設定好了</b>。</figcaption>
+        <img data-shot="fontToggle" alt="The Font Mod page: the top-left toggle reads Enabled, and Fonts is the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>This package only has Fonts turned on — every other item on the left is still hollow. Note that nothing in the list below is ticked yet:<b>turning the page on is not the same as setting it up</b>。</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="sLib">
-    <div class="sec-head"><span class="sec-num">02</span><h2>素材庫：東西放這裡</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Asset Library: where your files go</h2></div>
     <p>
-      你要用的檔案——字型、音樂、配音、圖示——都先放進<strong>素材庫</strong>。
-      它是<strong>所有 MOD 包共用</strong>的一個資料夾，放在遊戲的存檔目錄底下。
+      Every file you want to use — fonts, music, voice clips, icons — goes into the<strong>Asset Library</strong> first.
+      It is one folder<strong>shared by every MOD package</strong>, stored under the game's save directory.
     </p>
     <p>
-      在編輯頁挑素材，按下「<strong>儲存設定</strong>」時，系統才會把<strong>真正用到的</strong>檔案
-      複製一份進你的 MOD 包。所以發佈出去的包一定是自足的，別人下載不會少檔。
+      When you pick an asset on an editing page and press<strong>Save Settings</strong>, only the files you<strong>actually used</strong>are copied into your MOD package.
+      That is why a published package is always self-contained — nobody downloads it and finds files missing.
     </p>
 
     <div class="note tip">
-      <b>不用背路徑</b>
-      素材庫頁的每個分頁右上角都有一顆「<strong>開啟資料夾</strong>」，
-      按下去檔案總管就直接開在對的位置。
+      <b>You do not need to memorise the path</b>
+      Every tab on the Asset Library page has an<strong>Open folder</strong>button in the top-right corner
+      that opens Explorer straight at the right place.
     </div>
 
-    <p>要自己找的話，位置在這裡：</p>
+    <p>If you want to find it yourself, it lives here:</p>
     <div class="code">
-      <header>素材庫位置<span>貼進「執行」(Win + R) 按 Enter</span></header>
+      <header>Asset Library location<span>Paste it into Run (Win + R) and press Enter</span></header>
       <pre>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\ModAssetLibrary\</pre>
     </div>
 
-    <p>裡面照類型分成七個資料夾，對應素材庫頁上方的七個分頁：</p>
+    <p>Inside are seven folders by type, matching the seven tabs across the top of the Asset Library page:</p>
     <div class="tw">
       <table>
-        <thead><tr><th>分頁</th><th>資料夾</th><th>放什麼</th></tr></thead>
+        <thead><tr><th>Tab</th><th>Folder</th><th>What goes in it</th></tr></thead>
         <tbody>
-          <tr><td>序列圖</td><td><code>skin\</code></td><td>戰場小人的逐格動畫圖</td></tr>
-          <tr><td>圖片</td><td><code>image\</code></td><td>半身像、頭像的立繪（PNG / JPG）</td></tr>
-          <tr><td><strong>字型</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
-          <tr><td><strong>音檔</strong></td><td><code>bgm\</code></td><td>背景音樂 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>配音</strong></td><td><code>voice\</code></td><td>對話語音 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>圖示</strong></td><td><code>icon\</code></td><td>裝備圖示（PNG）</td></tr>
-          <tr><td>Spine</td><td><code>spine\</code></td><td>外部 Spine，每個角色一個子資料夾</td></tr>
+          <tr><td>Sprite sheets</td><td><code>skin\</code></td><td>Frame-by-frame animation sheets for battle sprites</td></tr>
+          <tr><td>Images</td><td><code>image\</code></td><td>Portrait and avatar artwork (PNG / JPG)</td></tr>
+          <tr><td><strong>Fonts</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
+          <tr><td><strong>Audio</strong></td><td><code>bgm\</code></td><td>Background music <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Voice</strong></td><td><code>voice\</code></td><td>Dialogue voice lines <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Icons</strong></td><td><code>icon\</code></td><td>Equipment icons (PNG)</td></tr>
+          <tr><td>Spine</td><td><code>spine\</code></td><td>External Spine data, one subfolder per character</td></tr>
         </tbody>
       </table>
     </div>
 
     <figure class="shot" data-t="font">
-      <img data-shot="assetFont" alt="素材庫頁切在「字型」分頁，清單列出六個 ttf/otf，右邊各有「開啟目錄」與「刪除」">
-      <figcaption><b>素材庫 · 字型分頁</b>上面那排就是七個分頁；右邊的「<b>開啟資料夾</b>」會直接開在 <code>font\</code>，把字型檔丟進去按「重新掃描」就會出現在清單裡。</figcaption>
+      <img data-shot="assetFont" alt="The Asset Library page on the Fonts tab, listing six ttf/otf files, each with Open folder and Delete on the right">
+      <figcaption><b>Asset Library · Fonts tab</b>That row along the top is the seven tabs. The<b>Open folder</b>button on the right opens <code>font\</code>directly — drop a font file in, press Rescan, and it appears in the list.</figcaption>
     </figure>
 
     <div class="note">
-      <b>放進去之後記得按「重新掃描」</b>
-      清單不會自己更新。剛複製進去的檔案沒出現，按一下分頁右上角的「重新掃描」就有了。
+      <b>Remember to press Rescan after copying files in</b>
+      The list does not refresh by itself. If a file you just copied in is missing, press Rescan in the tab's top-right corner and it will show up.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s8">
-    <div class="sec-head"><span class="sec-num">03</span><h2>換字型</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Changing the font</h2></div>
     <p>
-      字型 MOD 會把<strong>整個遊戲介面的文字</strong>換成你指定的字型檔。
-      不需要（也沒辦法）指定要換掉遊戲的哪一種字體——選一個字型，全部都換。
+      A font MOD replaces<strong>all text in the game UI</strong>with the font file you choose.
+      You do not need to — and cannot — say which of the game's typefaces to swap: pick one font and everything changes.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>把字型檔放進素材庫</h4>
+      <h4><span class="n">Step 1</span>Put the font into the Asset Library</h4>
       <p>
-        到<strong>素材庫</strong>頁，切到「<strong>字型</strong>」分頁，按「<strong>開啟資料夾</strong>」，
-        把 <code>.ttf</code> 或 <code>.otf</code> 丟進去。
+        Go to<strong>Asset Library</strong>, switch to the<strong>Fonts</strong>tab, press<strong>Open folder</strong>,
+        and drop your <code>.ttf</code> or <code>.otf</code> file in.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>在字型頁勾選一個</h4>
+      <h4><span class="n">Step 2</span>Tick one on the Fonts page</h4>
       <p>
-        左側功能列點「<strong>字型</strong>」，先確認上方<strong>目標包</strong>是你要編輯的包，
-        再把左上角的<strong>啟用開關</strong>打開，然後在清單裡勾選要用的字型。
+        In the left-hand list click<strong>Fonts</strong>, check that the<strong>Target package</strong>at the top is the package you mean to edit,
+        turn on the<strong>Page toggle</strong>in the top-left corner, then tick the font you want in the list.
       </p>
       <div class="note warn">
-        <b>一個 MOD 只能有一個字型</b>
-        勾了新的，原本那個會自動取消。想給玩家多種選擇，就做成多個 MOD 包。
+        <b>One MOD, one font</b>
+        Ticking a new one unticks the old one automatically. To offer players a choice, ship several MOD packages.
       </div>
       <p>
-        每一列右邊的「<strong>狀態</strong>」欄寫著綠色的「<strong>素材庫 · 就緒</strong>」，
-        代表這個字型檔在素材庫裡、可以直接用。
-        剛丟進素材庫的檔案沒出現在清單裡，按右上角「<strong>重新掃描</strong>」。
+        The<strong>Status</strong>column on the right of each row shows a green<strong>Library · ready</strong>,
+        meaning the font is in the Asset Library and ready to use.
+        If a file you just dropped in is not listed, press<strong>Rescan</strong>」。
       </p>
       <figure class="shot">
-        <img data-shot="fontPage" alt="字型 Mod 頁的清單，六個字型只有 jf-openhuninn-2.1.ttf 被勾選，狀態都是「素材庫 · 就緒」">
-        <figcaption><b>字型頁</b>六個字型只勾了一個——勾別的，這個會自動取消。</figcaption>
+        <img data-shot="fontPage" alt="The Font Mod list: six fonts, only jf-openhuninn-2.1.ttf ticked, all showing Library · ready">
+        <figcaption><b>Fonts page</b>Six fonts, one ticked — tick another and this one clears itself.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>儲存設定</h4>
+      <h4><span class="n">Step 3</span>Save Settings</h4>
       <p>
-        按右上角「<strong>儲存設定</strong>」。字型檔會<strong>複製一份進 MOD 包的 <code>font\</code></strong>，
-        所以包本身是自足的，直接壓縮就能分享。
+        Press<strong>Save Settings</strong>in the top-right corner. The font file is<strong>copied into the package's <code>font\</code></strong>folder,
+        so the package is self-contained — zip it and it is ready to share.
       </p>
-      <p>接著到<a href="#s7">模組管理套用</a>就會生效。取消啟用再套用一次，字型就回到遊戲預設。</p>
+      <p>Then<a href="#s7">apply it in Manage Mods</a>and it takes effect. Untick it and apply again to go back to the game's default font.</p>
     </div>
 
     <div class="note tip">
-      <b>缺字會自動退回原本的字型</b>
-      中文字型通常不含韓文諺文，遇到沒有的字，遊戲會用原本的字型顯示，
-      <strong>不會變成空白方塊</strong>。所以畫面上出現混排（漢字是新字型、諺文是原樣）是正常的。
+      <b>Missing characters fall back to the original font</b>
+      Chinese fonts rarely include Korean Hangul. When a character is missing, the game draws it in the original font, so it
+      <strong>never turns into a blank box</strong>. Seeing the two mixed on screen — Han characters in your font, Hangul unchanged — is expected.
     </div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>要注意</th><th>說明</th></tr></thead>
+        <thead><tr><th>Watch out for</th><th>Details</th></tr></thead>
         <tbody>
-          <tr><td>支援格式</td><td><code>.ttf</code> / <code>.otf</code></td></tr>
-          <tr><td>兩個包都給字型</td><td>模組管理裡<strong>優先序較高（清單較後面）</strong>的包勝出</td></tr>
-          <tr><td>字型載入失敗</td><td>模組管理的詳情頁會顯示警告，但這個包的<strong>其他內容照常生效</strong></td></tr>
-          <tr><td>授權</td><td>字型的再散布授權由作者自己負責。發佈前先確認這個字型可以跟著 MOD 一起散布</td></tr>
+          <tr><td>Supported formats</td><td><code>.ttf</code> / <code>.otf</code></td></tr>
+          <tr><td>Two packages both supply a font</td><td>In Manage Mods, the package<strong>further down the list (higher priority)</strong>wins</td></tr>
+          <tr><td>The font fails to load</td><td>The detail pane in Manage Mods shows a warning, but the package's<strong>other content still applies normally</strong></td></tr>
+          <tr><td>Licensing</td><td>Redistribution rights are the MOD author's responsibility. Check that the font may be shipped with a MOD before you publish</td></tr>
         </tbody>
       </table>
     </div>
@@ -689,61 +689,59 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">04</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>Troubleshooting</h2></div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="skin font bgm voice equip"><td>剛放進素材庫的檔案，編輯頁的清單裡看不到</td><td>按該頁的「重新掃描」；素材庫頁與編輯頁各有一顆</td></tr>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="font"><td>字型換了但畫面沒變</td><td>字型頁的啟用開關沒開；或另一個啟用中的包也給了字型，優先序比你高</td></tr>
-          <tr data-t="font"><td>只有部分文字換成新字型</td><td>正常。這個字型缺的字會自動退回遊戲原本的字型</td></tr>
+          <tr data-t="skin font bgm voice equip"><td>A file just added to the Asset Library is missing from the editing page's list</td><td>Press Rescan on that page — the Asset Library page and the editing page each have their own</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="font"><td>Font ticked but nothing changed on screen</td><td>The Fonts page toggle is off, or another enabled package also supplies a font and outranks yours</td></tr>
+          <tr data-t="font"><td>Only some of the text uses the new font</td><td>Expected. Characters your font lacks fall back to the game's original font</td></tr>
           </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 字型 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Font MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -752,7 +750,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 修改裝備 MOD 指南</title>
+<title>HSLR Edit Equipment MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/equip/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/equip/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,409 +446,406 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav hslrnav-cur" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/equip/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav hslrnav-cur" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/equip/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 修改裝備 MOD</div>
-  <h1>改一件裝備的<br>數值、效果與外觀</h1>
+  <div class="eyebrow">HSLR · Edit Equipment MOD</div>
+  <h1>Change a piece of equipment's<br>stats, effects and looks</h1>
   <p class="lede">
-    挑一件遊戲內既有的裝備，改它的數值、魔法效果、說明文字與圖示。沒動到的欄位維持遊戲原值，所以只會蓋掉你真的改過的部分。
+    Pick a piece of equipment that already exists in the game and change its attributes, magic effects, description and icons. Anything you leave alone keeps the game's original value, so only what you actually edited gets overridden.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>41</b><span>種可改數值</span></div>
-    <div class="stat"><b>5</b><span>個額外數值上限</span></div>
-    <div class="stat"><b>6</b><span>個步驟</span></div>
+    <div class="stat"><b>41</b><span>editable attributes</span></div>
+    <div class="stat"><b>5</b><span>extra attributes max</span></div>
+    <div class="stat"><b>6</b><span>steps</span></div>
   </div>
 </header>
 
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s1"><em>01</em>開始之前</a></li>
-      <li><a href="#sLib"><em>02</em>素材庫</a></li>
-      <li><a href="#s12"><em>03</em>修改裝備</a></li>
-      <li><a href="#s7"><em>04</em>套用與發佈</a></li>
-      <li><a href="#a5"><em>A</em>可改的 41 種數值</a></li>
-      <li><a href="#a3"><em>B</em>疑難排解</a></li>
+      <li><a href="#s1"><em>01</em>Before you start</a></li>
+      <li><a href="#sLib"><em>02</em>Asset Library</a></li>
+      <li><a href="#s12"><em>03</em>Edit Equipment</a></li>
+      <li><a href="#s7"><em>04</em>Apply and publish</a></li>
+      <li><a href="#a5"><em>A</em>The 41 editable attributes</a></li>
+      <li><a href="#a3"><em>B</em>Troubleshooting</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="equip">
-        <img data-shot="equipPack" alt="修改裝備頁右上角的目標包下拉展開，目前選中「[官方模組]黃金首飾+100%偷取機率」">
-        <figcaption><b>目標包</b>上半是既有的包（這裡選的是「[官方模組]黃金首飾+100%偷取機率」），下半輸入新名稱按「建立」就是開一個新包。</figcaption>
+        <img data-shot="equipPack" alt="The target package dropdown on the Edit Equipment page, with [官方模組]黃金首飾+100%偷取機率 currently selected">
+        <figcaption><b>Target package</b>The top half lists existing packages ([官方模組]黃金首飾+100%偷取機率 is selected here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="equip">
-        <img data-shot="equipToggle" alt="修改裝備 Mod 頁左上角的開關已打開，左側功能列只有「修改裝備」是實心紅點">
-        <figcaption><b>啟用開關</b>這個包只把「修改裝備」打開了——左側其他項目都還是空心圓，右上角是「儲存設定」。</figcaption>
+        <img data-shot="equipToggle" alt="The Edit Equipment Mod page with the top-left toggle on, and Edit Equipment the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>This package only has Edit Equipment turned on — every other item on the left is still hollow, and Save Settings sits in the top-right corner.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="sLib">
-    <div class="sec-head"><span class="sec-num">02</span><h2>素材庫：東西放這裡</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Asset Library: where your files go</h2></div>
     <p>
-      你要用的檔案——字型、音樂、配音、圖示——都先放進<strong>素材庫</strong>。
-      它是<strong>所有 MOD 包共用</strong>的一個資料夾，放在遊戲的存檔目錄底下。
+      Every file you want to use — fonts, music, voice clips, icons — goes into the<strong>Asset Library</strong> first.
+      It is one folder<strong>shared by every MOD package</strong>, stored under the game's save directory.
     </p>
     <p>
-      在編輯頁挑素材，按下「<strong>儲存設定</strong>」時，系統才會把<strong>真正用到的</strong>檔案
-      複製一份進你的 MOD 包。所以發佈出去的包一定是自足的，別人下載不會少檔。
+      When you pick an asset on an editing page and press<strong>Save Settings</strong>, only the files you<strong>actually used</strong>are copied into your MOD package.
+      That is why a published package is always self-contained — nobody downloads it and finds files missing.
     </p>
 
     <div class="note tip">
-      <b>不用背路徑</b>
-      素材庫頁的每個分頁右上角都有一顆「<strong>開啟資料夾</strong>」，
-      按下去檔案總管就直接開在對的位置。
+      <b>You do not need to memorise the path</b>
+      Every tab on the Asset Library page has an<strong>Open folder</strong>button in the top-right corner
+      that opens Explorer straight at the right place.
     </div>
 
-    <p>要自己找的話，位置在這裡：</p>
+    <p>If you want to find it yourself, it lives here:</p>
     <div class="code">
-      <header>素材庫位置<span>貼進「執行」(Win + R) 按 Enter</span></header>
+      <header>Asset Library location<span>Paste it into Run (Win + R) and press Enter</span></header>
       <pre>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\ModAssetLibrary\</pre>
     </div>
 
-    <p>裡面照類型分成七個資料夾，對應素材庫頁上方的七個分頁：</p>
+    <p>Inside are seven folders by type, matching the seven tabs across the top of the Asset Library page:</p>
     <div class="tw">
       <table>
-        <thead><tr><th>分頁</th><th>資料夾</th><th>放什麼</th></tr></thead>
+        <thead><tr><th>Tab</th><th>Folder</th><th>What goes in it</th></tr></thead>
         <tbody>
-          <tr><td>序列圖</td><td><code>skin\</code></td><td>戰場小人的逐格動畫圖</td></tr>
-          <tr><td>圖片</td><td><code>image\</code></td><td>半身像、頭像的立繪（PNG / JPG）</td></tr>
-          <tr><td><strong>字型</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
-          <tr><td><strong>音檔</strong></td><td><code>bgm\</code></td><td>背景音樂 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>配音</strong></td><td><code>voice\</code></td><td>對話語音 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>圖示</strong></td><td><code>icon\</code></td><td>裝備圖示（PNG）</td></tr>
-          <tr><td>Spine</td><td><code>spine\</code></td><td>外部 Spine，每個角色一個子資料夾</td></tr>
+          <tr><td>Sprite sheets</td><td><code>skin\</code></td><td>Frame-by-frame animation sheets for battle sprites</td></tr>
+          <tr><td>Images</td><td><code>image\</code></td><td>Portrait and avatar artwork (PNG / JPG)</td></tr>
+          <tr><td><strong>Fonts</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
+          <tr><td><strong>Audio</strong></td><td><code>bgm\</code></td><td>Background music <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Voice</strong></td><td><code>voice\</code></td><td>Dialogue voice lines <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Icons</strong></td><td><code>icon\</code></td><td>Equipment icons (PNG)</td></tr>
+          <tr><td>Spine</td><td><code>spine\</code></td><td>External Spine data, one subfolder per character</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="note">
-      <b>放進去之後記得按「重新掃描」</b>
-      清單不會自己更新。剛複製進去的檔案沒出現，按一下分頁右上角的「重新掃描」就有了。
+      <b>Remember to press Rescan after copying files in</b>
+      The list does not refresh by itself. If a file you just copied in is missing, press Rescan in the tab's top-right corner and it will show up.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s12">
-    <div class="sec-head"><span class="sec-num">03</span><h2>修改裝備</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Edit Equipment</h2></div>
     <p>
-      挑一件遊戲裡既有的裝備，改它的數值、魔法效果、說明文字與圖示。
-      <strong>沒動到的欄位維持遊戲原值</strong>，所以只會蓋掉你真的改過的部分。
+      Pick a piece of equipment that already exists in the game and change its attributes, magic effects, description and icons.
+      <strong>Fields you leave alone keep the game's original values</strong>, so only what you actually edited gets overridden.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>挑一件裝備</h4>
+      <h4><span class="n">Step 1</span>Choose a piece of equipment</h4>
       <p>
-        左側點「<strong>修改裝備</strong>」，打開左上角「<strong>啟用修改裝備</strong>」，
-        按「<strong>選擇裝備</strong>」。
+        On the left, click<strong>Edit Equipment</strong>, turn on<strong>Enable equipment edits</strong>in the top-left corner,
+        then press<strong>Choose equipment</strong>」。
       </p>
       <figure class="shot">
-        <img data-shot="equipPick" alt="「選擇裝備」視窗，上方是部位下拉與搜尋框，下方列出裝備名稱、ID、部位與「選用」按鈕">
-        <figcaption><b>選擇裝備</b>每一列右邊按「選用」就加進清單。ID 也會列出來，跟別人討論時報 ID 最不會認錯。</figcaption>
+        <img data-shot="equipPick" alt="The Choose equipment dialog: a slot dropdown and search box across the top, and below them a list of names, IDs, slots and Select buttons">
+        <figcaption><b>Choose equipment</b>Press Select on the right of any row to add it to your list. The ID is shown too — quoting the ID is the least ambiguous way to discuss an item with someone else.</figcaption>
       </figure>
 
       <p>
-        可以依部位篩選（<strong>頭盔 / 身體 / 鞋子 / 武器 / 飾品</strong>），
-        或直接搜尋名稱與 ID。選好的裝備會加進下方清單，每一列都能編輯、收合或移除，
-        並且會標示這件裝備<strong>改了哪些項目</strong>。
+        You can filter by slot (<strong>helmet / body / boots / weapon / accessory</strong>),
+        or search by name and ID. Whatever you pick joins the list below, where each row can be edited, collapsed or removed,
+        and is labelled with<strong>what you changed on it</strong>。
       </p>
       <figure class="shot">
-        <img data-shot="equipFilter" alt="「選擇裝備」視窗的部位下拉展開，可選全部部位或單一部位">
-        <figcaption><b>依部位篩選</b>裝備很多，先選部位再搜尋最快。</figcaption>
+        <img data-shot="equipFilter" alt="The slot dropdown in the Choose equipment dialog, offering All slots or a single slot">
+        <figcaption><b>Filter by slot</b>There is a lot of equipment; picking a slot before you search is the quickest route.</figcaption>
       </figure>
       <div class="note alert">
-        <b>清單裡的「所有人 / 玩家 / 敵方」不要碰</b>
-        那三個不是穿戴部位，而是<strong>全體共通的基礎數值</strong>。
-        改下去會動到所有單位，一般做 MOD 請避開。
+        <b>Leave All / Player / Enemy alone</b>
+        Those three are not equipment slots but the<strong>base stats shared by every unit</strong>.
+        Editing them affects every unit in the game — best avoided in an ordinary MOD.
       </div>
       <figure class="shot">
-        <img data-shot="equipList" alt="已修改的裝備清單，兩件裝備各自標示部位、資料版本、改了哪些項目，右邊有編輯與刪除">
-        <figcaption><b>已修改的裝備</b>「數值 2、說明」這種標示會告訴你這件改過哪些東西；「尚未改動」代表選進來還沒動它。</figcaption>
+        <img data-shot="equipList" alt="The Edited equipment list: two items, each showing its slot, data version and what was changed, with Edit and Delete on the right">
+        <figcaption><b>Edited equipment</b>A label like "2 attr, description" tells you what has been changed on that item; "no changes yet" means you added it but have not touched it.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>選資料版本</h4>
-      <p>遊戲的裝備資料分成兩份，難度設定決定讀哪一份：</p>
+      <h4><span class="n">Step 2</span>Pick a data version</h4>
+      <p>The game keeps two sets of equipment data, and the difficulty setting decides which is read:</p>
       <div class="tw">
         <table>
-          <thead><tr><th>選項</th><th>效果</th></tr></thead>
+          <thead><tr><th>Option</th><th>Effect</th></tr></thead>
           <tbody>
-            <tr><td><strong>經典版 + 普通版</strong></td><td><strong>預設，不確定就用這個。</strong>兩個難度都吃得到你的修改</td></tr>
-            <tr><td>只套經典版</td><td>只有玩經典難度的人吃得到</td></tr>
-            <tr><td>只套普通版</td><td>只有玩普通難度的人吃得到</td></tr>
+            <tr><td><strong>Classic + Normal</strong></td><td><strong>The default — use this if you are unsure.</strong>Both difficulties pick up your edits</td></tr>
+            <tr><td>Classic only</td><td>Only players on Classic difficulty see the change</td></tr>
+            <tr><td>Normal only</td><td>Only players on Normal difficulty see the change</td></tr>
           </tbody>
         </table>
       </div>
       <figure class="shot">
-        <img data-shot="equipGroup" alt="裝備編輯區的「資料版本」下拉，右邊有一行說明文字">
-        <figcaption><b>資料版本</b>就在每件裝備展開後的最上面，預設「經典版 + 普通版」。</figcaption>
+        <img data-shot="equipGroup" alt="The Data version dropdown in the equipment editor, with a line of explanatory text beside it">
+        <figcaption><b>Data version</b>sits at the top of each expanded item, defaulting to Classic + Normal.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>改數值</h4>
+      <h4><span class="n">Step 3</span>Edit the attributes</h4>
       <p>
-        裝備原本就有的數值可以直接改，每一列都有「<strong>還原</strong>」回到遊戲原值。
+        Attributes the item already has can be edited directly, and every row has a<strong>Reset</strong>to put the game's original value back.
       </p>
       <figure class="shot">
-        <img data-shot="equipAttr2" alt="裝備的數值區，Speed 原值 -2、PhysicalAttack 原值 23，各有輸入框與還原鈕，下面是新增數值的下拉與輸入框">
-        <figcaption><b>改原有的數值</b>左邊是欄位名、中間灰字是<b>遊戲原值</b>、右邊輸入框才是你要填的新值，改壞了按「還原」。</figcaption>
+        <img data-shot="equipAttr2" alt="The attributes section: Speed originally -2, PhysicalAttack originally 23, each with an input field and a Reset button, and below them the Add attribute dropdown and field">
+        <figcaption><b>Editing an existing attribute</b>The field name is on the left, the grey figure in the middle is the<b>game's original value</b>, and the input on the right is the new value you type. Press Reset if you make a mess of it.</figcaption>
       </figure>
       <p>
-        要加上原本沒有的數值：下拉選屬性、填數值、按「<strong>新增數值</strong>」。
-        <strong>額外新增最多 5 個</strong>（改原有數值的值不算在內）。
+        To add an attribute the item never had: pick it from the dropdown, enter a value, and press<strong>Add attribute</strong>」。
+        <strong>You can add at most 5</strong> (changing values the item already had does not count).
       </p>
       <div class="note alert">
-        <b>下拉裡是英文欄位名，不是中文</b>
-        <code>Str</code> 是力量、<code>Speed</code> 是速度、<code>PhysicalAttack</code> 是物理攻擊……
-        全部 41 個的中文對照列在最後面的「<a href="#a5">可改的 41 種數值</a>」，改之前先翻一下。
+        <b>The dropdown lists English field names</b>
+        <code>Str</code> is Strength,<code>Speed</code> is Speed,<code>PhysicalAttack</code> is physical attack, and so on.
+        All 41 are explained at the end under<a href="#a5">The 41 editable attributes</a> — worth a look before you start.
       </div>
       <figure class="shot">
-        <img data-shot="equipAttr" alt="新增數值的下拉展開，列出 Str、Dex、Mind、Con、MaxHp、MaxMp、Defense 等英文欄位名">
-        <figcaption><b>新增數值</b>下拉列出的是英文欄位名，順序跟附錄的對照表一樣。</figcaption>
+        <img data-shot="equipAttr" alt="The Add attribute dropdown, listing English field names such as Str, Dex, Mind, Con, MaxHp, MaxMp and Defense">
+        <figcaption><b>Add attribute</b>The dropdown lists English field names, in the same order as the reference table in the appendix.</figcaption>
       </figure>
       <div class="note tip">
-        <b>可以填負數</b>
-        做成有代價的裝備——例如攻擊力 +30、但速度 −10 的重武器。
+        <b>Negative values are allowed</b>
+        Useful for equipment with a downside — a heavy weapon at +30 attack but −10 speed, say.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 4</span>改魔法效果</h4>
+      <h4><span class="n">Step 4</span>Edit the magic effects</h4>
       <p>
-        裝備原有的效果可以逐一移除；按「<strong>新增魔法效果</strong>」則能從清單挑要附加的被動效果，
-        系統會自動包成裝備用技能寫進 MOD。
+        You can remove the item's existing effects one by one, and<strong>Add magic effect</strong>lets you pick a passive effect from a list;
+        the game wraps it into an equipment skill and writes it into the MOD for you.
       </p>
       <figure class="shot">
-        <img data-shot="equipMagic" alt="「新增魔法效果」視窗，列出被動免疫毒 1000101、被動兩次普攻、被動_再動、被動_飛行等效果與各自的 ID">
-        <figcaption><b>新增魔法效果</b>清單是遊戲既有的被動效果，右邊那串是它的 Magic ID。挑一個按「選用」就掛上去了。</figcaption>
+        <img data-shot="equipMagic" alt="The Add magic effect dialog, listing passives such as poison immunity 1000101, double normal attack, extra move and flight, each with its ID">
+        <figcaption><b>Add magic effect</b>The list holds the game's existing passive effects; the string on the right is the Magic ID. Pick one, press Select, and it is attached.</figcaption>
       </figure>
       <div class="note warn">
-        <b>兩種東西動不了</b>
-        武器的<strong>普攻技能鎖定不可移除</strong>（移掉就不能攻擊了）；
-        會導致關卡無法推進的效果（<strong>不死、不收屍</strong>）不開放選用。
+        <b>Two things you cannot touch</b>
+        A weapon's<strong>normal attack skill is locked and cannot be removed</strong> (without it the weapon cannot attack), and effects that would make a stage unwinnable (<strong>undying, no corpse removal</strong>) are not offered.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 5</span>改說明與圖示</h4>
+      <h4><span class="n">Step 5</span>Edit the description and icons</h4>
       <p>
-        說明文字直接按 <kbd>Enter</kbd> 換行就好，存檔時會自動轉成遊戲用的換行標記
-        「<code>#</code>」——<strong>所以文字裡不要自己打 # 號</strong>。改壞了有「還原成原本說明」。
+        For the description, just press <kbd>Enter</kbd> for a line break; on save it is converted to the game's line-break marker
+        <code>#</code>」——<strong>so do not type # yourself</strong>. Restore original description undoes any mess.
       </p>
       <p>
-        圖示分<strong>小圖</strong>與<strong>大圖</strong>，各自可以替換，
-        從素材庫的「<strong>圖示</strong>」分頁挑，或維持「<strong>沿用原圖</strong>」。
+        Icons come in two sizes,<strong>Icon</strong>and<strong>Big icon</strong>, each replaceable independently.
+        Pick from the Asset Library's<strong>Icons</strong>tab, or leave it on<strong>Keep original</strong>」。
       </p>
       <figure class="shot">
-        <img data-shot="equipTip" alt="說明文字的多行輸入框，內容是攻擊力+2、職業限制:劍士、敏捷-2，下面有「還原成原本說明」">
-        <figcaption><b>說明文字</b>一行一個重點，直接按 Enter 換行；存檔時才會轉成遊戲用的「#」。</figcaption>
+        <img data-shot="equipTip" alt="The multi-line description field reading attack +2, class limit: swordsman, agility -2, with Restore original description below it">
+        <figcaption><b>Description</b>One point per line, with plain Enter for line breaks; they only become the game's # marker on save.</figcaption>
       </figure>
       <figure class="shot">
-        <img data-shot="equipIcon" alt="「選擇圖示」視窗，標題下方顯示 ModAssetLibrary\icon 路徑，列出一張圖與「選用」按鈕">
-        <figcaption><b>選擇圖示</b>視窗標題底下那行就是它正在讀的資料夾——把圖丟進那裡才會出現在這個清單。</figcaption>
+        <img data-shot="equipIcon" alt="The Pick icon dialog, showing the ModAssetLibrary\icon path under its title and listing one image with a Select button">
+        <figcaption><b>Pick icon</b>The line under the title is the folder it is reading. Images only appear in this list once they are in that folder.</figcaption>
       </figure>
       <div class="note">
-        <b>圖示放素材庫的「圖示」分頁</b>
-        也就是 <code>ModAssetLibrary\icon\</code>。不確定的話不用記——
-        上面那個視窗<strong>標題底下就寫著它正在讀哪個資料夾</strong>，
-        照那行路徑把圖丟進去，再回來按一次「選圖」就看得到了。
+        <b>Icons go in the Asset Library's Icons tab</b>
+        which is <code>ModAssetLibrary\icon\</code>. You do not have to memorise it —
+        the dialog above<strong>prints the folder it is reading right under its title</strong>.
+        Drop your image at that path, press Pick again, and there it is.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 6</span>儲存並寫入 MOD</h4>
+      <h4><span class="n">Step 6</span>Save to MOD</h4>
       <p>
-        按「<strong>儲存並寫入 MOD</strong>」，然後到模組管理套用。
+        Use the preview in the<strong>Save to MOD</strong>, then apply it in Manage Mods.
       </p>
       <div class="note tip">
-        <b>反覆編輯不會愈疊愈偏</b>
-        修改基準一律取「<strong>沒有套用任何 MOD 的原始資料</strong>」，
-        所以同一件裝備改十次，結果跟一次改到位是一樣的。
-        把某件裝備的修改移除掉，它就恢復成遊戲原本的樣子。
+        <b>Repeated edits never compound</b>
+        Every edit is measured against the<strong>original data with no MODs applied</strong>,
+        so editing the same item ten times gives exactly the same result as getting it right first time.
+        Remove an item's edits and it goes straight back to the game's original.
       </div>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">04</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     </section>
 
   <div class="cutline"></div>
   <section id="a5">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>可改的 41 種數值</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>The 41 editable attributes</h2></div>
     <p>
-      <a href="#s12">修改裝備</a>的「新增數值」下拉裡可以選的全部項目。
-      <strong>下拉顯示的是英文欄位名</strong>，所以這裡照下拉的順序分組列出，右邊是它的意思。
+      <a href="#s12">Edit Equipment</a>Everything the Add attribute dropdown offers.
+      <strong>The dropdown shows English field names</strong>, so they are grouped here in dropdown order with their meanings on the right.
     </p>
 
     <div class="tw">
       <table>
-        <thead><tr><th>分組</th><th>下拉裡的名字 → 意思</th></tr></thead>
+        <thead><tr><th>Group</th><th>Name in the dropdown → meaning</th></tr></thead>
         <tbody>
-          <tr><td><strong>基本能力</strong></td><td><code>Str</code> 力量、<code>Dex</code> 敏捷、<code>Mind</code> 精神、<code>Con</code> 體質</td></tr>
-          <tr><td><strong>生存與行動</strong></td><td><code>MaxHp</code> 最大HP、<code>MaxMp</code> 最大MP、<code>Defense</code> 防禦、<code>Stamina</code> 氣力、<code>Speed</code> 速度、<code>Move</code> 移動</td></tr>
-          <tr><td><strong>攻擊</strong></td><td><code>PhysicalAttack</code> 物理攻擊、<code>MagicAttack</code> 魔法攻擊、<code>AttackRange</code> 攻擊距離</td></tr>
-          <tr><td><strong>抗性</strong></td><td><code>FireRes</code> 火抗、<code>WaterRes</code> 水抗、<code>AirRes</code> 風抗、<code>EarthRes</code> 地抗、<code>MindRes</code> 心抗、<code>IgnoreResist</code> 無視抗性</td></tr>
-          <tr><td><strong>命中與機率</strong></td><td><code>PhysicalHitRatio</code> 物理命中、<code>MagicHitRatio</code> 魔法命中、<code>DodgeRatio</code> 迴避率、<code>AttackBackRatio</code> 反擊率、<code>CriticalRatio</code> 暴擊率、<code>StaminaRatio</code> 氣力率、<code>MpCostRatio</code> MP消耗率</td></tr>
-          <tr><td><strong>收益</strong></td><td><code>StealRatio</code> 偷竊率、<code>ExpRatio</code> 經驗率、<code>GoldRatio</code> 金錢率</td></tr>
-          <tr><td><strong>減傷</strong></td><td><code>PhysicalDR</code> 物理減傷、<code>FireDR</code> 火減傷、<code>WaterDR</code> 水減傷、<code>AirDR</code> 風減傷、<code>EarthDR</code> 地減傷、<code>MindDR</code> 心減傷</td></tr>
-          <tr><td><strong>倍率</strong></td><td><code>PhysicalRatio</code> 物理倍率、<code>DefenseRatio</code> 防禦倍率、<code>AtkDamageRatio</code> 攻擊傷害率、<code>DefDamageRatio</code> 防禦傷害率、<code>MaxHPRatio</code> 最大HP率、<code>MaxMPRatio</code> 最大MP率</td></tr>
+          <tr><td><strong>Core stats</strong></td><td><code>Str</code> Strength,<code>Dex</code> Dexterity,<code>Mind</code> Mind,<code>Con</code> Constitution</td></tr>
+          <tr><td><strong>Survival and movement</strong></td><td><code>MaxHp</code> Max HP,<code>MaxMp</code> Max MP,<code>Defense</code> Defence,<code>Stamina</code> Morale,<code>Speed</code> Speed,<code>Move</code> Movement</td></tr>
+          <tr><td><strong>Attack</strong></td><td><code>PhysicalAttack</code> Physical attack,<code>MagicAttack</code> Magic attack,<code>AttackRange</code> Attack range</td></tr>
+          <tr><td><strong>Resistances</strong></td><td><code>FireRes</code> Fire resistance,<code>WaterRes</code> Water resistance,<code>AirRes</code> Wind resistance,<code>EarthRes</code> Earth resistance,<code>MindRes</code> Mind resistance,<code>IgnoreResist</code> Resistance ignore</td></tr>
+          <tr><td><strong>Accuracy and rates</strong></td><td><code>PhysicalHitRatio</code> Physical accuracy,<code>MagicHitRatio</code> Magic accuracy,<code>DodgeRatio</code> Evasion rate,<code>AttackBackRatio</code> Counter rate,<code>CriticalRatio</code> Critical rate,<code>StaminaRatio</code> Morale rate,<code>MpCostRatio</code> MP cost rate</td></tr>
+          <tr><td><strong>Rewards</strong></td><td><code>StealRatio</code> Steal rate,<code>ExpRatio</code> EXP rate,<code>GoldRatio</code> Gold rate</td></tr>
+          <tr><td><strong>Damage reduction</strong></td><td><code>PhysicalDR</code> Physical damage reduction,<code>FireDR</code> Fire damage reduction,<code>WaterDR</code> Water damage reduction,<code>AirDR</code> Wind damage reduction,<code>EarthDR</code> Earth damage reduction,<code>MindDR</code> Mind damage reduction</td></tr>
+          <tr><td><strong>Multipliers</strong></td><td><code>PhysicalRatio</code> Physical multiplier,<code>DefenseRatio</code> Defence multiplier,<code>AtkDamageRatio</code> Attack damage rate,<code>DefDamageRatio</code> Defence damage rate,<code>MaxHPRatio</code> Max HP rate,<code>MaxMPRatio</code> Max MP rate</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="note">
-      <b>名字帶「率」的多半是百分比</b>
-      填 10 通常代表 +10%，不是 +10 點。改之前先看看這件裝備原本的數字大概是多少，
-      照那個量級加減比較不會做出壞掉的裝備。
+      <b>Anything with "rate" in the name is usually a percentage</b>
+      Entering 10 normally means +10%, not +10 points. Look at what the item's original figures are before you edit,
+      and stay in the same order of magnitude — that is how you avoid building something broken.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">B</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">B</span><h2>Troubleshooting</h2></div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="skin font bgm voice equip"><td>剛放進素材庫的檔案，編輯頁的清單裡看不到</td><td>按該頁的「重新掃描」；素材庫頁與編輯頁各有一顆</td></tr>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="equip"><td>裝備改了但遊戲裡沒差</td><td>難度對不上「資料版本」。不確定就選「經典版 + 普通版」</td></tr>
-          <tr data-t="equip"><td>裝備說明裡冒出 # 號</td><td>說明文字裡自己打了 #。換行直接按 Enter 就好</td></tr>
+          <tr data-t="skin font bgm voice equip"><td>A file just added to the Asset Library is missing from the editing page's list</td><td>Press Rescan on that page — the Asset Library page and the editing page each have their own</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="equip"><td>Equipment edited but nothing changed in game</td><td>The difficulty does not match the Data version. When in doubt, pick Classic + Normal</td></tr>
+          <tr data-t="equip"><td>A # appears in the item description</td><td>You typed a # in the description yourself. Just press Enter for line breaks</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 修改裝備 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Edit Equipment MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -857,7 +854,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>

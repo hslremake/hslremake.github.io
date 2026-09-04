@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<link rel="alternate" hreflang="en" href="https://hslremake.github.io/en/mod/">
-<title>幻世錄 MOD 指南</title>
+<link rel="alternate" hreflang="zh-Hant" href="https://hslremake.github.io/mod/">
+<title>HSLR MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&display=swap">
@@ -60,7 +60,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
 </style>
 </head>
 <body>
-<script>(function(){var L="zh",A="/en/mod/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<script>(function(){var L="en",A="/mod/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -80,64 +80,64 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="hero"><div class="hero-in">
   <div class="kicker">HSLR · MOD</div>
-  <h1>幻世錄 MOD 指南</h1>
-  <p>遊戲裡就有 MOD 編輯器，換角色外觀、換字型、換音樂、換配音、翻譯文字、改裝備，六類內容全部在同一個介面裡，不需要寫程式，也不用手改設定檔。</p>
+  <h1>HSLR MOD Guide</h1>
+  <p>The MOD editor ships with the game. Character skins, fonts, music, voice lines, translations and equipment — all six live in the same screen. No coding, no config files to hand-edit.</p>
 </div></div>
 
 <div class="wrap">
 
-<h2>六類 MOD</h2>
-<p class="sub">每一章都可以單獨看，不必照順序。第一次做建議從「外觀」開始。</p>
-<div class="grid"><a class="card" href="skin/"><div class="n">01</div><div class="t">外觀教學</div><div class="d">換戰場小人、半身像、頭像</div></a><a class="card" href="font/"><div class="n">02</div><div class="t">字型教學</div><div class="d">替換整個遊戲介面的文字字型</div></a><a class="card" href="bgm/"><div class="n">03</div><div class="t">音樂音效教學</div><div class="d">換背景音樂與音效</div></a><a class="card" href="voice/"><div class="n">04</div><div class="t">配音教學</div><div class="d">替換角色語音</div></a><a class="card" href="lang/"><div class="n">05</div><div class="t">翻譯教學</div><div class="d">把遊戲文字翻成其他語言</div></a><a class="card" href="equip/"><div class="n">06</div><div class="t">裝備教學</div><div class="d">改裝備數值、做新裝備</div></a></div>
+<h2>Six kinds of MOD</h2>
+<p class="sub">Each chapter stands alone; read them in any order. If this is your first MOD, start with Skins.</p>
+<div class="grid"><a class="card" href="skin/"><div class="n">01</div><div class="t">Skins</div><div class="d">Battle sprites, portraits and avatars</div></a><a class="card" href="font/"><div class="n">02</div><div class="t">Fonts</div><div class="d">Replace every font in the game UI</div></a><a class="card" href="bgm/"><div class="n">03</div><div class="t">Music</div><div class="d">Swap background music and sound effects</div></a><a class="card" href="voice/"><div class="n">04</div><div class="t">Voice</div><div class="d">Replace character voice lines</div></a><a class="card" href="lang/"><div class="n">05</div><div class="t">Translation</div><div class="d">Translate the game into another language</div></a><a class="card" href="equip/"><div class="n">06</div><div class="t">Equipment</div><div class="d">Edit equipment stats and create new items</div></a></div>
 
-<h2 id="downloads">範例包下載</h2>
-<p class="sub">官方做好的成品，拆開來對照指南看最快。</p>
+<h2 id="downloads">Sample packs</h2>
+<p class="sub">Finished official MODs. Unzipping one and reading it alongside the guide is the fastest way in.</p>
 
 <div class="note">
-<b>這些 zip 是給想學做 MOD 的人拆解用的教材，不是一般玩家的安裝檔。</b>
-只想玩 MOD 的話，請直接在 Steam 創意工坊訂閱，遊戲會自動安裝。真的要手動安裝的話：
+<b>These zips are teaching material for people who want to build MODs — they are not installers.</b>
+If you just want to play with MODs, subscribe on the Steam Workshop and the game installs them for you. To install one by hand:
 <ol>
-<li>解壓縮，會得到一個 MOD 資料夾</li>
-<li>把整個資料夾放進 <code>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\Mods\</code></li>
-<li>回遊戲開「模組管理」，勾選後按「套用變更」</li>
+<li>Unzip it — you get a single MOD folder</li>
+<li>Move that whole folder into <code>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\Mods\</code></li>
+<li>Back in the game, open MOD Manager, tick it, then press Apply Changes</li>
 </ol>
 </div>
 
 <div class="tw">
 <table>
-<thead><tr><th>範例包</th><th>對應章節</th>
-<th>大小</th><th></th></tr></thead>
+<thead><tr><th>Pack</th><th>Chapter</th>
+<th>Size</th><th></th></tr></thead>
 <tbody><tr><td><div class="nm">[官方模組]飯友小人外觀</div><div class="ds">戰場小人外觀 MOD — 克羅蒂、嚎、漢克斯、琥、緹娜、雪拉、雷歐納德、雷特。
 Battle sprite skins for eight characters.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/skin/">https://hslremake.github.io/mod/skin/</a></div></td><td class="sz">外觀</td><td class="sz">17.9 MB</td><td><a class="dl" href="/mod/dl/sample-skin-fanyou.zip" download>下載 zip</a><a class="dl dl2" href="/mod/dl/sample-skin-fanyou-art.zip" download>素材圖 zip <span class="dlsz">17.7 MB</span></a><div class="ds">80 張戰場小人序列圖 ＋ 8 張半身立繪，照「外觀教學」路線一直接取用</div></td></tr><tr><td><div class="nm">[官方模組]字型替換</div><div class="ds">圓潤好讀的粉圓體，替換遊戲全部介面文字。繁中／日文／英文覆蓋 99% 以上。
+教學 / Guide: <a href="https://hslremake.github.io/mod/skin/">https://hslremake.github.io/mod/skin/</a></div></td><td class="sz">Skins</td><td class="sz">17.9 MB</td><td><a class="dl" href="/mod/dl/sample-skin-fanyou.zip" download>Download zip</a><a class="dl dl2" href="/mod/dl/sample-skin-fanyou-art.zip" download>Source art zip <span class="dlsz">17.7 MB</span></a><div class="ds">80 battle-sprite sheets and 8 portraits — the ready-made assets used in Route 1 of the skin guide</div></td></tr><tr><td><div class="nm">[官方模組]字型替換</div><div class="ds">圓潤好讀的粉圓體，替換遊戲全部介面文字。繁中／日文／英文覆蓋 99% 以上。
 簡體中文僅約 74%，缺字會自動以遊戲原本字型顯示（韓文同理）。
 jf open huninn 2.1 by justfont — SIL OFL 1.1
 
 Rounded, highly readable font replacing all in-game UI text. Over 99% coverage for Traditional Chinese, Japanese and English; about 74% for Simplified Chinese. Missing characters fall back to the game's original font.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/font/">https://hslremake.github.io/mod/font/</a></div></td><td class="sz">字型</td><td class="sz">2.8 MB</td><td><a class="dl" href="/mod/dl/sample-font-huninn.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]修改主畫面音樂</div><div class="ds">替換主畫面背景音樂。
+教學 / Guide: <a href="https://hslremake.github.io/mod/font/">https://hslremake.github.io/mod/font/</a></div></td><td class="sz">Fonts</td><td class="sz">2.8 MB</td><td><a class="dl" href="/mod/dl/sample-font-huninn.zip" download>Download zip</a></td></tr><tr><td><div class="nm">[官方模組]修改主畫面音樂</div><div class="ds">替換主畫面背景音樂。
 Replaces the title screen music.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/bgm/">https://hslremake.github.io/mod/bgm/</a></div></td><td class="sz">音樂音效</td><td class="sz">19.6 MB</td><td><a class="dl" href="/mod/dl/sample-bgm-title.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]Full Russian language</div><div class="ds">Русская локализация — 俄文語系包 Full Russian localization. Set the game language to English to play in Russian. Untranslated lines stay in English.
+教學 / Guide: <a href="https://hslremake.github.io/mod/bgm/">https://hslremake.github.io/mod/bgm/</a></div></td><td class="sz">Music</td><td class="sz">19.6 MB</td><td><a class="dl" href="/mod/dl/sample-bgm-title.zip" download>Download zip</a></td></tr><tr><td><div class="nm">[官方模組]Full Russian language</div><div class="ds">Русская локализация — 俄文語系包 Full Russian localization. Set the game language to English to play in Russian. Untranslated lines stay in English.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/lang/">https://hslremake.github.io/mod/lang/</a></div></td><td class="sz">翻譯</td><td class="sz">1.1 MB</td><td><a class="dl" href="/mod/dl/sample-lang-ru.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]100%CounterAttack</div><div class="ds">所有角色都能反擊。「修改裝備」分頁的範例包，示範怎麼改動技能與裝備數值。
+教學 / Guide: <a href="https://hslremake.github.io/mod/lang/">https://hslremake.github.io/mod/lang/</a></div></td><td class="sz">Translation</td><td class="sz">1.1 MB</td><td><a class="dl" href="/mod/dl/sample-lang-ru.zip" download>Download zip</a></td></tr><tr><td><div class="nm">[官方模組]100%CounterAttack</div><div class="ds">所有角色都能反擊。「修改裝備」分頁的範例包，示範怎麼改動技能與裝備數值。
 All characters can counterattack. A sample MOD for the Equipment page.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">裝備</td><td class="sz">265 KB</td><td><a class="dl" href="/mod/dl/sample-equip-counter.zip" download>下載 zip</a></td></tr><tr><td><div class="nm">[官方模組]黃金首飾+100%偷取機率</div><div class="ds">黃金首飾 ＋100% 偷取機率，並額外增加 300% 回 SP 效果。
+教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">Equipment</td><td class="sz">265 KB</td><td><a class="dl" href="/mod/dl/sample-equip-counter.zip" download>Download zip</a></td></tr><tr><td><div class="nm">[官方模組]黃金首飾+100%偷取機率</div><div class="ds">黃金首飾 ＋100% 偷取機率，並額外增加 300% 回 SP 效果。
 Gold accessory with a 100% steal rate and +300% SP recovery.
 
-教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">裝備</td><td class="sz">210 KB</td><td><a class="dl" href="/mod/dl/sample-equip-gold.zip" download>下載 zip</a></td></tr></tbody>
+教學 / Guide: <a href="https://hslremake.github.io/mod/equip/">https://hslremake.github.io/mod/equip/</a></div></td><td class="sz">Equipment</td><td class="sz">210 KB</td><td><a class="dl" href="/mod/dl/sample-equip-gold.zip" download>Download zip</a></td></tr></tbody>
 </table>
 </div>
-<p style="color:var(--ink-mute);font-size:13px;margin-top:10px">（配音 目前沒有官方範例包，請直接看指南操作。）</p>
+<p style="color:var(--ink-mute);font-size:13px;margin-top:10px">(Voice have no official sample pack yet — follow the guide directly.)</p>
 
 <footer>
-幻世錄 Remake · MOD 指南　|　本頁與範例包由官方提供，內容對應遊戲內建的 MOD 編輯器。<br>
-字型範例包內含 jf open huninn 2.1 by justfont（SIL OFL 1.1），再散布請保留授權檔。
+HSLR Remake · MOD Guide　|　This page and the sample packs are official, and match the MOD editor built into the game.<br>
+The font sample pack contains jf open huninn 2.1 by justfont (SIL OFL 1.1); keep the licence files if you redistribute it.
 </footer>
 
 </div>

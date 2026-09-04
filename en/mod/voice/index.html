@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 配音 MOD 指南</title>
+<title>HSLR Voice MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/voice/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/voice/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,297 +446,297 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav hslrnav-cur" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/voice/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav hslrnav-cur" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/voice/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 配音 MOD</div>
-  <h1>幫角色配上<br>你自己的聲音</h1>
+  <div class="eyebrow">HSLR · Voice MOD</div>
+  <h1>Give the cast<br>your own voice</h1>
   <p class="lede">
-    匯出一份錄音清單，照著上面的檔名命名你的錄音檔，整包丟進去就完成——檔名就是替換目標，不必一句一句設定。
+    Export a recording list, name your audio files exactly as it says, and drop the whole lot in. The filename is the target — there is nothing to configure line by line.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>4</b><span>欄錄音清單</span></div>
-    <div class="stat"><b>3</b><span>種音檔格式</span></div>
-    <div class="stat"><b>4</b><span>個步驟</span></div>
+    <div class="stat"><b>4</b><span>columns in the list</span></div>
+    <div class="stat"><b>3</b><span>audio formats</span></div>
+    <div class="stat"><b>4</b><span>steps</span></div>
   </div>
 </header>
 
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s1"><em>01</em>開始之前</a></li>
-      <li><a href="#sLib"><em>02</em>素材庫</a></li>
-      <li><a href="#s10"><em>03</em>換配音</a></li>
-      <li><a href="#s7"><em>04</em>套用與發佈</a></li>
-      <li><a href="#a3"><em>A</em>疑難排解</a></li>
+      <li><a href="#s1"><em>01</em>Before you start</a></li>
+      <li><a href="#sLib"><em>02</em>Asset Library</a></li>
+      <li><a href="#s10"><em>03</em>Changing the voices</a></li>
+      <li><a href="#s7"><em>04</em>Apply and publish</a></li>
+      <li><a href="#a3"><em>A</em>Troubleshooting</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="voice">
-        <img data-shot="voicePack" alt="配音頁右上角的目標包下拉展開，目前選中「[官方模組]配音測試」，最下方有輸入框與「建立」按鈕">
-        <figcaption><b>目標包</b>上半是既有的包（這裡選的是「[官方模組]配音測試」），下半輸入新名稱按「建立」就是開一個新包。</figcaption>
+        <img data-shot="voicePack" alt="The target package dropdown on the Voice page with [官方模組]配音測試 currently selected, and an input field and Create button at the bottom">
+        <figcaption><b>Target package</b>The top half lists existing packages ([官方模組]配音測試 is selected here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="voice">
-        <img data-shot="voiceToggle" alt="配音 Mod 頁左上角的開關顯示「已啟用」，左側功能列只有「配音」是實心紅點">
-        <figcaption><b>啟用開關</b>這個包只把「配音」打開了——左側其他項目都還是空心圓，右上角是「儲存設定」。</figcaption>
+        <img data-shot="voiceToggle" alt="The Voice Mod page: the top-left toggle reads Enabled, and Voice is the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>This package only has Voice turned on — every other item on the left is still hollow, and Save Settings sits in the top-right corner.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="sLib">
-    <div class="sec-head"><span class="sec-num">02</span><h2>素材庫：東西放這裡</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Asset Library: where your files go</h2></div>
     <p>
-      你要用的檔案——字型、音樂、配音、圖示——都先放進<strong>素材庫</strong>。
-      它是<strong>所有 MOD 包共用</strong>的一個資料夾，放在遊戲的存檔目錄底下。
+      Every file you want to use — fonts, music, voice clips, icons — goes into the<strong>Asset Library</strong> first.
+      It is one folder<strong>shared by every MOD package</strong>, stored under the game's save directory.
     </p>
     <p>
-      在編輯頁挑素材，按下「<strong>儲存設定</strong>」時，系統才會把<strong>真正用到的</strong>檔案
-      複製一份進你的 MOD 包。所以發佈出去的包一定是自足的，別人下載不會少檔。
+      When you pick an asset on an editing page and press<strong>Save Settings</strong>, only the files you<strong>actually used</strong>are copied into your MOD package.
+      That is why a published package is always self-contained — nobody downloads it and finds files missing.
     </p>
 
     <div class="note tip">
-      <b>不用背路徑</b>
-      素材庫頁的每個分頁右上角都有一顆「<strong>開啟資料夾</strong>」，
-      按下去檔案總管就直接開在對的位置。
+      <b>You do not need to memorise the path</b>
+      Every tab on the Asset Library page has an<strong>Open folder</strong>button in the top-right corner
+      that opens Explorer straight at the right place.
     </div>
 
-    <p>要自己找的話，位置在這裡：</p>
+    <p>If you want to find it yourself, it lives here:</p>
     <div class="code">
-      <header>素材庫位置<span>貼進「執行」(Win + R) 按 Enter</span></header>
+      <header>Asset Library location<span>Paste it into Run (Win + R) and press Enter</span></header>
       <pre>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\ModAssetLibrary\</pre>
     </div>
 
-    <p>裡面照類型分成七個資料夾，對應素材庫頁上方的七個分頁：</p>
+    <p>Inside are seven folders by type, matching the seven tabs across the top of the Asset Library page:</p>
     <div class="tw">
       <table>
-        <thead><tr><th>分頁</th><th>資料夾</th><th>放什麼</th></tr></thead>
+        <thead><tr><th>Tab</th><th>Folder</th><th>What goes in it</th></tr></thead>
         <tbody>
-          <tr><td>序列圖</td><td><code>skin\</code></td><td>戰場小人的逐格動畫圖</td></tr>
-          <tr><td>圖片</td><td><code>image\</code></td><td>半身像、頭像的立繪（PNG / JPG）</td></tr>
-          <tr><td><strong>字型</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
-          <tr><td><strong>音檔</strong></td><td><code>bgm\</code></td><td>背景音樂 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>配音</strong></td><td><code>voice\</code></td><td>對話語音 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>圖示</strong></td><td><code>icon\</code></td><td>裝備圖示（PNG）</td></tr>
-          <tr><td>Spine</td><td><code>spine\</code></td><td>外部 Spine，每個角色一個子資料夾</td></tr>
+          <tr><td>Sprite sheets</td><td><code>skin\</code></td><td>Frame-by-frame animation sheets for battle sprites</td></tr>
+          <tr><td>Images</td><td><code>image\</code></td><td>Portrait and avatar artwork (PNG / JPG)</td></tr>
+          <tr><td><strong>Fonts</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
+          <tr><td><strong>Audio</strong></td><td><code>bgm\</code></td><td>Background music <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Voice</strong></td><td><code>voice\</code></td><td>Dialogue voice lines <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Icons</strong></td><td><code>icon\</code></td><td>Equipment icons (PNG)</td></tr>
+          <tr><td>Spine</td><td><code>spine\</code></td><td>External Spine data, one subfolder per character</td></tr>
         </tbody>
       </table>
     </div>
 
     <figure class="shot" data-t="voice">
-      <img data-shot="assetVoice" alt="素材庫頁切在「配音」分頁，清單裡有一個 5000_2@大臣.wav">
-      <figcaption><b>素材庫 · 配音分頁</b>右邊的「<b>開啟資料夾</b>」會直接開在 <code>voice\</code>。清單裡那個 <code>5000_2@大臣.wav</code> 就是標準命名：<b>@ 之前</b>的「5000_2」才是配對用的配音名。</figcaption>
+      <img data-shot="assetVoice" alt="The Asset Library page on the Voice tab, with a single 5000_2@大臣.wav in the list">
+      <figcaption><b>Asset Library · Voice tab</b>The<b>Open folder</b>button on the right opens <code>voice\</code>on the right opens it. The <code>5000_2@大臣.wav</code> in the list shows the naming convention:<b>the part before the @</b> — here 5000_2 — is the voice name used for matching.</figcaption>
     </figure>
 
     <div class="note">
-      <b>放進去之後記得按「重新掃描」</b>
-      清單不會自己更新。剛複製進去的檔案沒出現，按一下分頁右上角的「重新掃描」就有了。
+      <b>Remember to press Rescan after copying files in</b>
+      The list does not refresh by itself. If a file you just copied in is missing, press Rescan in the tab's top-right corner and it will show up.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s10">
-    <div class="sec-head"><span class="sec-num">03</span><h2>換配音</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Changing the voices</h2></div>
     <p>
-      把遊戲裡的對話語音（含影片旁白）換成自己錄的。
-      這一頁的做法跟前面都不一樣——<strong>檔名就是替換目標</strong>，
-      所以你不用一句一句設定，照著清單把檔案命名好，整包丟進去就行。
+      Replace the game's dialogue voices, cutscene narration included, with your own recordings.
+      This page works differently from the others:<strong>the filename is the target</strong>,
+      so there is nothing to set line by line. Name your files to match the list and import the whole folder.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>匯出錄音清單</h4>
+      <h4><span class="n">Step 1</span>Export recording list</h4>
       <p>
-        左側點「<strong>配音</strong>」，打開啟用開關。先選「<strong>台詞語言</strong>」，
-        再按「<strong>匯出錄音清單</strong>」。
+        On the left, click<strong>Voice</strong>, then turn on the page toggle. Pick a<strong>Line language</strong>first,
+        then press<strong>Export recording list</strong>」。
       </p>
       <p>
-        系統會在素材庫的 <code>voice</code> 資料夾產生 <code>voice_list.csv</code>，四個欄位：
+        The game writes <code>voice</code> into the Asset Library's <code>voice_list.csv</code>folder, with four columns:
       </p>
       <div class="tw">
         <table>
-          <thead><tr><th>欄位</th><th>是什麼</th></tr></thead>
+          <thead><tr><th>Column</th><th>What it is</th></tr></thead>
           <tbody>
-            <tr><td><strong>檔名</strong></td><td><strong>你要照著取的名字</strong>，這欄決定會換掉哪一句</td></tr>
-            <tr><td>角色</td><td>這句是誰講的。要只錄某個角色，就用試算表篩這一欄</td></tr>
-            <tr><td>分類</td><td>這句話出現的場合</td></tr>
-            <tr><td>台詞</td><td>台詞內容，錄音的時候照著念</td></tr>
+            <tr><td><strong>Filename</strong></td><td><strong>The name you must copy</strong>; this column decides which line gets replaced</td></tr>
+            <tr><td>Character</td><td>Who says the line. To record just one character, filter on this column in a spreadsheet</td></tr>
+            <tr><td>Category</td><td>Where the line comes up</td></tr>
+            <tr><td>Line</td><td>The text itself — read it out when you record</td></tr>
           </tbody>
         </table>
       </div>
       <div class="note">
-        <b>台詞語言跟你現在玩的語言無關</b>
-        想錄日文語音但介面開繁中，直接在這裡選日文匯出即可。
+        <b>Line language has nothing to do with the language you play in</b>
+        To record Japanese voices while running the UI in Chinese, just pick Japanese here and export.
       </div>
       <figure class="shot">
-        <img data-shot="voiceExport" alt="匯出完成的對話框，寫著已匯出 2429 筆錄音清單與 voice_list.csv 的完整路徑">
-        <figcaption><b>匯出完成</b>會直接告訴你 CSV 放在哪、總共幾句——整套是 <b>2429 筆</b>，不必全錄，想錄幾句就錄幾句。</figcaption>
+        <img data-shot="voiceExport" alt="The export dialog, reporting 2429 entries written and the full path to voice_list.csv">
+        <figcaption><b>Export complete</b>It tells you where the CSV went and how many lines there are. The full set is <b>2429 entries</b>, but you do not have to record them all — do as many as you like.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>照清單的檔名命名錄音檔</h4>
+      <h4><span class="n">Step 2</span>Name your recordings after the list</h4>
       <p>
-        錄好之後，依 CSV「<strong>檔名</strong>」欄命名，支援 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code>。
+        Once recorded, name each file after the CSV's<strong>Filename</strong>column. Supported formats: <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code>。
       </p>
       <div class="code">
-        <header>檔名格式<span>@ 前面才是重點</span></header>
-        <pre>10000@雷歐納德.wav   <span class="c">← @ 之前的「10000」才是配對用的配音名</span>
-10000.wav            <span class="c">← 備註可以省略，這樣也完全正確</span></pre>
+        <header>Filename format<span>Only the part before the @ matters</span></header>
+        <pre>10000@雷歐納德.wav   <span class="c">← 10000, before the @, is the voice name used for matching</span>
+10000.wav            <span class="c">← the note is optional; this is equally correct</span></pre>
       </div>
       <p>
-        <code>@</code> 後面是自由備註，愛寫什麼寫什麼（角色、章節、第幾版），
-        <strong>改備註不影響替換結果</strong>，純粹是給你自己認的。
+        <code>@</code> Anything after it is a free-form note — character, chapter, take number, whatever you like —
+        <strong>changing the note has no effect on what gets replaced</strong>; it is purely for your own reference.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>建立語音組，整包匯入</h4>
+      <h4><span class="n">Step 3</span>Create a voice set and import the folder</h4>
       <p>
-        在「<strong>語音組</strong>」欄位輸入一個名字（留空的話就叫 <code>common</code>），
-        按「<strong>開啟本組資料夾</strong>」，把音檔全部放進去。
+        Search the Asset Library from the<strong>Voice set</strong>field, type a name (leave it empty and it becomes <code>common</code>),
+        press<strong>Open this set's folder</strong>, and drop all your audio in.
       </p>
       <p>
-        回到頁面選「<strong>匯入範圍</strong>」——全部，或只匯入某個角色的部分——
-        再按「<strong>整包匯入本 MOD</strong>」。
+        Back on the page, choose an<strong>Import scope</strong> — everything, or just one character —
+        then press<strong>Import all into this MOD</strong>」。
       </p>
       <div class="note tip">
-        <b>語音組只是素材庫的資料夾名稱</b>
-        它不影響遊戲怎麼播，純粹是給你分類用的（例如日文一組、搞笑版一組）。
-        MOD 包裡<strong>只會留一份配音</strong>，同一句重複匯入時以最後匯入的為準。
+        <b>A voice set is just a folder name in the Asset Library</b>
+        It has no effect on playback; it only helps you keep things sorted (one set for Japanese, one for the joke version).
+        A MOD package holds<strong>a single set of voices</strong>, so importing the same line twice keeps the last one.
       </div>
       <figure class="shot">
-        <img data-shot="voiceImport" alt="匯入完成的對話框，寫著已複製 1 個音檔至 MOD 包的 voice 目錄，其中 0 個對應到遊戲配音">
-        <figcaption><b>匯入完成</b>看「<b>其中 N 個對應到遊戲配音</b>」這一行——圖中是 <b>0</b>，代表那個檔名遊戲根本不認得，等於白做。</figcaption>
+        <img data-shot="voiceImport" alt="The import dialog, reporting 1 audio file copied into the package's voice folder, 0 of which match a game voice line">
+        <figcaption><b>Import complete</b>Read the<b>N of which match a game voice line</b>line. In this screenshot it is <b>0</b>, which means the game does not recognise the filename at all — the work counts for nothing.</figcaption>
       </figure>
       <div class="note alert">
-        <b>「其中 0 個對應到遊戲配音」＝ 檔名全錯</b>
-        匯入是照檔名配對的，複製進去幾個檔跟<strong>對上幾句</strong>是兩回事。
-        這一行如果是 0，回頭核對 CSV 的「檔名」欄，多半是少了底線、多了空格，或把備註寫在 <code>@</code> 前面。
+        <b>"0 of which match a game voice line" means every filename is wrong</b>
+        Importing matches on filename, so how many files were copied and how many<strong>actually matched</strong>are two different things.
+        If that number is 0, go back and check the CSV's Filename column — usually a missing underscore, a stray space, or the note put <code>@</code> before the @.
       </div>
       <figure class="shot">
-        <img data-shot="voiceImportOk" alt="匯入完成的對話框，這次寫著其中 1 個對應到遊戲配音">
-        <figcaption><b>對上了長這樣</b>同樣一個框，「其中 <b>1</b> 個對應到遊戲配音」——名字改對之後重新匯入一次就會變成這樣。</figcaption>
+        <img data-shot="voiceImportOk" alt="The same import dialog, this time reporting 1 file matching a game voice line">
+        <figcaption><b>What a match looks like</b>The same dialog, now reading <b>1</b>  — this is what you get once the names are right and you import again.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 4</span>檢查缺漏，然後儲存</h4>
+      <h4><span class="n">Step 4</span>Check for gaps, then save</h4>
       <p>
-        按「<strong>檢查缺漏</strong>」會拿素材庫跟錄音清單對一遍，
-        告訴你還缺哪些句子——選定角色之後會列出明細。
-        <strong>檔名對不上遊戲配音的檔案會被列為「多餘」</strong>，那就是打錯字了。
+        Use the preview in the<strong>Check for gaps</strong>compares the Asset Library against the recording list
+        and tells you which lines are still missing; pick a single character to see them itemised.
+        <strong>Files whose names match no game voice line are listed as Extra</strong> — that is a typo.
       </p>
-      <p>按「<strong>儲存設定</strong>」，然後到模組管理套用。</p>
+      <p>Use the preview in the<strong>Save Settings</strong>, then apply it in Manage Mods.</p>
       <figure class="shot">
-        <img data-shot="voiceRecon" alt="檢查缺漏的結果摘要：應有 2429 句、素材庫已備妥 1 句、缺少 2428 句、多餘 0 個，本包已匯入 2 個檔案">
-        <figcaption><b>檢查缺漏</b>四個數字：<b>應有</b>是總句數、<b>已備妥</b>是你錄好且名字對得上的、<b>缺少</b>是還沒錄的、<b>多餘</b>是名字對不上的。「多餘」不是 0 就代表有檔名打錯。</figcaption>
+        <img data-shot="voiceRecon" alt="The Check for gaps summary: 2429 expected, 1 ready in the asset library, 2428 missing, 0 extra, 2 files imported into this package">
+        <figcaption><b>Check for gaps</b>Four numbers:<b>expected</b>is the total number of lines,<b>ready</b>is what you have recorded with a matching name,<b>missing</b>is what you have not recorded yet, and<b>extra</b>is what matches nothing. Anything other than 0 extra means a filename is wrong.</figcaption>
       </figure>
       <p>
-        句子太多時它<strong>不會列出明細</strong>，只給你上面那行總計——
-        想逐句對照，就把「<strong>匯入範圍</strong>」改成某個角色再按一次。
+        When there are too many lines it<strong>does not itemise them</strong>, giving only the totals above.
+        To go through them one by one, set<strong>Import scope</strong>to a single character and press it again.
       </p>
       <p>
-        再往下的「<strong>③ 本包目前的配音</strong>」會告訴你這個包裡總共幾個音檔、其中幾個真的對應得到遊戲配音；
-        想重來的話那裡有「<strong>清空本包配音</strong>」。
+        Further down,<strong>3. Voices currently in this package</strong>tells you how many audio files the package holds and how many really match a game voice line.
+        To start over, there is a<strong>Clear</strong>」。
       </p>
     </div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>要注意</th><th>說明</th></tr></thead>
+        <thead><tr><th>Watch out for</th><th>Details</th></tr></thead>
         <tbody>
-          <tr><td>沒換到的句子</td><td>沿用遊戲原本的配音，所以可以只錄幾句，其餘不動</td></tr>
-          <tr><td>字幕與語音可以不同語言</td><td>繁體中文字幕配日文語音之類的搭配完全沒問題</td></tr>
-          <tr><td>換不到的東西</td><td>戰鬥吼叫、受擊聲這類<strong>音效型語音不在替換範圍</strong></td></tr>
-          <tr><td>兩個包搶同一句</td><td>依模組管理的優先序，後者生效</td></tr>
+          <tr><td>Lines you did not replace</td><td>keep the game's original voices, so recording just a handful is perfectly fine</td></tr>
+          <tr><td>Subtitles and voices can be different languages</td><td>Traditional Chinese subtitles with Japanese voices, for instance, works fine</td></tr>
+          <tr><td>What you cannot replace</td><td>Battle shouts, hit reactions and similar<strong>sound-effect voices are out of scope</strong></td></tr>
+          <tr><td>Two packages claim the same line</td><td>Load order in Manage Mods decides it: the later one wins</td></tr>
         </tbody>
       </table>
     </div>
@@ -744,61 +744,59 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">04</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>Troubleshooting</h2></div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="skin font bgm voice equip"><td>剛放進素材庫的檔案，編輯頁的清單裡看不到</td><td>按該頁的「重新掃描」；素材庫頁與編輯頁各有一顆</td></tr>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="voice"><td>配音某幾句沒換到</td><td>檔名打錯。按「檢查缺漏」，被列成「多餘」的就是對不上的那些</td></tr>
-          <tr data-t="voice"><td>戰鬥中的吼叫沒換</td><td>音效型語音本來就不在配音的替換範圍內</td></tr>
+          <tr data-t="skin font bgm voice equip"><td>A file just added to the Asset Library is missing from the editing page's list</td><td>Press Rescan on that page — the Asset Library page and the editing page each have their own</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="voice"><td>Some lines were not replaced</td><td>A filename typo. Press Check for gaps — anything listed as Extra is what failed to match</td></tr>
+          <tr data-t="voice"><td>Battle shouts did not change</td><td>Sound-effect voices are outside the scope of voice replacement by design</td></tr>
           </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 配音 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Voice MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -807,7 +805,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 在地化翻譯 MOD 指南</title>
+<title>HSLR Localization MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/lang/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/lang/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,275 +446,272 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav hslrnav-cur" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/lang/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav hslrnav-cur" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/lang/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 在地化翻譯 MOD</div>
-  <h1>把遊戲文字，<br>翻成你要的語言</h1>
+  <div class="eyebrow">HSLR · Localization MOD</div>
+  <h1>Put the game's text<br>into the language you want</h1>
   <p class="lede">
-    匯出成 CSV，用試算表翻譯，再匯回來。整套翻成另一種語言、改寫成搞笑版、或只修幾個錯字，都是同一套流程。
+    Export a CSV, translate it in a spreadsheet, import it back. A full translation into another language, a joke rewrite, or fixing a couple of typos — it is all the same workflow.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>4</b><span>欄 CSV</span></div>
-    <div class="stat"><b>1</b><span>個語言 / 包</span></div>
-    <div class="stat"><b>3</b><span>個步驟</span></div>
+    <div class="stat"><b>4</b><span>CSV columns</span></div>
+    <div class="stat"><b>1</b><span>language per pack</span></div>
+    <div class="stat"><b>3</b><span>steps</span></div>
   </div>
 </header>
 
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s1"><em>01</em>開始之前</a></li>
-      <li><a href="#s11"><em>02</em>翻譯遊戲文字</a></li>
-      <li><a href="#s7"><em>03</em>套用與發佈</a></li>
-      <li><a href="#a3"><em>A</em>疑難排解</a></li>
+      <li><a href="#s1"><em>01</em>Before you start</a></li>
+      <li><a href="#s11"><em>02</em>Translating the game's text</a></li>
+      <li><a href="#s7"><em>03</em>Apply and publish</a></li>
+      <li><a href="#a3"><em>A</em>Troubleshooting</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="locale">
-        <img data-shot="localePack" alt="本地化頁右上角的目標包下拉展開，列出多個官方模組，最下方有輸入框與「建立」按鈕">
-        <figcaption><b>目標包</b>上半是既有的包（這裡選的是「[官方模組]Full Russian language」），下半輸入新名稱按「建立」就是開一個新包。</figcaption>
+        <img data-shot="localePack" alt="The target package dropdown on the Localization page, listing several official MODs, with an input field and a Create button at the bottom">
+        <figcaption><b>Target package</b>The top half lists existing packages ([官方模組]Full Russian language is selected here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="locale">
-        <img data-shot="localeToggle" alt="本地化 Mod 頁左上角的開關顯示「已啟用」，左側功能列只有「本地化」是實心紅點">
-        <figcaption><b>啟用開關</b>這個包只把「本地化」打開了——左側其他項目都還是空心圓，右上角是「儲存設定」。</figcaption>
+        <img data-shot="localeToggle" alt="The Localization Mod page: the top-left toggle reads Enabled, and Localization is the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>This package only has Localization turned on — every other item on the left is still hollow, and Save Settings sits in the top-right corner.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s11">
-    <div class="sec-head"><span class="sec-num">02</span><h2>翻譯遊戲文字</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Translating the game's text</h2></div>
     <p>
-      把遊戲文字換成別的內容——整套翻成西班牙文、改寫成搞笑版、或只修幾個錯字，都是這一頁。
-      做法是<strong>匯出成 CSV，用試算表改，再匯回來</strong>。
+      Replacing the game's text with something else — a full Spanish translation, a joke rewrite, or fixing a few typos — all happens on this page.
+      The workflow is to<strong>export a CSV, edit it in a spreadsheet, and import it back</strong>。
     </p>
 
     <div class="note alert">
-      <b>是「改掉某個語言」，不是「新增一個語言」</b>
-      你選哪個語言，就是覆蓋那個語言的文字。玩家要看到你的版本，
-      得在遊戲設定裡<strong>切到你選的那個語言</strong>。
-      所以做西班牙文翻譯的常見做法，是挑一個你的玩家不會用到的語言欄來覆蓋。
+      <b>You are overwriting an existing language, not adding a new one</b>
+      Whichever language you pick is the one your text replaces. For players to see your version, they have to<strong>switch the game to that same language</strong> in the settings.
+      So the usual trick for, say, a Spanish translation is to overwrite a language column your players will never use.
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>匯出 CSV</h4>
+      <h4><span class="n">Step 1</span>Export CSV</h4>
       <p>
-        左側點「<strong>本地化</strong>」，打開啟用開關。
-        在「<strong>① 匯出 CSV</strong>」區塊選「<strong>語言</strong>」＝你要修改的那個語言，按「<strong>匯出 CSV</strong>」。
+        On the left, click<strong>Localization</strong>, then turn on the page toggle.
+        Under<strong>(1) Export CSV</strong>, pick the<strong>Language</strong>you want to overwrite, then press<strong>Export CSV</strong>」。
       </p>
-      <p>可以選的語言有五種：</p>
+      <p>There are five to choose from:</p>
       <div class="tw">
         <table>
-          <thead><tr><th>下拉裡的名字</th><th>就是遊戲設定裡的</th></tr></thead>
+          <thead><tr><th>The names in the dropdown</th><th>are exactly the ones in the game's settings:</th></tr></thead>
           <tbody>
-            <tr><td><code>ChineseTraditional</code></td><td>繁體中文</td></tr>
-            <tr><td><code>ChineseSimplified</code></td><td>简体中文</td></tr>
+            <tr><td><code>ChineseTraditional</code></td><td>Traditional Chinese</td></tr>
+            <tr><td><code>ChineseSimplified</code></td><td>Simplified Chinese</td></tr>
             <tr><td><code>English</code></td><td>English</td></tr>
-            <tr><td><code>Japanese</code></td><td>日本語</td></tr>
+            <tr><td><code>Japanese</code></td><td>Japanese</td></tr>
             <tr><td><code>Korean</code></td><td>한국어</td></tr>
           </tbody>
         </table>
       </div>
-      <p>匯出的 CSV 有四欄，<strong>你只要改最後一欄</strong>：</p>
+      <p>The exported CSV has four columns, and<strong>you only edit the last one</strong>：</p>
       <div class="code">
-        <header>匯出的 CSV 長這樣<span>只改最後一欄</span></header>
-        <pre>source , id , TextID , <span class="s">繁體中文</span>
+        <header>What the exported CSV looks like<span>Edit the last column only</span></header>
+        <pre>source , id , TextID , <span class="s">Traditional Chinese</span>
 <span class="c">  ↑        ↑      ↑         ↑</span>
-<span class="c"> 別動     別動   別動   改這一欄（欄名就是你剛剛選的語言）</span></pre>
+<span class="c"> leave it   leave it   leave it   edit this one (the column is named after the language you picked)</span></pre>
       </div>
       <div class="note">
-        <b>想單獨包成一個 MOD 分享？</b>
-        翻譯會寫進上方「<strong>目標包</strong>」選的那個包。要另開一個，就把下拉點開，
-        在最下面的輸入框打一個新名稱按「<strong>建立</strong>」，再回來匯出。
+        <b>Want to ship the translation as its own MOD?</b>
+        The translation is written into whichever package is selected under<strong>Target package</strong>at the top. To start a separate one, open the dropdown,
+        type a new name in the field at the bottom, press<strong>Create</strong>, then come back and export.
       </div>
       <figure class="shot">
-        <img data-shot="localeExport" alt="本地化頁「① 匯出 CSV」的語言下拉展開，列出五種語言，目前勾選 English">
-        <figcaption><b>① 匯出 CSV</b>「語言」就是你要修改的那個語言，選好按右邊的「匯出 CSV」。</figcaption>
+        <img data-shot="localeExport" alt="The language dropdown under (1) Export CSV on the Localization page, listing five languages with English selected">
+        <figcaption><b>(1) Export CSV</b>Language is the one you are overwriting. Pick it, then press Export CSV on the right.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>用試算表翻譯</h4>
+      <h4><span class="n">Step 2</span>Translate in a spreadsheet</h4>
       <p>
-        用 Excel、Google 試算表之類的軟體打開，在最後一欄改文字。
-        <strong>不想改的列就整列不要動</strong>——匯入時只會寫回你真的改過的列。
+        Open it in Excel, Google Sheets or anything similar and edit the last column.
+        <strong>Leave any row you do not want to change completely alone</strong> — only rows you actually edited get written back on import.
       </p>
       <div class="note warn">
-        <b>存檔一定要用 UTF-8</b>
-        Excel 另存新檔時請選「<strong>CSV UTF-8</strong>」。存成一般 CSV（Big5）中文會全部變亂碼，
-        匯回去遊戲裡就是一堆問號。
+        <b>Always save as UTF-8</b>
+        When you Save As in Excel, choose<strong>CSV UTF-8</strong>. A plain CSV (Big5) mangles every non-ASCII character,
+        and you end up importing a wall of question marks.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>匯入，儲存</h4>
+      <h4><span class="n">Step 3</span>Import and save</h4>
       <p>
-        回到本地化頁，在「<strong>② 匯入 CSV</strong>」按「<strong>匯入 CSV</strong>」。
-        <strong>語言是從 CSV 的標頭讀的</strong>，所以不用再選一次——
-        別人分享給你的 CSV 也能直接匯入。
+        Back on the Localization page, under<strong>(2) Import CSV</strong>, press<strong>Import CSV</strong>」。
+        <strong>The language is read from the CSV header</strong>, so you do not pick it again —
+        a CSV someone else shares with you imports just as well.
       </p>
       <p>
-        匯完會跳一個「匯入完成」的框，告訴你寫進去幾筆、跳過幾筆。
-        關掉之後還可以看「<strong>目前狀態</strong>」與下方「<strong>已建立的翻譯覆寫</strong>」清單，
-        最後按右上角「<strong>儲存設定</strong>」。
+        An Import complete dialog tells you how many rows were written and how many were skipped.
+        After closing it you can still check<strong>Current status</strong>and, below that,<strong>Translation overrides created</strong>.
+        Finally press<strong>Save Settings</strong>」。
       </p>
       <div class="note">
-        <b>「目前狀態」寫著「來源語系 → 目標語系」是同一個語言，這是對的</b>
-        現在是單一語言模式：你改哪個語言，來源和目標就都是它。
+        <b>Current status shows the same language on both sides of source → target, which is correct</b>
+        This is single-language mode: whichever language you edit is both the source and the target.
       </div>
-      <p>最後到模組管理套用，然後<strong>把遊戲語言切到你剛剛改的那個語言</strong>就看得到了。</p>
+      <p>Then apply it in Manage Mods and<strong>switch the game's language to the one you just edited</strong>to see the result.</p>
       <figure class="shot">
-        <img data-shot="localeStatus" alt="匯入完成的對話框，列出目標包、GameString 3 筆、LocalizedStrings 0 筆、跳過（空白）6530 筆">
-        <figcaption><b>匯入完成</b>「跳過（空白）」是你沒動過的那些列——只有真的改過的才會寫進 MOD。</figcaption>
+        <img data-shot="localeStatus" alt="The Import complete dialog, listing the target package, 3 GameString rows, 0 LocalizedStrings rows and 6530 skipped (blank) rows">
+        <figcaption><b>Import complete</b>Skipped (blank) means the rows you never touched — only what you actually changed goes into the MOD.</figcaption>
       </figure>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">03</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>Troubleshooting</h2></div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="locale"><td>翻譯匯入後遊戲還是原文</td><td>沒把遊戲語言切到你當初選來覆蓋的那個語言</td></tr>
-          <tr data-t="locale"><td>翻譯的中文變亂碼</td><td>CSV 存檔時不是 UTF-8。用 Excel 要選「CSV UTF-8」</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="locale"><td>Translation imported but the game still shows the original text</td><td>The game's language is not set to the one you chose to overwrite</td></tr>
+          <tr data-t="locale"><td>Translated text comes out garbled</td><td>The CSV was not saved as UTF-8. In Excel, pick CSV UTF-8</td></tr>
           </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 在地化翻譯 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Localization MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -723,7 +720,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 外觀 MOD 指南</title>
+<title>HSLR Appearance MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/skin/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/skin/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,20 +446,20 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav hslrnav-cur" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/skin/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav hslrnav-cur" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/skin/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 外觀 MOD</div>
-  <h1>用內建編輯器，<br>把自己的圖放進戰場</h1>
+  <div class="eyebrow">HSLR · Appearance MOD</div>
+  <h1>Use the built-in editor<br>to put your own art on the battlefield</h1>
   <p class="lede">
-    換戰場小人、換半身像、換頭像。整個流程不需要寫程式或改設定檔——把圖丟進素材庫、填三個數字、點幾下滑鼠就完成。這份文件用「飯友合集」當範例，帶你走完一次。
+    Battle sprites, half-body portraits, avatars. No code, no config files to hand-edit — drop your art into the Asset Library, type three numbers, click a few times and you are done. This guide walks through it once using the 飯友 collection as the example.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>8</b><span>範例角色</span></div>
-    <div class="stat"><b>10</b><span>張圖 / 人</span></div>
-    <div class="stat"><b>3</b><span>個要填的數字</span></div>
-    <div class="stat"><b>0</b><span>行程式碼</span></div>
+    <div class="stat"><b>8</b><span>example characters</span></div>
+    <div class="stat"><b>10</b><span>images per character</span></div>
+    <div class="stat"><b>3</b><span>numbers to type</span></div>
+    <div class="stat"><b>0</b><span>lines of code</span></div>
   </div>
 
   <div class="parade" id="parade">
@@ -470,204 +470,204 @@ footer code{color:var(--ink-soft)}
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s0"><em>01</em>成品長這樣</a></li>
-      <li><a href="#s1"><em>02</em>開始之前</a></li>
-      <li><a href="#s2"><em>03</em>準備圖檔</a></li>
-      <li><a href="#s3"><em>04</em>素材庫設定</a></li>
-      <li><a href="#s4"><em>05</em>組戰場小人</a></li>
-      <li><a href="#s5"><em>06</em>換半身像</a></li>
-      <li><a href="#s6"><em>07</em>換頭像</a></li>
-      <li><a href="#s7"><em>08</em>套用與發佈</a></li>
-      <li><a href="#a1"><em>A</em>目標角色與職業</a></li>
-      <li><a href="#a2"><em>B</em>動作總表</a></li>
-      <li><a href="#a3"><em>C</em>疑難排解</a></li>
-      <li><a href="#a4"><em>D</em>編輯器寫了什麼</a></li>
+      <li><a href="#s0"><em>01</em>What you end up with</a></li>
+      <li><a href="#s1"><em>02</em>Before you start</a></li>
+      <li><a href="#s2"><em>03</em>Preparing the art</a></li>
+      <li><a href="#s3"><em>04</em>Asset Library setup</a></li>
+      <li><a href="#s4"><em>05</em>Building a battle sprite</a></li>
+      <li><a href="#s5"><em>06</em>Replacing a half-body portrait</a></li>
+      <li><a href="#s6"><em>07</em>Replacing an avatar</a></li>
+      <li><a href="#s7"><em>08</em>Apply and publish</a></li>
+      <li><a href="#a1"><em>A</em>Target character and class</a></li>
+      <li><a href="#a2"><em>B</em>Full action list</a></li>
+      <li><a href="#a3"><em>C</em>Troubleshooting</a></li>
+      <li><a href="#a4"><em>D</em>What the editor writes</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s0">
-    <div class="sec-head"><span class="sec-num">01</span><h2>成品長這樣</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>What you end up with</h2></div>
     <p>
-      八名角色各有一組戰場小人動畫與一張對話半身像。
-      下面卡片裡的小人都是真的在動——就是編輯器組出來的東西在遊戲裡的樣子。
+      Eight characters, each with a set of battle-sprite animations and one dialogue portrait.
+      The sprites in the cards below really are animating — this is what the editor's output looks like in game.
     </p>
     <div class="roster" id="roster"></div>
     <div class="note tip">
-      <b>外觀流程只有三步</b>
-      把 PNG 丟進<strong>素材庫</strong> → 在<strong>素材庫</strong>頁填幀數／幀寬／幀高按「產生」 →
-      到<strong>外觀</strong>頁把圖素套進動作。全程滑鼠操作，不用碰檔案內容。
+      <b>The whole appearance workflow is three steps</b>
+      Drop your PNGs into<strong>Asset Library</strong> → on the<strong>Asset Library</strong>page type the frame count, frame width and frame height and press Generate →
+      go to<strong>Appearance</strong>and assign each image to an action. All mouse work; you never touch a file's contents.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">02</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="skin">
-        <img data-shot="packNew" alt="右上角目標包下拉展開，可切換既有包或在下方輸入新名稱建立">
-        <figcaption><b>目標包</b>上半是既有的包（目前是「飯友合集」），下半輸入新名稱按「建立」開新包。</figcaption>
+        <img data-shot="packNew" alt="The target package dropdown in the top-right corner, where you can switch package or type a new name below to create one">
+        <figcaption><b>Target package</b>The top half lists existing packages (飯友合集 here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="skin">
-        <img data-shot="packToggle" alt="新建的 TEST 包，外觀頁左上角的啟用開關已打開，左側功能列只有「外觀」是實心紅點">
-        <figcaption><b>啟用開關</b>剛建好的「TEST」包，只把「外觀」打開了——左側其他項目都還是空心圓。</figcaption>
+        <img data-shot="packToggle" alt="A newly created TEST package: the Appearance page toggle is on in the top-left corner, and Appearance is the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>A freshly created TEST package with only Appearance turned on — every other item on the left is still hollow.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s2">
-    <div class="sec-head"><span class="sec-num">03</span><h2>準備圖檔</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Preparing the art</h2></div>
     <p class="sec-note">
-      準備圖檔有兩種方式：<strong>路線一</strong>直接拿範例包現成的圖，<strong>路線二</strong>自己做圖。
-      本指南從第 03 節開始的每一個步驟，都是以<strong>路線一</strong>的素材示範。
+      There are two ways to get your art ready:<strong>Route 1</strong>use the ready-made art from the sample pack;<strong>Route 2</strong>make your own.
+      From section 03 onwards, every step in this guide is demonstrated with the<strong>Route 1</strong>assets.
     </p>
 
-    <h3>路線一：直接用範例包的圖</h3>
+    <h3>Route 1: use the sample pack's art</h3>
     <p>
-      想先跑一次流程、確認每一步長什麼樣，最快的方法是用現成素材。
-      把範例 MOD 包<strong>「飯友」解壓縮</strong>，打開裡面的
-      <code>skin</code> 資料夾，需要的圖<strong>全部都在這一層</strong>——
-      80 張戰場小人序列圖，加上 8 張半身立繪。
+      If you just want to run through the workflow once and see what each step looks like, ready-made assets are the fastest route.
+      Unzip the<strong>飯友 sample MOD</strong>, open the
+      <code>skin</code> folder inside, and everything you need is<strong>right there at that level</strong> —
+      80 battle-sprite sheets plus 8 half-body portraits.
     </p>
     <figure class="shot">
-      <img data-shot="artFiles" alt="飯友包 skin 資料夾內容，8 個角色各 10 張，檔名是 p100_wait.png 這種格式">
-      <figcaption><b>飯友 / skin</b>檔名是「角色前綴 _ 動作」，例如 <code>p400_wait.png</code> 就是漢克斯的待機。</figcaption>
+      <img data-shot="artFiles" alt="The 飯友 pack's skin folder: 10 images for each of 8 characters, named like p100_wait.png">
+      <figcaption><b>飯友 / skin</b>Filenames are character prefix + underscore + action, so <code>p400_wait.png</code> is Hanks idling.</figcaption>
     </figure>
     <p>
-      八個前綴分別對應八名角色：
-      <code>p100</code> 雷歐納德、<code>p200</code> 琥、<code>p300</code> 緹娜、<code>p400</code> 漢克斯、
-      <code>p500</code> 雪拉、<code>p600</code> 雷特、<code>p700</code> 嚎、<code>p900</code> 克羅蒂。
+      The eight prefixes map to the eight characters:
+      <code>p100</code> Leonard,<code>p200</code> Hu,<code>p300</code> Tina,<code>p400</code> Hanks,
+      <code>p500</code> Shira,<code>p600</code> Rett,<code>p700</code> Hao,<code>p900</code> Cloti.
     </p>
 
-    <h3>路線二：自己新增圖檔</h3>
+    <h3>Route 2: make your own art</h3>
     <p>
-      要放自己畫的角色，就照下面的規格做圖。每個角色只要
-      <strong>10 張</strong>就夠湊出 13 個動作——左走用右走鏡像，不必另外畫。
-      每張圖是一個動作的完整序列，把每一幀<strong>等距排成一列</strong>。
+      To use a character you drew yourself, follow the spec below. Each character needs only
+      <strong>10 images</strong>to cover 13 actions — walking left is the right-walk sheet mirrored, so you never draw it.
+      Each image is one complete action sequence, with every frame<strong>laid out in a row at equal spacing</strong>。
     </p>
 
     <div class="tw">
       <table>
-        <thead><tr><th>這張圖是</th><th>對應動作</th><th class="num">幀數</th><th>必填？</th></tr></thead>
+        <thead><tr><th>What the image is</th><th>Action</th><th class="num">Frames</th><th>Required?</th></tr></thead>
         <tbody>
-          <tr><td>待機</td><td><code>wait</code></td><td class="num">8</td><td>必填</td></tr>
-          <tr><td>向下（面向鏡頭）走</td><td><code>b_walk</code> 下走</td><td class="num">8</td><td>必填</td></tr>
-          <tr><td>向上（背對鏡頭）走</td><td><code>t_walk</code> 上走</td><td class="num">8</td><td>必填</td></tr>
-          <tr><td>向右走</td><td><code>r_walk</code> 右走</td><td class="num">8</td><td>必填</td></tr>
-          <tr><td>—</td><td><code>l_walk</code> 左走</td><td class="num">—</td><td>必填，但用右走鏡像</td></tr>
-          <tr><td>受擊</td><td><code>hurt</code> 受擊</td><td class="num">6</td><td>選填</td></tr>
-          <tr><td>倒地</td><td><code>dead</code> 死亡</td><td class="num">1</td><td>選填</td></tr>
-          <tr><td>詠唱 / 施法</td><td><code>magic</code> 施法</td><td class="num">8</td><td>選填</td></tr>
-          <tr><td>使用道具</td><td><code>item</code> 使用道具</td><td class="num">6</td><td>選填</td></tr>
-          <tr><td>專用演出 ×2</td><td><code>spec_01</code> / <code>spec_02</code></td><td class="num">5</td><td>看角色</td></tr>
+          <tr><td>Idle</td><td><code>wait</code></td><td class="num">8</td><td>Required</td></tr>
+          <tr><td>Walking down, facing the camera</td><td><code>b_walk</code> Walk down</td><td class="num">8</td><td>Required</td></tr>
+          <tr><td>Walking up, back to the camera</td><td><code>t_walk</code> Walk up</td><td class="num">8</td><td>Required</td></tr>
+          <tr><td>Walking right</td><td><code>r_walk</code> Walk right</td><td class="num">8</td><td>Required</td></tr>
+          <tr><td>—</td><td><code>l_walk</code> Walk left</td><td class="num">—</td><td>Required, but mirrored from walk right</td></tr>
+          <tr><td>Hurt</td><td><code>hurt</code> Hurt</td><td class="num">6</td><td>Optional</td></tr>
+          <tr><td>Down</td><td><code>dead</code> Death</td><td class="num">1</td><td>Optional</td></tr>
+          <tr><td>Casting</td><td><code>magic</code> Magic</td><td class="num">8</td><td>Optional</td></tr>
+          <tr><td>Use item</td><td><code>item</code> Use item</td><td class="num">6</td><td>Optional</td></tr>
+          <tr><td>Special sequences ×2</td><td><code>spec_01</code> / <code>spec_02</code></td><td class="num">5</td><td>Character-dependent</td></tr>
         </tbody>
       </table>
     </div>
     <p>
-      幀數不是硬性規定，上表是範例包的做法。你想做 12 幀的待機也可以，
-      只要<strong>每一幀大小一致</strong>、等一下在素材庫填對數字就好。
+      Frame counts are not fixed; the table above is just what the sample pack does. A 12-frame idle is perfectly fine
+      as long as<strong>every frame is the same size</strong>and you type the right numbers into the Asset Library later.
     </p>
 
     <div class="note tip">
-      <b>選填動作缺了也不會壞</b>
-      沒設定的動作會自動退回用「待機」。所以第一次做可以只做 4 張走路圖 + 待機，
-      能跑起來之後再慢慢補。
+      <b>Missing optional actions break nothing</b>
+      Any action you do not set falls back to Idle. So on your first attempt you can do four walk sheets plus an idle,
+      get it running, and fill in the rest later.
     </div>
 
-    <h4>檔名怎麼取都行，但取好一點</h4>
+    <h4>Names are free, but choose well</h4>
     <p>
-      編輯器是從清單裡挑圖，檔名不影響功能。不過素材庫是所有 MOD 共用的，
-      圖一多就很難找——建議照範例用 <code>角色_動作</code> 的命名，在清單裡一眼認得出來。
+      The editor picks images from a list, so filenames have no functional effect. But the Asset Library is shared by every MOD,
+      and once it fills up things get hard to find — so follow the sample and use <code>character_action</code> , which stays readable in the list.
     </p>
 
-    <h3>把一張圖切開來看</h3>
+    <h3>A sheet, taken apart</h3>
     <p>
-      下面是範例素材的 <code>p400_spec_01.png</code>，5 幀。
-      紫色虛線就是遊戲切開它的位置——這也是下一步要填的三個數字的由來：
+      Below is the sample pack's <code>p400_spec_01.png</code>, 5 frames.
+      The dashed purple lines are where the game slices it — and where the three numbers in the next step come from:
     </p>
 
     <div class="dissect" id="dissect">
@@ -676,253 +676,252 @@ footer code{color:var(--ink-soft)}
     </div>
 
     <div class="note warn">
-      <b>唯一的硬性規定</b>
-      <strong>每一幀大小必須一致</strong>。排列方式是左到右、上到下；
-      可以排成多列（例如 12 幀排 4×3），最後一行沒排滿的部分會自動忽略。
+      <b>The one hard rule</b>
+      <strong>every frame must be the same size</strong>. Frames run left to right, then top to bottom.
+      Multiple rows are fine (12 frames as 4×3, say); an unfilled remainder on the last row is ignored.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s3">
-    <div class="sec-head"><span class="sec-num">04</span><h2>素材庫：讓遊戲看懂你的圖</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Asset Library: teaching the game to read your art</h2></div>
     <p>
-      素材庫是<strong>所有 MOD 共用</strong>的一個資料夾。
-      你在編輯頁挑素材，按下「儲存設定」時才會把真正用到的檔案複製進目標包——
-      所以發佈出去的包一定是自足的，不會少檔。
+      The Asset Library is one folder<strong>shared by every MOD</strong>.
+      You pick assets on the editing page, and only when you press Save Settings are the files you actually used copied into the target package —
+      which is why a published package is always self-contained, never missing a file.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>把 PNG 複製進素材庫</h4>
-      <p>素材庫在遊戲存檔目錄底下，完整路徑是：</p>
+      <h4><span class="n">Step 1</span>Copy your PNGs into the Asset Library</h4>
+      <p>The Asset Library sits under the game's save directory. The full path is:</p>
       <div class="code">
-        <header>素材庫位置<span>直接複製這一行去貼</span></header>
+        <header>Asset Library location<span>Copy this line as-is</span></header>
         <pre>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\ModAssetLibrary\</pre>
       </div>
-      <p>最快的開法：</p>
+      <p>Quickest way in:</p>
       <ol>
-        <li>按 <kbd>Win</kbd> + <kbd>R</kbd> 叫出「執行」</li>
-        <li>把上面那一行整段貼進去，按 <kbd>Enter</kbd>——檔案總管會直接開在素材庫</li>
+        <li>press <kbd>Win</kbd> + <kbd>R</kbd> to bring up Run</li>
+        <li>, paste the whole line above, press <kbd>Enter</kbd>and Explorer opens straight at the Asset Library</li>
       </ol>
-      <p>裡面已經照類型分好資料夾，把檔案<strong>複製</strong>（不是剪下）到對應的那一個：</p>
+      <p>Inside it is already split by type. Use<strong>Copy</strong>(not Cut) to put each file in the right one:</p>
       <div class="code">
         <header>ModAssetLibrary\</header>
-        <pre>├─ <span class="s">skin\</span>    <span class="c">← 戰場小人的序列圖：飯友包 skin 裡的 80 張 p***_*.png</span>
-├─ <span class="s">image\</span>   <span class="c">← 半身像／頭像的立繪：飯友包 skin 裡的 8 張中文檔名 PNG</span>
+        <pre>├─ <span class="s">skin\</span>    <span class="c">← battle-sprite sheets: the 80 p***_*.png files in the 飯友 pack's skin folder</span>
+├─ <span class="s">image\</span>   <span class="c">← portrait and avatar art: the 8 PNGs with Chinese filenames in the same folder</span>
 ├─ icon\    bgm\    font\    voice\    spine\</pre>
       </div>
       <p>
-        所以用範例包的話，是<strong>打開「飯友 / skin」，把 80 張 <code>p***_*.png</code>
-        複製到 <code>ModAssetLibrary\skin\</code>，把 8 張中文檔名的立繪
-        複製到 <code>ModAssetLibrary\image\</code></strong>。
+        So with the sample pack that means<strong>opening 飯友 / skin, copying the 80 <code>p***_*.png</code>
+        files into <code>ModAssetLibrary\skin\</code>, and the 8 Chinese-named portraits
+        into <code>ModAssetLibrary\image\</code></strong>。
       </p>
       <div class="note">
-        <b>也可以放在包裡</b>
-        放進 MOD 包自己的 <code>skin\</code> 也讀得到，但只有放素材庫才能跨包共用，
-        做「合集」時不會因為切了包就選不到圖。
+        <b>You can also keep them inside the package</b>
+        The package's own <code>skin\</code> folder is read too, but only the Asset Library is shared across packages —
+        which matters for a collection, where switching packages should not lose access to your art.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>在素材庫頁填三個數字</h4>
-      <p>回到遊戲，左邊功能列點<strong>素材庫</strong>，照下面四小步走一次：</p>
+      <h4><span class="n">Step 2</span>Type the three numbers on the Asset Library page</h4>
+      <p>Back in the game, click<strong>Asset Library</strong>in the left-hand list and work through these four steps:</p>
 
       <ol class="substeps">
         <li>
-          切到<strong>素材庫</strong>頁，按右上角的「<strong>重新掃描</strong>」，
-          剛複製進去的圖就會出現在清單裡。上排可以切素材類型，序列圖看
-          <strong>「序列圖」</strong>那一頁。
+          Switch to the<strong>Asset Library</strong>tab and press<strong>Rescan</strong>in the top-right corner;
+          the files you just copied appear in the list. The top row switches asset type — sprite sheets live under
+          <strong>Sprite sheets</strong>.
         </li>
         <li>
-          找到 <code>p400_spec_01</code> 這一列。這時候「圖片尺寸」已經顯示
-          <strong>840 × 169</strong>，但幀數／幀寬／幀高還是預設的 <code>1 / 256 / 256</code>，
-          「配置」欄寫著<strong>未設定</strong>。
+          Find the <code>p400_spec_01</code> row. Image size already reads
+          <strong>840 × 169</strong>, but frame count, width and height are still the default <code>1 / 256 / 256</code>,
+          and the Config column says<strong>not set</strong>。
           <figure class="shot">
-            <img data-shot="lib1" alt="素材庫頁的序列圖清單，p400_spec_01 那一列還是預設值 1 / 256 / 256，配置顯示未設定">
-            <figcaption><b>掃描後</b>每一列都是待填狀態，「配置」欄一律是「未設定」。</figcaption>
+            <img data-shot="lib1" alt="The sprite-sheet list on the Asset Library page: the p400_spec_01 row still shows the defaults 1 / 256 / 256 with Config reading not set">
+            <figcaption><b>After a rescan</b>every row is waiting to be filled in, with Config reading not set throughout.</figcaption>
           </figure>
         </li>
         <li>
-          把三個欄位改成 <strong>幀數 5</strong>、<strong>幀寬 168</strong>、<strong>幀高 169</strong>。
-          幀寬是圖片寬度除以幀數（<code>840 ÷ 5 = 168</code>），排成一列時幀高就是圖片高度。
+          Change the three fields to <strong>5 frames</strong>、<strong>168 wide</strong>、<strong>169 high</strong>.
+          Frame width is the image width divided by the frame count (<code>840 ÷ 5 = 168</code>), and for a single row the frame height is simply the image height.
         </li>
         <li>
-          按那一列的紅色「<strong>產生</strong>」。「排列」會自動變成 <strong>5 × 1</strong>，
-          「配置」欄跳出綠色的 <code>tex_kf_063.cfg</code>，按鈕也變成「更新」——
-          這張圖就設定完成了。
+          Press the red<strong>Generate</strong>on that row. Layout switches to <strong>5 × 1</strong>by itself,
+          Config turns green and shows a <code>tex_kf_063.cfg</code>, and the button becomes Update —
+          that image is now configured.
           <figure class="shot">
-            <img data-shot="lib2" alt="p400_spec_01 填入 5 / 168 / 169 並按下產生後，排列變成 5 x 1、配置顯示 tex_kf_063.cfg">
-            <figcaption><b>產生之後</b>配置欄有綠色檔名 = 這張圖已經可以在外觀頁被挑到了。</figcaption>
+            <img data-shot="lib2" alt="After entering 5 / 168 / 169 for p400_spec_01 and pressing Generate, Layout reads 5 x 1 and Config shows tex_kf_063.cfg">
+            <figcaption><b>After generating</b>a green filename in Config means the image can now be picked on the Appearance page.</figcaption>
           </figure>
         </li>
       </ol>
 
       <div class="note tip">
-        <b>配置檔的編號不用管</b>
-        <code>tex_kf_063</code> 這個號碼是系統自動配的，每個人、每一次都可能不一樣，
-        不影響結果。你只要認得綠色檔名旁邊的<strong>圖片名稱</strong>就好。
+        <b>Ignore the config file's number</b>
+        <code>tex_kf_063</code> It is assigned automatically and may differ for every person and every run;
+        it changes nothing. All you need to recognise is the<strong>image name</strong>beside the green filename.
       </div>
 
       <div class="note warn">
-        <b>下一步之前</b>
-        把範例包<strong>所有</strong>要用的圖都照上面設定完（每一列的「配置」欄都有綠色檔名），
-        才進到外觀頁。沒產生配置的圖，在外觀頁的清單裡是挑不到的。
-        整批處理可以按右上角的「<strong>儲存全部</strong>」。
+        <b>Before moving on</b>
+        Configure<strong>every</strong>image you plan to use the same way — every row's Config column showing a green filename —
+        before you go to the Appearance page. An image with no config cannot be picked there at all.
+        To do a batch in one go, use<strong>Save all</strong>」。
       </div>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s4">
-    <div class="sec-head"><span class="sec-num">05</span><h2>外觀頁：組出戰場小人</h2></div>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Appearance page: building the battle sprite</h2></div>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>按「+ 新增戰場小人」</h4>
+      <h4><span class="n">Step 1</span>Press + Add battle sprite</h4>
       <p>
-        功能列點<strong>外觀</strong>，先把左上角的啟用開關打開，
-        再按右上角的「<strong>+ 新增戰場小人</strong>」，就會進入「角色外觀設定」頁。
+        In the list click<strong>Appearance</strong>, turn on the toggle in the top-left corner,
+        then press<strong>+ Add battle sprite</strong>in the top-right corner to open the Character appearance settings page.
       </p>
       <figure class="shot">
-        <img data-shot="appearance" alt="外觀管理頁，右上角有新增戰場小人、新增頭像替換、新增半身像替換三顆按鈕">
-        <figcaption><b>外觀管理</b>三顆新增按鈕：戰場小人、頭像替換、半身像替換。最右邊紅色的是「儲存設定」。</figcaption>
+        <img data-shot="appearance" alt="The Appearance manager page, with Add battle sprite, Add avatar replacement and Add half-body replacement in the top-right corner">
+        <figcaption><b>Appearance manager</b>Three Add buttons: battle sprite, avatar replacement, half-body replacement. The red one on the far right is Save Settings.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>填設定檔名稱</h4>
+      <h4><span class="n">Step 2</span>Name the profile</h4>
       <p>
-        最上面一列的「<strong>設定檔名稱</strong>」，填一個你自己看得懂的名字就好，
-        例如角色名「漢克斯」。這只是清單上的標籤，不影響功能，但一包做了十幾筆之後，
-        有名字跟沒名字差很多。
+        The<strong>Display name</strong>field at the top just needs something you will recognise —
+        the character's name, Hanks, for instance. It is only a label in the list and changes nothing functionally, but once a package holds a dozen entries
+        the difference between named and unnamed is enormous.
       </p>
       <figure class="shot">
-        <img data-shot="stName" alt="角色外觀設定頁，設定檔名稱填入「漢克斯」">
-        <figcaption><b>設定檔名稱</b>左邊是全域參數與動作列表，右邊是「可用圖素」清單。</figcaption>
+        <img data-shot="stName" alt="The Character appearance settings page with the display name set to Hanks">
+        <figcaption><b>Display name</b>Global parameters and the action list on the left, the available-assets list on the right.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>指定要換誰</h4>
+      <h4><span class="n">Step 3</span>Say who you are replacing</h4>
       <p>
-        點「<strong>目標角色</strong>」下拉，從清單裡選要替換的角色。
-        每一項後面括號裡的數字是該角色的編號，例如
-        <code>漢克斯（400）</code>、<code>克羅蒂（900）</code>。
+        Open the<strong>Target character</strong>dropdown and pick the character to replace.
+        The number in brackets after each entry is that character's ID, for example
+        <code>Hanks (400)</code>、<code>Cloti (900)</code>。
       </p>
       <figure class="shot">
-        <img data-shot="stChar" alt="目標角色下拉展開，列出一般兵、克羅蒂、嚎等角色與其編號">
-        <figcaption><b>目標角色</b>清單很長，包含主角群、一般兵與各種怪物。</figcaption>
+        <img data-shot="stChar" alt="The Target character dropdown, listing generic soldiers, Cloti, Hao and others with their IDs">
+        <figcaption><b>Target character</b>It is a long list, covering the main cast, generic troops and every kind of monster.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 4</span>選擇替換職業</h4>
+      <h4><span class="n">Step 4</span>Choose which class it applies to</h4>
       <p>
-        目標角色右邊還有一個下拉，決定這張圖要套用到<strong>哪個轉職階段</strong>：
+        There is a second dropdown to the right of Target character, deciding which<strong>class tier</strong>：
       </p>
       <ul>
-        <li><strong>全部</strong> — 該角色所有職業都用這張圖。<strong>一般選這個就好。</strong></li>
-        <li><strong>一轉 / 二轉 / 三轉…</strong> — 只有玩家轉到該階職業時才顯示。</li>
+        <li><strong>All</strong> — every class of that character uses this art.<strong>This is normally what you want.</strong></li>
+        <li><strong>Tier 1 / Tier 2 / Tier 3…</strong> — shown only once the player reaches that class tier.</li>
       </ul>
       <p>
-        可以同時做多筆分層：一筆「全部」打底，再加一筆「二轉」覆寫，
-        玩家轉到二轉就看到不一樣的造型。不能轉職的角色（例如怪物）只會有「全部」。
+        You can layer several entries: one All as the base, plus a Tier 2 that overrides it,
+        so the player sees a different look after promoting. Characters that cannot promote — monsters, say — only offer All.
       </p>
       <figure class="shot">
-        <img data-shot="stJob" alt="職業下拉展開，選項為全部、一轉、二轉、三轉">
-        <figcaption><b>職業</b>選項依該角色可轉的階數自動帶出。</figcaption>
+        <img data-shot="stJob" alt="The class dropdown, offering All, Tier 1, Tier 2 and Tier 3">
+        <figcaption><b>Class</b>The options follow whatever tiers that character can actually reach.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 5</span>把圖素套進動作</h4>
-      <p>操作是固定的兩下，重複到所有動作都指派完：</p>
+      <h4><span class="n">Step 5</span>Assign assets to actions</h4>
+      <p>It is always the same two clicks, repeated until every action is assigned:</p>
       <ol class="substeps">
         <li>
-          在<strong>右側「可用圖素」</strong>勾選一張圖素——就是剛剛在素材庫按過「產生」的那些。
-          勾中的那一列會變成粉紅底，同時左邊動作列表的「套用」按鈕會從淡粉色<strong>變成實心紅色</strong>
-          （沒勾圖素時是不能按的）。
+          In the<strong>available-assets list on the right</strong>, tick an asset — one of the images you pressed Generate on in the Asset Library.
+          The ticked row turns pink, and the Apply buttons in the action list on the left go from pale pink to<strong>solid red</strong>
+           (with nothing ticked they cannot be pressed).
         </li>
         <li>
-          在<strong>中間「動作列表」</strong>找到要指派的動作，點該列的「<strong>套用</strong>」。
+          In the<strong>In the action list in the middle</strong>, find the action you want and press<strong>Apply</strong>」。
         </li>
       </ol>
       <figure class="shot">
-        <img data-shot="stApply1" alt="右側勾選 p400_spec_01 之後該列變粉紅底，左側動作列的套用按鈕變成實心紅色">
-        <figcaption><b>先勾圖素</b>右側勾選 <code>p400_spec_01</code>（5 幀），左側的「套用」就亮起來了。</figcaption>
+        <img data-shot="stApply1" alt="With p400_spec_01 ticked on the right, its row turns pink and the Apply buttons in the action list turn solid red">
+        <figcaption><b>Tick the asset first</b>Ticking <code>p400_spec_01</code> (5 frames) on the right lights up Apply on the left.</figcaption>
       </figure>
       <p>
-        套用成功之後，那一列會出現<strong>綠色的圖片檔名</strong>，右邊多出三樣東西：
-        播放模式下拉（<code>loop</code> 循環／<code>once</code> 播一次）、
-        <strong>鏡像</strong>勾選框、還有一顆 <strong>◎</strong> 站位設定鈕。
-        要換圖就按「取消套用」再重來。
+        Once applied, the row shows a<strong>green filename</strong> and gains three controls on the right:
+        a playback dropdown (<code>loop</code> loop or<code>once</code> play once), a
+        <strong>Mirror</strong>checkbox, and a <strong>◎</strong> button for stance settings.
+        To swap the image, press Unapply and start that row again.
       </p>
       <figure class="shot">
-        <img data-shot="stApply2" alt="套用後該動作列顯示綠色檔名 p400_spec_01.png、loop 下拉、鏡像勾選框與取消套用按鈕">
-        <figcaption><b>套用之後</b>綠色檔名 = 已綁定。右邊是播放模式、鏡像、站位設定與取消套用。</figcaption>
+        <img data-shot="stApply2" alt="After applying, the action row shows the green filename p400_spec_01.png, a loop dropdown, a Mirror checkbox and an Unapply button">
+        <figcaption><b>After applying</b>a green filename means it is bound. To its right: playback mode, mirror, stance settings and unapply.</figcaption>
       </figure>
       <div class="note tip">
-        <b>左走不用另外畫</b>
-        把<strong>右走那張圖素</strong>也套用到「左走」，然後勾該列的「<strong>鏡像</strong>」。
-        系統會自動水平翻轉，省下一整組素材。
+        <b>You never draw the left walk</b>
+        Apply the<strong>walk-right asset</strong>to Walk left as well, then tick<strong>Mirror</strong>on that row.
+        The game flips it horizontally for you, saving a whole set of art.
       </div>
       <p>
-        丟了新圖進資料夾之後，按「可用圖素」右上的「<strong>重新讀取</strong>」就會刷新，不必關掉重進。
+        After dropping new art into the folder, press<strong>Reload</strong>above the available-assets list to refresh — no need to close and reopen.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 6</span>調全域設定與站位</h4>
-      <p>動作列表上方有四組數值，整個角色共用：</p>
+      <h4><span class="n">Step 6</span>Tune the global settings and stance</h4>
+      <p>Four values sit above the action list, shared by the whole character:</p>
       <div class="tw">
         <table>
-          <thead><tr><th>欄位</th><th>意思</th><th>建議值</th></tr></thead>
+          <thead><tr><th>Column</th><th>What it does</th><th>Suggested</th></tr></thead>
           <tbody>
-            <tr><td><strong>FPS</strong></td><td>播放速度，越大越快</td><td class="num">12</td></tr>
-            <tr><td><strong>Pivot X</strong></td><td>錨點水平位置（0=左, 0.5=中, 1=右）</td><td class="num">0.5</td></tr>
-            <tr><td><strong>Pivot Y</strong></td><td>錨點垂直位置（0=底部, 0.5=中, 1=頂部）</td><td class="num">0</td></tr>
-            <tr><td><strong>偏移 X / Y</strong></td><td>對齊之後再推幾個像素</td><td class="num">0 / −12</td></tr>
+            <tr><td><strong>FPS</strong></td><td>Playback speed; higher is faster</td><td class="num">12</td></tr>
+            <tr><td><strong>Pivot X</strong></td><td>Anchor X (0 = left, 0.5 = centre, 1 = right)</td><td class="num">0.5</td></tr>
+            <tr><td><strong>Pivot Y</strong></td><td>Anchor Y (0 = bottom, 0.5 = middle, 1 = top)</td><td class="num">0</td></tr>
+            <tr><td><strong>Offset X / Y</strong></td><td>A few pixels of nudge after alignment</td><td class="num">0 / −12</td></tr>
           </tbody>
         </table>
       </div>
       <p>
-        數字看不懂沒關係——按 <strong>◎</strong> 會打開「<strong>站位設定</strong>」，
-        直接把角色<strong>拖到綠線上</strong>就好。綠線是「腳底目標」，
-        腳底對到綠線就等於站進格子裡；方向鍵可以微調 1px。
+        The numbers do not have to make sense to you — press <strong>◎</strong> to open<strong>Stance settings</strong>and simply<strong>drag the character onto the green line</strong>. The green line is the foot target;
+        feet on the line means the sprite stands correctly in its tile. Arrow keys nudge by 1px.
       </p>
       <figure class="shot">
-        <img data-shot="stPivot" alt="站位設定視窗，角色站在九宮格中，下方有一條綠色的腳底目標線">
-        <figcaption><b>站位設定</b>調好一個動作之後，可以按「<strong>套用到所有動作</strong>」一次帶到其他動作。</figcaption>
+        <img data-shot="stPivot" alt="The Stance settings window: the character stands on a 3×3 grid with a green foot-target line below">
+        <figcaption><b>Stance settings</b>Once one action is right, press<strong>Apply to all actions</strong>to carry it across the rest.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 7</span>儲存</h4>
+      <h4><span class="n">Step 7</span>Save</h4>
       <p>
-        按左上角紅色的「<strong>儲存</strong>」。
-        <strong>必填的五個動作</strong>是：待機、上走、下走、左走、右走；
-        其餘動作缺了會自動用待機替代，不會出錯。
+        Press the red<strong>Save</strong>」。
+        <strong>The five required actions</strong>are idle and the four walks — up, down, left, right.
+        Anything else falls back to idle if missing, without error.
       </p>
     </div>
 
     <div class="note alert">
-      <b>做 spec 之前一定要先看這個</b>
-      <code>spec_01</code>～<code>spec_04</code> <strong>不是通用動作</strong>，
-      同一個槽在不同角色是完全不同的演出，而且<strong>全遊戲只有兩個角色會播</strong>：
-      <strong>緹娜</strong>（順繩下降 / 落地）與<strong>漢克斯</strong>（二轉起的四向偷襲）。
-      其他角色就算做了圖也<strong>永遠不會出現</strong>。<br><br>
-      判斷方法很簡單：<strong>編輯器會自動把用不到的槽藏起來</strong>——
-      在動作列表裡看不到 spec 那幾列，就代表這個角色不用做。
-      看得到的話，列名會直接寫出它的實際用途（例如「偷襲・向下」），
-      下面還有一行說明什麼時候會播。
+      <b>Read this before you make any spec art</b>
+      <code>spec_01</code>～<code>spec_04</code> <strong>are not generic actions</strong>.
+      The same slot means something completely different on each character, and<strong>only two characters in the entire game ever play them</strong>：
+      <strong>Tina</strong>(rope descent and landing) and<strong>Hanks</strong>(the four-way ambush from Tier 2 onwards).
+      For anyone else the art will<strong>never appear</strong>。<br><br>
+      Telling them apart is easy:<strong>the editor hides slots that are never used</strong> —
+      if you cannot see the spec rows in the action list, that character does not need them.
+      If you can, the row is labelled with what it actually does (Ambush · down, for instance),
+      with a line underneath saying when it plays.
     </div>
 
-    <h3>完成後動作預覽</h3>
+    <h3>Finished animation preview</h3>
     <p>
-      挑一個角色跟動作，看看它實際的動畫，以及在編輯器裡對應的那一列：
+      Pick a character and an action to see the real animation alongside the row it corresponds to in the editor:
     </p>
 
     <div class="viewer" id="viewer">
-      <div class="picker" id="pickChar" role="group" aria-label="選擇角色"></div>
-      <div class="picker" id="pickAct" role="group" aria-label="選擇動作"></div>
+      <div class="picker" id="pickChar" role="group" aria-label="Character"></div>
+      <div class="picker" id="pickAct" role="group" aria-label="Action"></div>
       <div class="plate checker" id="plate"></div>
       <div class="foot">
         <div class="meta" id="meta"></div>
@@ -933,306 +932,304 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="s5">
-    <div class="sec-head"><span class="sec-num">06</span><h2>換半身像</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Replacing a half-body portrait</h2></div>
     <p>
-      半身像是對話與角色狀態面板上的大圖。它是靜圖、不做動畫，
-      設定比戰場小人單純很多，<strong>不需要切格</strong>。
+      The half-body portrait is the large image in dialogue and on the character status panel. It is a still image with no animation,
+      which makes it far simpler than a battle sprite —<strong>no slicing needed</strong>。
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>把圖片放進素材庫</h4>
+      <h4><span class="n">Step 1</span>Put the image into the Asset Library</h4>
       <p>
-        立繪放到 <code>ModAssetLibrary\<strong>image\</strong></code>（跟 skin 同一層）。
-        範例包的 8 張中文檔名 PNG（<code>雷歐納德.png</code>、<code>緹娜.png</code>…）就是半身立繪。
+        Portraits go in <code>ModAssetLibrary\<strong>image\</strong></code> (the same level as skin).
+        The sample pack's 8 Chinese-named PNGs (<code>雷歐納德.png</code>、<code>緹娜.png</code>…) are the half-body portraits.
       </p>
       <p>
-        半身像不切格，所以<strong>不用去素材庫頁填幀數</strong>，複製進去就可以了。
+        Half-body portraits are not sliced, so<strong>there is no frame count to type on the Asset Library page</strong> — copying them in is enough.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>按「+ 新增半身像替換」</h4>
-      <p>回到<strong>外觀</strong>頁，按右上角的「<strong>+ 新增半身像替換</strong>」。</p>
+      <h4><span class="n">Step 2</span>Press + Add half-body replacement</h4>
+      <p>Back on<strong>Appearance</strong>tab and press<strong>+ Add half-body replacement</strong>」。</p>
       <figure class="shot">
-        <img data-shot="appearance" alt="外觀管理頁，右上角第三顆按鈕是「+ 新增半身像替換」">
-        <figcaption><b>外觀管理</b>半身像用第三顆按鈕。</figcaption>
+        <img data-shot="appearance" alt="The Appearance manager page, where the third button in the top-right corner is + Add half-body replacement">
+        <figcaption><b>Appearance manager</b>Half-body portraits use the third button.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>填設定檔名稱</h4>
-      <p>一樣填一個看得懂的名字，通常直接用角色名。</p>
+      <h4><span class="n">Step 3</span>Name the profile</h4>
+      <p>Again, give it a name you will recognise — usually just the character's.</p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 4</span>指定要換誰</h4>
-      <p>「目標角色」下拉選要替換的角色。</p>
+      <h4><span class="n">Step 4</span>Say who you are replacing</h4>
+      <p>Pick who you are replacing from the Target character dropdown.</p>
       <figure class="shot">
-        <img data-shot="halfChar" alt="半身像設定頁的目標角色下拉展開">
-        <figcaption><b>目標角色</b>跟戰場小人是同一份角色清單。</figcaption>
+        <img data-shot="halfChar" alt="The Target character dropdown on the half-body settings page">
+        <figcaption><b>Target character</b>It is the same character list as for battle sprites.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 5</span>選擇替換職業</h4>
-      <p>右邊的下拉選套用範圍：全部 / 一轉 / 二轉 / 三轉。一般選「<strong>全部</strong>」。</p>
+      <h4><span class="n">Step 5</span>Choose which class it applies to</h4>
+      <p>The dropdown to its right sets the scope: All / Tier 1 / Tier 2 / Tier 3. Normally pick<strong>All</strong>」。</p>
       <figure class="shot">
-        <img data-shot="halfScope" alt="半身像的套用範圍下拉，選項為全部、一轉、二轉、三轉">
-        <figcaption><b>套用範圍</b>想讓轉職後換一張立繪，就多做一筆指定該階職業。</figcaption>
+        <img data-shot="halfScope" alt="The half-body scope dropdown, offering All, Tier 1, Tier 2 and Tier 3">
+        <figcaption><b>Scope</b>To change the portrait after a promotion, add a second entry pinned to that tier.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 6</span>選替換模式</h4>
+      <h4><span class="n">Step 6</span>Choose a replacement mode</h4>
       <div class="note alert">
-        <b>這一步選錯，圖就不會出現</b>
-        用範例包這種<strong>自己畫的整張立繪</strong>，一律選
-        「<strong>單圖（直接顯示）</strong>」。
+        <b>Get this step wrong and your art simply will not show</b>
+        For<strong>a complete portrait you drew yourself</strong>, like the sample pack's, always choose
+        <strong>Single image (direct)</strong>」。
       </div>
-      <p>四個模式的差別：</p>
+      <p>How the four modes differ:</p>
       <div class="tw">
         <table>
-          <thead><tr><th>模式</th><th>做什麼</th><th>什麼時候用</th></tr></thead>
+          <thead><tr><th>Mode</th><th>What it does</th><th>When to use it</th></tr></thead>
           <tbody>
             <tr>
-              <td><strong>單圖（直接顯示）</strong></td>
-              <td>關掉原本的骨架，把整張 PNG 直接貼上</td>
-              <td><strong>這包用這個。</strong>自繪立繪、版面跟原本對不起來時</td>
+              <td><strong>Single image (direct)</strong></td>
+              <td>Turns off the original rig and draws your PNG as-is</td>
+              <td><strong>What this pack uses.</strong>A portrait you drew yourself whose layout does not line up with the original</td>
             </tr>
             <tr>
-              <td>簡單（Atlas 替換）</td>
-              <td>沿用原本的骨架，只把貼圖換掉</td>
-              <td>想保留原本的動態表情，只改畫風／配色</td>
+              <td>Simple (atlas swap)</td>
+              <td>Keeps the original rig and swaps only the texture</td>
+              <td>You want to keep the animated expressions and only change the art style or palette</td>
             </tr>
             <tr>
-              <td>序列圖（動畫）</td>
-              <td>用切好格的序列圖做逐格動畫</td>
-              <td>想讓立繪自己動，但不想碰 Spine</td>
+              <td>Sprite sheet (animated)</td>
+              <td>Frame-by-frame animation from a sliced sheet</td>
+              <td>You want a moving portrait without touching Spine</td>
             </tr>
             <tr>
-              <td>外部 Spine（4.2）</td>
-              <td>掛自己做的 Spine 骨架動畫</td>
-              <td>有 Spine 素材、想做完整骨骼動畫</td>
+              <td>External Spine (4.2)</td>
+              <td>Attaches your own Spine skeletal animation</td>
+              <td>You have Spine assets and want full skeletal animation</td>
             </tr>
           </tbody>
         </table>
       </div>
       <figure class="shot">
-        <img data-shot="halfMode" alt="替換模式下拉展開，四個選項中「單圖（直接顯示）」被勾選">
-        <figcaption><b>替換模式</b>選「單圖（直接顯示）」，下面才會出現位置微調與等比縮放。</figcaption>
+        <img data-shot="halfMode" alt="The replacement mode dropdown with Single image (direct) selected out of the four options">
+        <figcaption><b>Replacement mode</b>Position nudge and uniform scale only appear once Single image (direct) is selected.</figcaption>
       </figure>
       <p>
-        頁面下方還有一顆「<strong>匯出 Atlas 模板</strong>」，
-        會把遊戲原始的半身像 atlas 匯出成 PNG 模板——
-        想走「簡單（Atlas 替換）」的話，照這張模板的版面畫就不會跑位。
+        Further down the page there is an<strong>Export atlas template</strong>button
+        that exports the game's original half-body atlas as a PNG template —
+        draw to that layout and Simple (atlas swap) will line up perfectly.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 7</span>挑替換貼圖</h4>
+      <h4><span class="n">Step 7</span>Pick the replacement texture</h4>
       <p>
-        「<strong>替換貼圖</strong>」下拉會列出當前包 <code>skin\</code> 加上共用素材夾的所有 PNG，
-        選要用的那張。也可以直接在右側「可用圖素」勾——兩邊是連動的。
+        「<strong>Replacement texture</strong>dropdown lists every PNG in the current package's <code>skin\</code> plus the shared asset folder;
+        pick the one you want. You can equally tick it in the available-assets list on the right — the two are linked.
       </p>
-      <p>丟了新圖進資料夾之後，按「重新讀取」刷新清單，不必關掉重進。</p>
+      <p>After dropping new art into the folder, press Reload to refresh the list — no need to close and reopen.</p>
       <figure class="shot">
-        <img data-shot="halfTex" alt="替換貼圖下拉展開，列出素材夾裡所有 PNG，右側可用圖素中「克羅蒂.png」已勾選">
-        <figcaption><b>替換貼圖</b>下拉選好之後，右側對應那一列也會變成粉紅底的已勾選狀態。</figcaption>
+        <img data-shot="halfTex" alt="The replacement texture dropdown listing every PNG in the asset folder, with 克羅蒂.png ticked in the available-assets list on the right">
+        <figcaption><b>Replacement texture</b>Choosing from the dropdown turns the matching row on the right pink and ticked.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 8</span>微調大小與位置</h4>
+      <h4><span class="n">Step 8</span>Fine-tune size and position</h4>
       <div class="tw">
         <table>
-          <thead><tr><th>欄位</th><th>意思</th><th>怎麼調</th></tr></thead>
+          <thead><tr><th>Column</th><th>What it does</th><th>How to use it</th></tr></thead>
           <tbody>
             <tr>
-              <td><strong>等比縮放</strong></td>
-              <td><code>1</code> = 原圖大小，<code>2</code> = 放大兩倍</td>
-              <td>立繪看起來太小就往上加。範例包八張統一用 <strong>1.3</strong></td>
+              <td><strong>Uniform scale</strong></td>
+              <td><code>1</code> = original size,<code>2</code> = double size</td>
+              <td>Raise it if the portrait looks too small. All eight in the sample pack use <strong>1.3</strong></td>
             </tr>
             <tr>
-              <td><strong>位置微調 X / Y</strong></td>
-              <td>相對原本位置的像素位移</td>
-              <td>X 正值往右、Y 正值往上。角色沒對準框就用這個推</td>
+              <td><strong>Position nudge X / Y</strong></td>
+              <td>Pixel offset from the default position</td>
+              <td>Positive X moves right, positive Y moves up. Use it when the character does not sit in its frame</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        先調縮放讓大小對，再用位置微調對齊。
-        <strong>放大會糊</strong>——縮放要拉到 1.5 以上才夠大的話，比較好的做法是回頭重畫大一點的原圖。
+        Get the scale right first, then use the nudge to line it up.
+        <strong>Scaling up gets blurry</strong> — if you need more than 1.5 to fill the frame, you are better off redrawing the original larger.
       </p>
       <div class="note">
-        <b>尺寸上限</b>
-        貼圖上限 <strong>1536 × 1536</strong>，超過會自動縮小。
-        直式立繪（例如 1280 × 1440）可以原尺寸顯示。
-        範例包的八張落在 480×660 到 790×740 之間。
+        <b>Size limits</b>
+        Texture limit <strong>1536 × 1536</strong>, above which it is scaled down automatically.
+        A portrait-orientation image (1280 × 1440, say) displays at full size.
+        The sample pack's eight run from 480×660 to 790×740.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 9</span>儲存</h4>
-      <p>按左上角的「<strong>儲存</strong>」。回到外觀清單就會看到這一筆，分類顯示「半身像」。</p>
+      <h4><span class="n">Step 9</span>Save</h4>
+      <p>Press the<strong>Save</strong>. Back on the Appearance list you will see the entry, categorised as half-body.</p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s6">
-    <div class="sec-head"><span class="sec-num">07</span><h2>換頭像</h2></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Replacing an avatar</h2></div>
     <p>
-      頭像是隊伍列表、戰鬥介面上的小圖。
-      它的設定頁跟半身像<strong>幾乎一模一樣</strong>，差別只在分類選的是「頭像」。
+      The avatar is the small image in the party list and battle UI.
+      Its settings page is<strong>almost identical</strong>to the half-body one; the only difference is that the category is avatar.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>把圖片放進素材庫</h4>
+      <h4><span class="n">Step 1</span>Put the image into the Asset Library</h4>
       <p>
-        頭像圖一樣放 <code>ModAssetLibrary\<strong>image\</strong></code>。
-        不切格，所以不用去素材庫頁填幀數。
+        Avatar art also goes in <code>ModAssetLibrary\<strong>image\</strong></code>.
+        It is not sliced, so there is no frame count to type on the Asset Library page.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>按「+ 新增頭像替換」</h4>
-      <p>外觀頁右上角<strong>中間那顆</strong>按鈕。</p>
+      <h4><span class="n">Step 2</span>Press + Add avatar replacement</h4>
+      <p>the top-right corner of the Appearance page<strong>the middle button in</strong>.</p>
       <figure class="shot">
-        <img data-shot="appearance" alt="外觀管理頁，右上角中間那顆按鈕是「+ 新增頭像替換」">
-        <figcaption><b>外觀管理</b>頭像用中間那顆按鈕。</figcaption>
+        <img data-shot="appearance" alt="The Appearance manager page, where the middle button in the top-right corner is + Add avatar replacement">
+        <figcaption><b>Appearance manager</b>Avatars use the middle button.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>填設定檔名稱</h4>
-      <p>填一個看得懂的名字，通常直接用角色名。</p>
+      <h4><span class="n">Step 3</span>Name the profile</h4>
+      <p>Give it a name you will recognise — usually just the character's.</p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 4</span>指定要換誰</h4>
+      <h4><span class="n">Step 4</span>Say who you are replacing</h4>
       <figure class="shot">
-        <img data-shot="headChar" alt="頭像設定頁的目標角色下拉展開">
-        <figcaption><b>目標角色</b>跟前面兩種是同一份清單。</figcaption>
+        <img data-shot="headChar" alt="The Target character dropdown on the avatar settings page">
+        <figcaption><b>Target character</b>It is the same list as the other two.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 5</span>選擇替換職業</h4>
-      <p>一般選「<strong>全部</strong>」。想讓轉職後換頭像，就多做一筆指定該階職業。</p>
+      <h4><span class="n">Step 5</span>Choose which class it applies to</h4>
+      <p>Normally pick<strong>All</strong>. To change the avatar after a promotion, add a second entry pinned to that tier.</p>
       <figure class="shot">
-        <img data-shot="headScope" alt="頭像的套用範圍下拉，選項為全部、一轉、二轉、三轉">
-        <figcaption><b>套用範圍</b>外觀清單的「目標 ID」欄會標出每一筆的作用範圍。</figcaption>
+        <img data-shot="headScope" alt="The avatar scope dropdown, offering All, Tier 1, Tier 2 and Tier 3">
+        <figcaption><b>Scope</b>The Target ID column in the Appearance list shows each entry's scope.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 6</span>選替換模式</h4>
+      <h4><span class="n">Step 6</span>Choose a replacement mode</h4>
       <div class="note alert">
-        <b>用自己畫的頭像，選「單圖（直接顯示）」</b>
-        跟半身像同一套規則：整張圖直接貼上，不吃原本的 atlas 版面。
+        <b>For an avatar you drew yourself, choose Single image (direct)</b>
+        Same rule as the half-body portrait: your image is drawn as-is, ignoring the original atlas layout.
       </div>
       <p>
-        另外三個模式的用途跟半身像完全一樣——
-        <strong>簡單（Atlas 替換）</strong>沿用原本骨架只換貼圖、
-        <strong>序列圖（動畫）</strong>做逐格動畫、
-        <strong>外部 Spine（4.2）</strong>掛自己的骨骼動畫。
+        The other three modes work exactly as they do for half-body portraits —
+        <strong>Simple (atlas swap)</strong>keep the rig and swap the texture,
+        <strong>Sprite sheet (animated)</strong>frame-by-frame animation, or
+        <strong>External Spine (4.2)</strong>attach your own skeletal animation.
       </p>
       <p>
-        頁面下方還有一顆「<strong>匯出 Atlas 模板</strong>」，
-        會把遊戲原始的頭像 atlas 匯出成 PNG 模板——
-        想走「簡單（Atlas 替換）」的話，照這張模板的版面畫就不會跑位。
+        Further down the page there is an<strong>Export atlas template</strong>button
+        that exports the game's original avatar atlas as a PNG template —
+        draw to that layout and Simple (atlas swap) will line up perfectly.
       </p>
       <figure class="shot">
-        <img data-shot="headMode" alt="頭像頁的替換模式下拉展開，四個選項中「單圖（直接顯示）」被勾選">
-        <figcaption><b>替換模式</b>分類標籤顯示「頭像」，其餘欄位跟半身像一致。</figcaption>
+        <img data-shot="headMode" alt="The replacement mode dropdown on the avatar page with Single image (direct) selected out of the four options">
+        <figcaption><b>Replacement mode</b>The category label reads avatar; every other field matches the half-body page.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 7</span>挑替換貼圖</h4>
-      <p>「替換貼圖」下拉選圖，或在右側「可用圖素」勾選，兩邊連動。</p>
+      <h4><span class="n">Step 7</span>Pick the replacement texture</h4>
+      <p>Pick from the replacement texture dropdown or tick it in the available-assets list on the right — the two are linked.</p>
       <figure class="shot">
-        <img data-shot="headTex" alt="頭像頁的替換貼圖下拉展開，列出素材夾裡的 PNG">
-        <figcaption><b>替換貼圖</b>清單來源跟半身像相同：當前包 skin\ 加上共用素材夾。</figcaption>
+        <img data-shot="headTex" alt="The replacement texture dropdown on the avatar page, listing the PNGs in the asset folder">
+        <figcaption><b>Replacement texture</b>Same sources as the half-body page: the current package's skin\ plus the shared asset folder.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 8</span>微調大小與位置</h4>
+      <h4><span class="n">Step 8</span>Fine-tune size and position</h4>
       <p>
-        <strong>等比縮放</strong>（1 = 原圖大小）與<strong>位置微調 X / Y</strong>（像素位移），
-        用法跟半身像一樣。頭像的顯示框比較小，通常只需要小幅度微調。
+        <strong>Uniform scale</strong> (1 = original size) and<strong>Position nudge X / Y</strong> (a pixel offset)
+        work exactly as they do for half-body portraits. The avatar frame is smaller, so it usually needs only a slight nudge.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 9</span>儲存</h4>
-      <p>按「<strong>儲存</strong>」。</p>
+      <h4><span class="n">Step 9</span>Save</h4>
+      <p>Use the preview in the<strong>Save</strong>」。</p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">08</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">08</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     <div class="note warn" data-t="skin">
-      <b>範例包不要上傳</b>
-      「飯友」是教學用的示範素材，不是你的作品。
-      請等到<strong>把圖換成自己的</strong>之後再發佈。
+      <b>Do not upload the sample pack</b>
+      飯友 is teaching material, not your work.
+      Wait until you have<strong>replaced the art with your own</strong>before publishing.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="a1">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>目標角色與職業</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>Target character and class</h2></div>
     <p>
-      編輯器裡你是用下拉選單挑角色跟職業，不需要記編號。
-      但外觀清單的「目標 ID」欄會顯示實際編號，知道規則會比較好對照：
-      <strong>每個角色是一個百位群組</strong>，
-      <code>X99</code> 代表「全部職業」，<code>X00</code> 是一轉、<code>X01</code> 是二轉，依此類推。
+      In the editor you pick characters and classes from dropdowns, so there is no need to memorise IDs.
+      But the Appearance list's Target ID column shows the real number, and knowing the rule makes it easier to read:
+      <strong>Each character owns one hundreds group</strong>，
+      <code>X99</code> means all classes,<code>X00</code> is Tier 1,<code>X01</code> is Tier 2, and so on.
     </p>
 
     <div class="note">
-      <b>例：雷歐納德</b>
-      下拉選「雷歐納德（100）」+「全部」，清單上會顯示 <code>199（全部）</code>。
-      選「二轉」則是 <code>101（二轉）</code>。
+      <b>Example: Leonard</b>
+      Pick Leonard (100) plus All in the dropdowns and the list shows <code>199 (All)</code>.
+      Pick Tier 2 and it becomes <code>101 (Tier 2)</code>。
     </div>
 
-    <h4>範例包用到的八名角色</h4>
+    <h4>The eight characters used in the sample pack</h4>
     <div class="tw">
       <table>
-        <thead><tr><th>角色</th><th class="num">全部職業</th><th>素材命名</th><th>有專用演出嗎</th></tr></thead>
+        <thead><tr><th>Character</th><th class="num">All classes</th><th>Asset name</th><th>Special sequences?</th></tr></thead>
         <tbody id="idTable"></tbody>
       </table>
     </div>
@@ -1240,68 +1237,68 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="a2">
-    <div class="sec-head"><span class="sec-num plain">B</span><h2>動作總表</h2></div>
+    <div class="sec-head"><span class="sec-num plain">B</span><h2>Full action list</h2></div>
     <div class="tw">
       <table>
-        <thead><tr><th>編輯器顯示</th><th>內部 key</th><th>必填</th><th>說明</th></tr></thead>
+        <thead><tr><th>Shown in the editor as</th><th>Internal key</th><th>Required</th><th>Details</th></tr></thead>
         <tbody>
-          <tr><td>待機</td><td><code>wait</code></td><td>必填</td><td>沒事站著</td></tr>
-          <tr><td>下走</td><td><code>b_walk</code></td><td>必填</td><td>往畫面下方移動</td></tr>
-          <tr><td>上走</td><td><code>t_walk</code></td><td>必填</td><td>往畫面上方移動</td></tr>
-          <tr><td>左走</td><td><code>l_walk</code></td><td>必填</td><td>套右走的圖 + 勾鏡像</td></tr>
-          <tr><td>右走</td><td><code>r_walk</code></td><td>必填</td><td>往畫面右方移動</td></tr>
-          <tr><td>受擊</td><td><code>hurt</code></td><td>選填</td><td>被打中，播放模式選 <code>once</code></td></tr>
-          <tr><td>死亡</td><td><code>dead</code></td><td>選填</td><td>陣亡倒地，可以只有 1 幀</td></tr>
-          <tr><td>施法</td><td><code>magic</code></td><td>選填</td><td>詠唱魔法</td></tr>
-          <tr><td>使用道具</td><td><code>item</code></td><td>選填</td><td>吃藥、丟東西</td></tr>
-          <tr><td>順繩下降 / 落地</td><td><code>spec_01</code> / <code>spec_04</code></td><td>選填</td><td>只有<strong>緹娜</strong>會播</td></tr>
-          <tr><td>偷襲・下 / 右 / 左 / 上</td><td><code>spec_01</code>～<code>spec_04</code></td><td>選填</td><td>只有<strong>漢克斯</strong>（二轉起）會播</td></tr>
-          <tr><td>公主待機 / 公主往後走</td><td><code>spec_02</code> / <code>spec_03</code></td><td>選填</td><td>只有劇情用的<strong>緹娜（公主）</strong>會播</td></tr>
+          <tr><td>Idle</td><td><code>wait</code></td><td>Required</td><td>Standing around</td></tr>
+          <tr><td>Walk down</td><td><code>b_walk</code></td><td>Required</td><td>Moving down the screen</td></tr>
+          <tr><td>Walk up</td><td><code>t_walk</code></td><td>Required</td><td>Moving up the screen</td></tr>
+          <tr><td>Walk left</td><td><code>l_walk</code></td><td>Required</td><td>Use the walk-right art and tick Mirror</td></tr>
+          <tr><td>Walk right</td><td><code>r_walk</code></td><td>Required</td><td>Moving right across the screen</td></tr>
+          <tr><td>Hurt</td><td><code>hurt</code></td><td>Optional</td><td>Taking a hit; set playback to <code>once</code></td></tr>
+          <tr><td>Death</td><td><code>dead</code></td><td>Optional</td><td>Falling in battle; a single frame is fine</td></tr>
+          <tr><td>Magic</td><td><code>magic</code></td><td>Optional</td><td>Casting a spell</td></tr>
+          <tr><td>Use item</td><td><code>item</code></td><td>Optional</td><td>Drinking a potion, throwing something</td></tr>
+          <tr><td>Rope descent and landing</td><td><code>spec_01</code> / <code>spec_04</code></td><td>Optional</td><td>Only<strong>Tina</strong>plays it</td></tr>
+          <tr><td>Ambush · down / right / left / up</td><td><code>spec_01</code>～<code>spec_04</code></td><td>Optional</td><td>Only<strong>Hanks</strong>(from Tier 2) plays it</td></tr>
+          <tr><td>Princess idle and princess walking back</td><td><code>spec_02</code> / <code>spec_03</code></td><td>Optional</td><td>Only the story-only<strong>Tina (princess)</strong>plays it</td></tr>
         </tbody>
       </table>
     </div>
     <p>
-      選填的動作缺了不會出錯，遊戲會靜靜退回用「待機」——
-      所以如果你看到角色「站著不動就打到人」，多半是那個動作沒指派。
+      A missing optional action causes no error; the game quietly falls back to idle —
+      so if a character seems to hit people while standing perfectly still, that action was probably never assigned.
     </p>
   </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">C</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">C</span><h2>Troubleshooting</h2></div>
 
     <div data-t="skin">
-    <h4>存檔前掃一遍</h4>
+    <h4>Run through this before saving</h4>
     <ul class="checks">
-      <li>外觀頁左上角的<strong>啟用開關</strong>已經打開（左側功能列的圓點是實心）</li>
-      <li>五個必填動作（待機、上下左右走）都指派好了，每列都有綠色檔名</li>
-      <li>「左走」勾了<strong>鏡像</strong></li>
-      <li>目標角色與<strong>職業</strong>選對了（一般選「全部」）</li>
-      <li>素材的<strong>幀數 / 幀寬 / 幀高</strong>都按過「產生」，配置欄有綠色檔名</li>
-      <li>半身像／頭像的<strong>替換模式</strong>選了「單圖（直接顯示）」</li>
-      <li>右上角按過「<strong>儲存設定</strong>」</li>
-      <li>回模組管理<strong>打勾</strong>並按過「<strong>套用變更</strong>」</li>
+      <li>The Appearance page's top-left<strong>Page toggle</strong>is on (the dot in the left-hand list is filled)</li>
+      <li>All five required actions — idle and the four walks — are assigned, each row showing a green filename</li>
+      <li>Walk left has<strong>Mirror</strong></li>
+      <li>Target character and<strong>Class</strong>are set correctly (normally All)</li>
+      <li>Each asset's<strong>frame count / width / height</strong>have been through Generate, and Config shows a green filename</li>
+      <li>The half-body and avatar<strong>Replacement mode</strong>is set to Single image (direct)</li>
+      <li>You pressed<strong>Save Settings</strong>」</li>
+      <li>went back to Manage Mods<strong>ticked</strong>and pressed<strong>Apply Changes</strong>」</li>
     </ul>
     </div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="skin"><td>整個角色沒換到，還是原本的樣子</td><td>外觀頁的啟用開關沒開；或存了但沒按「套用變更」；或模組管理沒勾這個包</td></tr>
-          <tr data-t="skin font bgm voice equip"><td>剛放進素材庫的檔案，編輯頁的清單裡看不到</td><td>按該頁的「重新掃描」；素材庫頁與編輯頁各有一顆</td></tr>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="skin"><td>外觀頁的「可用圖素」裡找不到我的圖</td><td>那張圖還沒在素材庫按「產生」，配置欄還是「未設定」</td></tr>
-          <tr data-t="skin"><td>剛丟進去的圖在清單裡看不到</td><td>按「重新掃描」（素材庫頁）／「重新讀取」（外觀頁）</td></tr>
-          <tr data-t="skin"><td>某個動作變成站著不動</td><td>那個動作沒指派圖素，被自動退回待機</td></tr>
-          <tr data-t="skin"><td>動畫一直抖、圖被切歪</td><td>幀寬填錯，或每一幀大小不一致</td></tr>
-          <tr data-t="skin"><td>只播到一半就跳回去</td><td>幀數填得比實際少</td></tr>
-          <tr data-t="skin"><td>播到後面出現空白</td><td>幀數填得比實際多</td></tr>
-          <tr data-t="skin"><td>小人浮在半空／陷進地板</td><td>按 ◎ 開站位設定，把腳底拖到綠線上</td></tr>
-          <tr data-t="skin"><td>往左走時角色朝向不對</td><td>「左走」那列忘了勾鏡像</td></tr>
-          <tr data-t="skin"><td>做了 spec 圖卻從來沒看過</td><td>那個角色本來就沒有專用演出槽——動作列表裡看不到就是不用做</td></tr>
-          <tr data-t="skin"><td>半身像／頭像沒換</td><td>替換模式沒選「單圖（直接顯示）」，或立繪沒放進 <code>image\</code></td></tr>
-          <tr data-t="skin"><td>立繪太小 / 位置不對</td><td>調「等比縮放」與「位置微調 X / Y」</td></tr>
+          <tr data-t="skin"><td>The character did not change at all</td><td>The Appearance page toggle is off, or you saved without pressing Apply Changes, or the package is not ticked in Manage Mods</td></tr>
+          <tr data-t="skin font bgm voice equip"><td>A file just added to the Asset Library is missing from the editing page's list</td><td>Press Rescan on that page — the Asset Library page and the editing page each have their own</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="skin"><td>My image is missing from the available-assets list</td><td>That image has not been through Generate in the Asset Library; its Config still says not set</td></tr>
+          <tr data-t="skin"><td>An image I just added is not in the list</td><td>Press Rescan on the Asset Library page, or Reload on the Appearance page</td></tr>
+          <tr data-t="skin"><td>One action just stands there</td><td>No asset is assigned to it, so it fell back to idle</td></tr>
+          <tr data-t="skin"><td>The animation jitters, or frames are sliced crooked</td><td>The frame width is wrong, or the frames are not all the same size</td></tr>
+          <tr data-t="skin"><td>It loops back halfway through</td><td>The frame count is lower than the sheet actually holds</td></tr>
+          <tr data-t="skin"><td>Blank frames appear near the end</td><td>The frame count is higher than the sheet actually holds</td></tr>
+          <tr data-t="skin"><td>The sprite floats above the ground or sinks into it</td><td>Press ◎ for Stance settings and drag the feet onto the green line</td></tr>
+          <tr data-t="skin"><td>The character faces the wrong way walking left</td><td>Mirror is not ticked on the Walk left row</td></tr>
+          <tr data-t="skin"><td>I made spec art and have never seen it</td><td>That character has no special sequence slots. If they are absent from the action list, they are not needed</td></tr>
+          <tr data-t="skin"><td>The half-body portrait or avatar did not change</td><td>The replacement mode is not Single image (direct), or the art was never placed in <code>image\</code></td></tr>
+          <tr data-t="skin"><td>The portrait is too small or badly positioned</td><td>Adjust Uniform scale and Position nudge X / Y</td></tr>
           </tbody>
       </table>
     </div>
@@ -1309,73 +1306,73 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="a4">
-    <div class="sec-head"><span class="sec-num plain">D</span><h2>編輯器寫了什麼</h2></div>
+    <div class="sec-head"><span class="sec-num plain">D</span><h2>What the editor writes</h2></div>
     <p>
-      這一節純粹是給好奇的人看的——<strong>你不需要手動改這些檔案</strong>，
-      編輯器會全部處理好。知道它長什麼樣，只是出問題時比較好判斷。
+      This section is purely for the curious —<strong>you never need to edit these files by hand</strong>;
+      the editor handles all of it. Knowing the shape of things just makes problems easier to diagnose.
     </p>
 
     <div class="tree">
 <b>MODS\飯友\</b>
-├─ <b>mod.json</b>                  <u>MOD 的身分證：名稱、版本、作者</u>
-├─ <b>preview.png</b>               <u>發佈時的封面圖</u>
-└─ <b>skin\</b>                     <u>外觀相關的東西全在這一層</u>
-   ├─ <i>p100_wait.png</i>          <u>┐ 存檔時從素材庫複製進來的圖</u>
-   ├─ <u>… 8 人 × 10 張 = 80 張</u>
-   ├─ <i>雷歐納德.png</i>            <u>┐ 半身像立繪</u>
-   ├─ <u>… 共 8 張</u>
-   ├─ <i>tex_kf_011.cfg</i>         <u>┐ 素材庫按「產生」寫出來的切格設定</u>
-   ├─ <u>… 每張動作圖一份，共 80 份</u>
-   ├─ <i>spec_stage_kf_001.cfg</i>  <u>┐ 「+ 新增戰場小人」寫出來的</u>
-   ├─ <u>… 每個角色一份，共 8 份</u>
-   ├─ <i>spec_chrhalf_001.cfg</i>   <u>┐ 「+ 新增半身像替換」寫出來的</u>
-   └─ <u>… 每個角色一份，共 8 份</u>
+├─ <b>mod.json</b>                  <u>The MOD's identity: name, version, author</u>
+├─ <b>preview.png</b>               <u>Cover image used when publishing</u>
+└─ <b>skin\</b>                     <u>Everything appearance-related lives at this level</u>
+   ├─ <i>p100_wait.png</i>          <u>┐ art copied in from the Asset Library on save</u>
+   ├─ <u>… 8 characters × 10 images = 80 files</u>
+   ├─ <i>雷歐納德.png</i>            <u>┐ half-body portraits</u>
+   ├─ <u>… 8 files</u>
+   ├─ <i>tex_kf_011.cfg</i>         <u>┐ slicing configs written by Generate in the Asset Library</u>
+   ├─ <u>… one per action sheet, 80 in all</u>
+   ├─ <i>spec_stage_kf_001.cfg</i>  <u>┐ written by + Add battle sprite</u>
+   ├─ <u>… one per character, 8 in all</u>
+   ├─ <i>spec_chrhalf_001.cfg</i>   <u>┐ written by + Add half-body replacement</u>
+   └─ <u>… one per character, 8 in all</u>
     </div>
 
     <p>
-      三者是單向串起來的：<strong>動作</strong>指到<strong>切格設定</strong>，
-      切格設定再指到<strong>圖檔</strong>。這就是為什麼素材沒按「產生」的話，外觀頁挑不到它。
+      The three are chained one way:<strong>an action</strong>points to a<strong>slicing config</strong>,
+      and the slicing config points to the<strong>image file</strong>. That is exactly why an asset you never pressed Generate on cannot be picked on the Appearance page.
     </p>
 
     <div class="code">
-      <header>skin \ tex_kf_029.cfg<span>素材庫填的那三個數字，變成這樣</span></header>
+      <header>skin \ tex_kf_029.cfg<span>The three numbers from the Asset Library end up like this</span></header>
       <pre>{
     <span class="k">"id"</span>: <span class="s">"tex_kf_029"</span>,
     <span class="k">"fileName"</span>: <span class="s">"p400_spec_01.png"</span>,
-    <span class="k">"frameWidth"</span>: <span class="n">168</span>,   <span class="c">// ← 幀寬</span>
-    <span class="k">"frameHeight"</span>: <span class="n">169</span>,  <span class="c">// ← 幀高</span>
-    <span class="k">"frameCount"</span>: <span class="n">5</span>,     <span class="c">// ← 幀數</span>
-    <span class="k">"cols"</span>: <span class="n">5</span>, <span class="k">"rows"</span>: <span class="n">1</span>,  <span class="c">// ← 系統自動推算的排列</span>
+    <span class="k">"frameWidth"</span>: <span class="n">168</span>,   <span class="c">// ← frame width</span>
+    <span class="k">"frameHeight"</span>: <span class="n">169</span>,  <span class="c">// ← frame height</span>
+    <span class="k">"frameCount"</span>: <span class="n">5</span>,     <span class="c">// ← frame count</span>
+    <span class="k">"cols"</span>: <span class="n">5</span>, <span class="k">"rows"</span>: <span class="n">1</span>,  <span class="c">// ← layout worked out automatically</span>
     <span class="k">"type"</span>: <span class="s">"sheet"</span>, <span class="k">"dirName"</span>: <span class="s">""</span>
 }</pre>
     </div>
 
     <div class="code">
-      <header>skin \ spec_stage_kf_002.cfg<span>外觀頁的操作，變成這樣</span></header>
+      <header>skin \ spec_stage_kf_002.cfg<span>Your work on the Appearance page ends up like this</span></header>
       <pre>{
-    <span class="k">"displayName"</span>: <span class="s">"漢克斯"</span>,      <span class="c">// ← 設定檔名稱</span>
-    <span class="k">"targetPlayerId"</span>: <span class="n">499</span>,      <span class="c">// ← 目標角色「漢克斯」+ 職業「全部」</span>
+    <span class="k">"displayName"</span>: <span class="s">"Hanks"</span>,      <span class="c">// ← display name</span>
+    <span class="k">"targetPlayerId"</span>: <span class="n">499</span>,      <span class="c">// ← target character Hanks + class All</span>
     <span class="k">"fps"</span>: <span class="n">12</span>,                   <span class="c">// ← FPS</span>
     <span class="k">"pivotX"</span>: <span class="n">0.5</span>, <span class="k">"pivotY"</span>: <span class="n">0.0</span>,  <span class="c">// ← Pivot</span>
-    <span class="k">"offsetX"</span>: <span class="n">0.0</span>, <span class="k">"offsetY"</span>: <span class="n">-12.0</span>, <span class="c">// ← 偏移（站位設定拖出來的）</span>
+    <span class="k">"offsetX"</span>: <span class="n">0.0</span>, <span class="k">"offsetY"</span>: <span class="n">-12.0</span>, <span class="c">// ← offset, dragged out in Stance settings</span>
     <span class="k">"actions"</span>: [
         { <span class="k">"key"</span>: <span class="s">"r_walk"</span>, <span class="k">"texId"</span>: <span class="s">"tex_kf_024"</span>, <span class="k">"mirror"</span>: <span class="n">false</span> },
-        <span class="hl">{ <span class="k">"key"</span>: <span class="s">"l_walk"</span>, <span class="k">"texId"</span>: <span class="s">"tex_kf_024"</span>, <span class="k">"mirror"</span>: <span class="n">true</span>  }</span>  <span class="c">// ← 勾了鏡像</span>
-        <span class="c">// … 其餘動作</span>
+        <span class="hl">{ <span class="k">"key"</span>: <span class="s">"l_walk"</span>, <span class="k">"texId"</span>: <span class="s">"tex_kf_024"</span>, <span class="k">"mirror"</span>: <span class="n">true</span>  }</span>  <span class="c">// ← Mirror ticked</span>
+        <span class="c">// … remaining actions</span>
     ]
 }</pre>
     </div>
 
     <div class="note warn">
-      <b>不建議手改</b>
-      這些檔案彼此有相依關係，手改很容易改出「檔案在、遊戲卻讀不到」的狀況，
-      而且編輯器下次存檔會蓋掉。有需要調整，回編輯器裡改。
+      <b>Editing by hand is a bad idea</b>
+      These files depend on one another, and hand-editing easily produces the "file is right there but the game cannot read it" situation —
+      and the editor overwrites them on its next save anyway. If something needs changing, change it in the editor.
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 外觀 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Appearance MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -1384,7 +1381,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>

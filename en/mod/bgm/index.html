@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,7 +10,7 @@ body{margin:0;background:#faf9f7;font:14px/1.5 system-ui,-apple-system,"Segoe UI
 img{max-width:100%}
 [hidden]{display:none!important}
 </style>
-<title>幻世錄 音樂音效 MOD 指南</title>
+<title>HSLR Music & SFX MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@700;900&display=swap">
@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){var L="zh",A="/en/mod/bgm/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
+<body><script>(function(){var L="en",A="/mod/bgm/";try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p!==L)location.replace(A);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -446,275 +446,275 @@ footer code{color:var(--ink-soft)}
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav hslrnav-cur" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/bgm/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav hslrnav-cur" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/bgm/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
-  <div class="eyebrow">幻世錄 · 音樂音效 MOD</div>
-  <h1>把遊戲的音樂，<br>換成你自己的曲子</h1>
+  <div class="eyebrow">HSLR · Music & SFX MOD</div>
+  <h1>Swap the game's music<br>for tracks of your own</h1>
   <p class="lede">
-    以 BGM 編號為單位逐首替換，一個音檔可以指派給很多個編號。存檔時還能直接聽——正在播的音樂會淡出，換成你的曲子淡入。
+    You replace tracks one BGM number at a time, and a single audio file can cover as many numbers as you like. You can even hear it while you work — the current track fades out and yours fades in.
   </p>
   <div class="hero-stats">
-    <div class="stat"><b>3</b><span>種音檔格式</span></div>
-    <div class="stat"><b>5</b><span>個場景篩選</span></div>
-    <div class="stat"><b>0</b><span>行程式碼</span></div>
+    <div class="stat"><b>3</b><span>audio formats</span></div>
+    <div class="stat"><b>5</b><span>scene filters</span></div>
+    <div class="stat"><b>0</b><span>lines of code</span></div>
   </div>
 </header>
 
 <div class="cutline"></div>
 
 <div class="shell">
-  <nav class="rail" aria-label="章節">
-    <h4>本冊內容</h4>
+  <nav class="rail" aria-label="sections">
+    <h4>In this guide</h4>
     <ol>
-      <li><a href="#s1"><em>01</em>開始之前</a></li>
-      <li><a href="#sLib"><em>02</em>素材庫</a></li>
-      <li><a href="#s9"><em>03</em>換音樂音效</a></li>
-      <li><a href="#s7"><em>04</em>套用與發佈</a></li>
-      <li><a href="#a3"><em>A</em>疑難排解</a></li>
+      <li><a href="#s1"><em>01</em>Before you start</a></li>
+      <li><a href="#sLib"><em>02</em>Asset Library</a></li>
+      <li><a href="#s9"><em>03</em>Changing music and SFX</a></li>
+      <li><a href="#s7"><em>04</em>Apply and publish</a></li>
+      <li><a href="#a3"><em>A</em>Troubleshooting</a></li>
     </ol>
   </nav>
 
   <main>
 
   <section id="s1">
-    <div class="sec-head"><span class="sec-num">01</span><h2>開始之前</h2></div>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Before you start</h2></div>
 
-    <h3>先找到 MOD 介面</h3>
-    <p>開啟遊戲進入主畫面，點<strong>左下角的「創意工坊」</strong>。</p>
+    <h3>Finding the MOD screen</h3>
+    <p>Launch the game, and on the title screen click<strong>Workshop in the bottom-left corner</strong>。</p>
     <figure class="shot">
-      <img data-shot="entry" alt="幻世錄主畫面，左下角有「創意工坊」按鈕">
-      <figcaption><b>主畫面</b>「創意工坊」在左下角，跟中間的選單是分開的，很容易漏看。</figcaption>
+      <img data-shot="entry" alt="The HSLR title screen, with the Workshop button in the bottom-left corner">
+      <figcaption><b>Title screen</b>Workshop sits in the bottom-left corner, separate from the menu in the middle — it is easy to miss.</figcaption>
     </figure>
 
-    <h3>三個功能按鈕</h3>
-    <p>進去之後是「模組管理員」，三個按鈕各管一件事：</p>
+    <h3>Three buttons</h3>
+    <p>That takes you to the Mod Manager, where each of the three buttons does one job:</p>
 
     <div class="pipe">
       <div class="box">
-        <span class="tagline">用別人的</span>
-        <h5>模組管理</h5>
+        <span class="tagline">Use other people's</span>
+        <h5>Manage Mods</h5>
         <p>
-          管理已安裝的 MOD（本地 + 工坊）：<strong>啟用／停用／排序</strong>。
-          做完 MOD 要看到效果，也是回這裡按「套用變更」。
+          Manage the MODs you have installed (local and Workshop):<strong>enable, disable and reorder them</strong>.
+          When you have finished building a MOD, this is also where you press Apply Changes to see it in action.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">做自己的</span>
-        <h5>製作模組</h5>
+        <span class="tagline">Build your own</span>
+        <h5>Create Mod</h5>
         <p>
-          建立與編輯 MOD 內容。<strong>這份文件講的全部都在這一頁裡面</strong>——
-          素材庫、外觀、字型、音樂、配音、本地化、修改裝備都在這。
+          Create and edit MOD content.<strong>Everything in this guide happens on this one screen</strong> —
+          Asset Library, Appearance, Fonts, Music & SFX, Voice, Localization and Edit Equipment are all here.
         </p>
       </div>
       <div class="box">
-        <span class="tagline">找新的</span>
-        <h5>工作坊</h5>
+        <span class="tagline">Find new ones</span>
+        <h5>Mod Store</h5>
         <p>
-          在遊戲裡直接瀏覽與訂閱 Steam 創意工坊的 MOD，不用切出去開瀏覽器。
+          Browse and subscribe to Steam Workshop MODs from inside the game, without switching to a browser.
         </p>
       </div>
     </div>
 
     <figure class="shot">
-      <img data-shot="hub" alt="模組管理員畫面，三個功能：模組管理、製作模組、工作坊">
-      <figcaption><b>模組管理員</b>接下來全部的操作都從中間的「製作模組」進去。</figcaption>
+      <img data-shot="hub" alt="The Mod Manager screen with its three options: Manage Mods, Create Mod and Mod Store">
+      <figcaption><b>Mod Manager</b>Everything from here on starts from Create Mod, the middle option.</figcaption>
     </figure>
 
-    <h3>三件必知的事</h3>
-    <p>動手之前先搞懂這三件事，後面會少走很多冤枉路。</p>
+    <h3>Three things to know first</h3>
+    <p>Get these three straight before you start and you will save yourself a lot of backtracking.</p>
 
     <div class="step">
-      <h4><span class="n">其一</span>目標包 — 你正在編輯哪一個 MOD</h4>
+      <h4><span class="n">First</span>Target package — which MOD you are editing</h4>
       <p>
-        除了「教學」與「素材庫」，每一頁<strong>右上角都有「目標包：」</strong>切換列，
-        代表目前的編輯對象，所有儲存都寫進這個包。
-        點開之後下方有一個輸入框——<strong>輸入一個新名稱按「建立」，就是開一個新的 MOD 包</strong>。
+        Every page except Tutorial and Asset Library has a<strong>Target package: selector in the top-right corner</strong>.
+        It shows what you are currently editing; everything you save is written into that package.
+        Open it and there is an input field at the bottom —<strong>type a new name, press Create, and you have started a new MOD package</strong>。
       </p>
       <figure class="shot" data-t="bgm">
-        <img data-shot="bgmPack" alt="音樂音效頁右上角的目標包下拉展開，列出多個官方模組，目前選中「[官方模組]修改主畫面音樂」，最下方有輸入框與「建立」按鈕">
-        <figcaption><b>目標包</b>上半是既有的包（這裡選的是「[官方模組]修改主畫面音樂」），下半輸入新名稱按「建立」就是開一個新包。</figcaption>
+        <img data-shot="bgmPack" alt="The target package dropdown on the Music & SFX page, listing several official MODs with [官方模組]修改主畫面音樂 currently selected, and an input field and Create button at the bottom">
+        <figcaption><b>Target package</b>The top half lists existing packages ([官方模組]修改主畫面音樂 is selected here); type a name in the bottom half and press Create to start a new one.</figcaption>
       </figure>
     </div>
 
     <div class="step">
-      <h4><span class="n">其二</span>分頁啟用開關 — 這個包有沒有在做這一類內容</h4>
+      <h4><span class="n">Second</span>The page toggle — whether this package covers this kind of content</h4>
       <p>
-        每個內容頁<strong>左上角有一顆開關</strong>（顯示「已啟用／已停用」）。
-        <strong>新建立的包預設全部關閉</strong>，要做哪一項就把哪一項打開；
-        關著的頁面就算有設定，套用後也不會生效。
+        Every content page has a<strong>toggle in the top-left corner</strong> (showing Enabled or Disabled).
+        <strong>A new package starts with all of them off</strong>, so turn on whichever one you are working on.
+        A page that is off has no effect when applied, even if you have set things up on it.
       </p>
       <p>
-        左側功能列每一項後面的小圓點就是狀態：<strong>實心 = 已啟用、空心 = 未啟用</strong>，
-        一眼就知道這個包在做什麼。開關的變更要跟著右上角「儲存設定」一起寫入，不是即時生效。
+        The small dot next to each item in the left-hand list is that page's status:<strong>filled = Enabled, hollow = Disabled</strong>,
+        so you can see at a glance what a package covers. Toggling one is written to disk by Save Settings in the top-right corner; it does not take effect on its own.
       </p>
       <figure class="shot" data-t="bgm">
-        <img data-shot="bgmToggle" alt="音樂音效 Mod 頁左上角的開關顯示「已啟用」，左側功能列只有「音樂音效」是實心紅點">
-        <figcaption><b>啟用開關</b>這個包只把「音樂音效」打開了——左側其他項目都還是空心圓，右上角是「儲存設定」。</figcaption>
+        <img data-shot="bgmToggle" alt="The Music & SFX Mod page: the top-left toggle reads Enabled, and Music & SFX is the only filled dot in the left-hand list">
+        <figcaption><b>Page toggle</b>This package only has Music & SFX turned on — every other item on the left is still hollow, and Save Settings sits in the top-right corner.</figcaption>
       </figure>
       </div>
 
     <div class="step">
-      <h4><span class="n">其三</span>儲存 ≠ 套用</h4>
+      <h4><span class="n">Third</span>Saving is not applying</h4>
       <p>
-        這兩件事很容易搞混，但完全不一樣：
+        These two are easy to confuse and completely different:
       </p>
       <ul>
-        <li><strong>儲存設定</strong> — 把編輯內容寫進 MOD 包（磁碟）。每一頁右上角都有。</li>
-        <li><strong>套用變更</strong> — 到「模組管理」勾選這個包並按下去，遊戲會即時重新載入，<strong>不需要重開遊戲</strong>。</li>
+        <li><strong>Save Settings</strong> — writes your edits into the MOD package on disk. Every page has this in the top-right corner.</li>
+        <li><strong>Apply Changes</strong> — go to Manage Mods, tick the package and press it; the game reloads on the spot, so you<strong>do not need to restart</strong>。</li>
       </ul>
       <p>
-        離開分頁、切換目標包或關閉視窗時，若有沒儲存的內容會跳提示。
-        「存好了卻沒效果」十次有九次是忘了按「套用變更」。
+        You get a warning if you leave a page, switch target package or close the window with unsaved work.
+        Nine times out of ten, "I saved it but nothing happened" means Apply Changes was never pressed.
       </p>
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="sLib">
-    <div class="sec-head"><span class="sec-num">02</span><h2>素材庫：東西放這裡</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Asset Library: where your files go</h2></div>
     <p>
-      你要用的檔案——字型、音樂、配音、圖示——都先放進<strong>素材庫</strong>。
-      它是<strong>所有 MOD 包共用</strong>的一個資料夾，放在遊戲的存檔目錄底下。
+      Every file you want to use — fonts, music, voice clips, icons — goes into the<strong>Asset Library</strong> first.
+      It is one folder<strong>shared by every MOD package</strong>, stored under the game's save directory.
     </p>
     <p>
-      在編輯頁挑素材，按下「<strong>儲存設定</strong>」時，系統才會把<strong>真正用到的</strong>檔案
-      複製一份進你的 MOD 包。所以發佈出去的包一定是自足的，別人下載不會少檔。
+      When you pick an asset on an editing page and press<strong>Save Settings</strong>, only the files you<strong>actually used</strong>are copied into your MOD package.
+      That is why a published package is always self-contained — nobody downloads it and finds files missing.
     </p>
 
     <div class="note tip">
-      <b>不用背路徑</b>
-      素材庫頁的每個分頁右上角都有一顆「<strong>開啟資料夾</strong>」，
-      按下去檔案總管就直接開在對的位置。
+      <b>You do not need to memorise the path</b>
+      Every tab on the Asset Library page has an<strong>Open folder</strong>button in the top-right corner
+      that opens Explorer straight at the right place.
     </div>
 
-    <p>要自己找的話，位置在這裡：</p>
+    <p>If you want to find it yourself, it lives here:</p>
     <div class="code">
-      <header>素材庫位置<span>貼進「執行」(Win + R) 按 Enter</span></header>
+      <header>Asset Library location<span>Paste it into Run (Win + R) and press Enter</span></header>
       <pre>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\ModAssetLibrary\</pre>
     </div>
 
-    <p>裡面照類型分成七個資料夾，對應素材庫頁上方的七個分頁：</p>
+    <p>Inside are seven folders by type, matching the seven tabs across the top of the Asset Library page:</p>
     <div class="tw">
       <table>
-        <thead><tr><th>分頁</th><th>資料夾</th><th>放什麼</th></tr></thead>
+        <thead><tr><th>Tab</th><th>Folder</th><th>What goes in it</th></tr></thead>
         <tbody>
-          <tr><td>序列圖</td><td><code>skin\</code></td><td>戰場小人的逐格動畫圖</td></tr>
-          <tr><td>圖片</td><td><code>image\</code></td><td>半身像、頭像的立繪（PNG / JPG）</td></tr>
-          <tr><td><strong>字型</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
-          <tr><td><strong>音檔</strong></td><td><code>bgm\</code></td><td>背景音樂 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>配音</strong></td><td><code>voice\</code></td><td>對話語音 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td><strong>圖示</strong></td><td><code>icon\</code></td><td>裝備圖示（PNG）</td></tr>
-          <tr><td>Spine</td><td><code>spine\</code></td><td>外部 Spine，每個角色一個子資料夾</td></tr>
+          <tr><td>Sprite sheets</td><td><code>skin\</code></td><td>Frame-by-frame animation sheets for battle sprites</td></tr>
+          <tr><td>Images</td><td><code>image\</code></td><td>Portrait and avatar artwork (PNG / JPG)</td></tr>
+          <tr><td><strong>Fonts</strong></td><td><code>font\</code></td><td><code>.ttf</code> / <code>.otf</code></td></tr>
+          <tr><td><strong>Audio</strong></td><td><code>bgm\</code></td><td>Background music <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Voice</strong></td><td><code>voice\</code></td><td>Dialogue voice lines <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td><strong>Icons</strong></td><td><code>icon\</code></td><td>Equipment icons (PNG)</td></tr>
+          <tr><td>Spine</td><td><code>spine\</code></td><td>External Spine data, one subfolder per character</td></tr>
         </tbody>
       </table>
     </div>
 
     <figure class="shot" data-t="bgm">
-      <img data-shot="assetBgm" alt="素材庫頁切在「音檔」分頁，清單列出三個 mp3/wav，右邊各有「開啟目錄」與「刪除」">
-      <figcaption><b>素材庫 · 音檔分頁</b>上面那排就是七個分頁；右邊的「<b>開啟資料夾</b>」會直接開在 <code>bgm\</code>，把音檔丟進去按「重新掃描」就會出現在清單裡。</figcaption>
+      <img data-shot="assetBgm" alt="The Asset Library page on the Audio tab, listing three mp3/wav files, each with Open folder and Delete on the right">
+      <figcaption><b>Asset Library · Audio tab</b>That row along the top is the seven tabs. The<b>Open folder</b>button on the right opens <code>bgm\</code>— drop an audio file in, press Rescan, and it appears in the list.</figcaption>
     </figure>
 
     <div class="note">
-      <b>放進去之後記得按「重新掃描」</b>
-      清單不會自己更新。剛複製進去的檔案沒出現，按一下分頁右上角的「重新掃描」就有了。
+      <b>Remember to press Rescan after copying files in</b>
+      The list does not refresh by itself. If a file you just copied in is missing, press Rescan in the tab's top-right corner and it will show up.
     </div>
   </section>
 
   <div class="cutline"></div>
   <section id="s9">
-    <div class="sec-head"><span class="sec-num">03</span><h2>換音樂音效</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Changing music and SFX</h2></div>
     <p>
-      用自己的音檔換掉遊戲 BGM。整頁以<strong>BGM 編號</strong>為單位，一列一首，
-      同一個音檔可以指派給很多個編號——例如把所有村莊換成同一首曲子。
+      Replace the game's BGM with your own audio. The whole page works in units of<strong>BGM number</strong>, one row per track.
+      A single audio file can be assigned to many numbers — for instance, giving every village the same theme.
     </p>
 
     <div class="step">
-      <h4><span class="n">Step 1</span>把音檔放進素材庫</h4>
+      <h4><span class="n">Step 1</span>Put the audio into the Asset Library</h4>
       <p>
-        <strong>素材庫</strong>頁切到「<strong>音檔</strong>」分頁，按「<strong>開啟資料夾</strong>」，
-        把 <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code> 放進去。
+        <strong>Asset Library</strong>page, switch to the<strong>Audio</strong>tab, press<strong>Open folder</strong>,
+        and drop your <code>.mp3</code> / <code>.wav</code> / <code>.ogg</code> file in.
       </p>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 2</span>逐列指派要換哪一首</h4>
+      <h4><span class="n">Step 2</span>Assign replacements row by row</h4>
       <p>
-        左側點「<strong>音樂音效</strong>」，打開左上角啟用開關。頁面每一列是一個 BGM 編號，
-        欄位是<strong>BGM 編號 / 原曲 / 替換為 / 試聽</strong>：
+        On the left, click<strong>Music & SFX</strong>, then turn on the toggle in the top-left corner. Each row on the page is one BGM number,
+        with columns for<strong>BGM number / original track / replacement / preview</strong>：
       </p>
       <ol class="substeps">
         <li>
-          按「<strong>原曲</strong>」欄的試聽，先確認這個編號是哪一首
+          Use the preview in the<strong>original track</strong>column to check which track a number actually is
           <figure class="shot">
-            <img data-shot="bgmIntro" alt="音樂音效 Mod 頁，上方有搜尋框與五顆篩選鈕，下方清單每列是一個 BGM 編號，欄位為原曲、替換為、試聽">
-            <figcaption><b>音樂音效頁</b>編號底下那行小字就是這首曲子用在哪（BGM_03 是「主畫面 / 標題」），配合「原曲」試聽，不必自己聽完全部去猜。</figcaption>
+            <img data-shot="bgmIntro" alt="The Music & SFX Mod page: a search box and five filter buttons across the top, and below them one row per BGM number with columns for original track, replacement and preview">
+            <figcaption><b>Music & SFX page</b>The small line under each number says where the track is used (BGM_03 is the title screen). Combined with the original-track preview, you never have to guess your way through the whole soundtrack.</figcaption>
           </figure>
         </li>
         <li>
-          在「<strong>替換為</strong>」搜尋並選用素材庫裡的音檔
+          Search the Asset Library from the<strong>replacement</strong>column and pick a file
           <figure class="shot">
-            <img data-shot="bgmPage" alt="「選擇要替換 BGM_03 的音檔」視窗，有搜尋框、（不替換）選項，以及三個音檔各自附試聽鈕">
-            <figcaption><b>挑音檔</b>點下去會跳出這個視窗，標題寫著你正在替換哪一個編號。上面可以打關鍵字搜尋檔名，下面每個音檔都能<b>先試聽再決定</b>，點一列就選用；選最上面的「（不替換）」則是取消這一列。</figcaption>
+            <img data-shot="bgmPage" alt="The "choose an audio file to replace BGM_03" dialog, with a search box, a (no replacement) option, and three audio files each with its own preview button">
+            <figcaption><b>Picking a file</b>Clicking opens this dialog, titled with the number you are replacing. Search filenames at the top; below, every file can be<b>previewed before you commit</b>. Click a row to use it, or pick (no replacement) at the top to clear that row.</figcaption>
           </figure>
         </li>
         <li>
-          再按一次試聽，聽的就是換過的版本
+          Press preview again and you hear your version
           <figure class="shot">
-            <img data-shot="bgmPreview" alt="BGM_03 的替換為欄已填入「資料片13 - 豐饒產地」，右邊的試聽鈕變成可以按，其他列仍是（不替換）且試聽是灰的">
-            <figcaption><b>指派好的樣子</b>BGM_03 的「替換為」出現檔名，右邊的「試聽」也跟著亮起來——<b>沒指派的列試聽是灰的</b>，一眼就看得出哪幾首換過了。</figcaption>
+            <img data-shot="bgmPreview" alt="BGM_03's replacement column now reads 資料片13 - 豐饒產地 and its preview button is active, while the other rows still say (no replacement) with preview greyed out">
+            <figcaption><b>What an assignment looks like</b>BGM_03's replacement column shows a filename and its preview lights up —<b>rows with nothing assigned keep preview greyed out</b>, so you can see at a glance which tracks you have changed.</figcaption>
           </figure>
         </li>
       </ol>
       <p>
-        曲子太多找不到？上方有「<strong>搜尋編號/場景</strong>」輸入框，
-        以及「<strong>全部 / 主畫面 / 村莊 / 關卡 / 經典版</strong>」五顆篩選鈕。
+        Too many tracks to find anything? There is a<strong>search by number or scene</strong>box at the top,
+        plus five filter buttons:<strong>All / Title / Village / Stage / Classic</strong>.
       </p>
       <figure class="shot">
-        <img data-shot="bgmFilter" alt="按下「村莊」篩選後，清單只剩村莊系列的 BGM_33 歐姆村、BGM_34 貿易都市 斐達克等">
-        <figcaption><b>篩選</b>按「村莊」就只剩村莊的曲子——想把所有村莊換成同一首，從這裡挑最快。</figcaption>
+        <img data-shot="bgmFilter" alt="With the Village filter applied, the list narrows to the village tracks — BGM_33 歐姆村, BGM_34 貿易都市 斐達克 and so on">
+        <figcaption><b>Filters</b>Village leaves only the village themes — the fastest way to give every village the same track.</figcaption>
       </figure>
       <div class="note">
-        <b>試聽的時候正式 BGM 會先停</b>
-        停止試聽之後會自己接回去，不用管它。
+        <b>The real BGM pauses while you preview</b>
+        It resumes on its own when you stop previewing; nothing to do.
       </div>
     </div>
 
     <div class="step">
-      <h4><span class="n">Step 3</span>儲存</h4>
+      <h4><span class="n">Step 3</span>Save</h4>
       <p>
-        按右上角「<strong>儲存設定</strong>」。有指派到的音檔會複製進包的 <code>bgm\</code>，
-        設定寫進 <code>mod.json</code>。
+        Press<strong>Save Settings</strong>in the top-right corner. Any file you assigned is copied into the package's <code>bgm\</code>folder,
+        and the settings are written to <code>mod.json</code>。
       </p>
       <p>
-        存好之後<strong>不會跳對話框</strong>，只在畫面上方出現一行紅字，
-        告訴你寫了幾組替換——看到它就是成功了。
+        Saving<strong>does not open a dialog</strong>; a single red line appears at the top of the screen
+        telling you how many replacements were written. Seeing it means it worked.
       </p>
       <figure class="shot">
-        <img data-shot="bgmSaved" alt="音樂音效頁上方出現紅字：已儲存並寫入 mod.json（共 1 組替換）。到「模組管理」啟用本包並套用變更即可生效">
-        <figcaption><b>存檔提示</b>「共 1 組替換」就是你指派了幾個編號。這行只是<b>存檔成功</b>，遊戲裡還沒換——要到「模組管理」套用才生效。</figcaption>
+        <img data-shot="bgmSaved" alt="A red line at the top of the Music & SFX page: saved and written to mod.json (1 replacement). Enable the package in Manage Mods and apply changes to activate it">
+        <figcaption><b>Save confirmation</b>"1 replacement" is the number of BGM numbers you assigned. This line only means the<b>save succeeded</b>; nothing has changed in game yet — it takes effect once you apply it in Manage Mods.</figcaption>
       </figure>
       <div class="note">
-        <b>存檔不等於聽得到</b>
-        存檔只是把設定寫進 MOD 包，<strong>音樂不會當場換掉</strong>。
-        要實際聽到，得到「模組管理」勾選這個包、按「套用變更」（下一節）。
+        <b>Saving is not the same as hearing it</b>
+        Saving only writes the settings into the MOD package;<strong>the music does not change on the spot</strong>.
+        To actually hear it, tick the package in Manage Mods and press Apply Changes (next section).
       </div>
     </div>
 
     <div class="note tip">
-      <b>反悔很容易</b>
-      在模組管理把這個包取消勾選、按「套用變更」，音樂就會換回遊戲原曲，<strong>不必重開遊戲</strong>。
-      換歌是在按下「套用變更」的那一刻發生的。
+      <b>Easy to undo</b>
+      Untick the package in Manage Mods and press Apply Changes; the music returns to the game's original tracks, and you<strong>do not need to restart</strong>.
+      The swap happens the moment you press Apply Changes.
     </div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>要注意</th><th>說明</th></tr></thead>
+        <thead><tr><th>Watch out for</th><th>Details</th></tr></thead>
         <tbody>
-          <tr><td>支援格式</td><td><code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
-          <tr><td>一首配多個編號</td><td>可以。同一個音檔在不同列重複選用即可</td></tr>
-          <tr><td>兩個包搶同一個編號</td><td>依模組管理的優先序，<strong>後者生效</strong></td></tr>
+          <tr><td>Supported formats</td><td><code>.mp3</code> / <code>.wav</code> / <code>.ogg</code></td></tr>
+          <tr><td>One track for several numbers</td><td>Fine — just pick the same audio file on each row</td></tr>
+          <tr><td>Two packages claim the same number</td><td>Load order in Manage Mods decides it:<strong>the later one wins</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -722,60 +722,58 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="s7">
-    <div class="sec-head"><span class="sec-num">04</span><h2>套用與發佈</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Apply and publish</h2></div>
 
-    <h3>看到效果</h3>
+    <h3>Seeing it in game</h3>
     <ol class="substeps">
-      <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
-      <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
-      <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
-      <li>回到遊戲就看得到成果</li>
+      <li>On the editing page, press<strong>Save Settings</strong>」／「<strong>Save</strong> (top-right corner of every page)</li>
+      <li>Use<strong>&lt; Back</strong>in the top-left corner to return to the Mod Manager, then open<strong>Manage Mods</strong>」</li>
+      <li>Find your package in the Installed MODs list and tick<strong>Loaded</strong></li>
+      <li>Press the red<strong>Apply Changes</strong>button in the top-right corner — the game reloads on the spot, so you<strong>do not need to restart</strong></li>
+      <li>Go back into the game and your work is there</li>
     </ol>
     <figure class="shot">
-      <img data-shot="modList" alt="模組管理頁的已安裝 MOD 清單，右上角有關閉全部與套用變更按鈕">
+      <img data-shot="modList" alt="The Installed MODs list on the Manage Mods page, with Disable All and Apply Changes in the top-right corner">
       <figcaption>
-        <b>模組管理</b>左邊 ▲▼ 調載入順序（後載入的蓋前面的）；
-        「關閉全部」會一次取消所有勾選，用來排查是哪個 MOD 出問題很方便。
+        <b>Manage Mods</b>The ▲▼ arrows on the left set load order (later packages override earlier ones);
+        Disable All unticks everything at once, which makes it easy to work out which MOD is misbehaving.
       </figcaption>
     </figure>
 
     <div class="note tip">
-      <b>存好了卻沒效果？</b>
-      九成是漏了「套用變更」。另外檢查：你編輯的那一頁<strong>左上角啟用開關</strong>有沒有打開、
-      模組管理裡這個包有沒有<strong>打勾</strong>。
+      <b>Saved, but nothing changed?</b>
+      Nine times out of ten, Apply Changes was never pressed. Also check that the<strong>top-left page toggle</strong>on the page you edited is on, and that the package is<strong>ticked</strong>。
     </div>
 
-    <h3>發佈到創意工坊</h3>
+    <h3>Publishing to the Workshop</h3>
     <p>
-      製作模組頁面<strong>左下角</strong>有一顆紅色的「<strong>發佈到工坊</strong>」。
-      發佈會先跑一次「儲存全部」，而且<strong>發出去收不回</strong>，所以系統會先跳確認框。
-      封面圖用包內的 <code>preview.png</code>。
+      The Create Mod page has a red<strong>bottom-left corner</strong>button in the<strong>Publish to Workshop</strong>.
+      Publishing runs Save all first, and<strong>what goes out cannot be taken back</strong>, so you get a confirmation dialog. The cover image comes from the package's <code>preview.png</code>。
     </p>
     <p>
-      做好的 MOD <strong>歡迎自己上傳分享</strong>，工坊上的其他玩家就能直接訂閱你的作品。
+      Finished MODs are <strong>yours to upload and share</strong> — other players can then subscribe to your work straight from the Workshop.
     </p>
     </section>
 
   <div class="cutline"></div>
   <section id="a3">
-    <div class="sec-head"><span class="sec-num plain">A</span><h2>疑難排解</h2></div>
+    <div class="sec-head"><span class="sec-num plain">A</span><h2>Troubleshooting</h2></div>
 
     <div class="tw">
       <table>
-        <thead><tr><th>症狀</th><th>多半是這個原因</th></tr></thead>
+        <thead><tr><th>Symptom</th><th>Usual cause</th></tr></thead>
         <tbody>
-          <tr data-t="skin font bgm voice equip"><td>剛放進素材庫的檔案，編輯頁的清單裡看不到</td><td>按該頁的「重新掃描」；素材庫頁與編輯頁各有一顆</td></tr>
-          <tr data-t="all"><td>存了設定卻寫進別的包</td><td>切過目標包但沒回那一頁重新載入。看「儲存全部」列出的略過清單</td></tr>
-          <tr data-t="bgm"><td>音樂沒換</td><td>那一列的「替換為」其實沒選到檔；或存檔時選了「稍後再說」又沒去套用</td></tr>
+          <tr data-t="skin font bgm voice equip"><td>A file just added to the Asset Library is missing from the editing page's list</td><td>Press Rescan on that page — the Asset Library page and the editing page each have their own</td></tr>
+          <tr data-t="all"><td>Settings saved into the wrong package</td><td>You switched target package without going back to reload that page. Check the skipped list that Save all prints</td></tr>
+          <tr data-t="bgm"><td>The music did not change</td><td>That row's replacement column is actually empty, or you chose Later when saving and never applied it</td></tr>
           </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    <span>幻世錄 音樂音效 MOD 指南</span>
-    <span><code>編輯 → 儲存設定 → 套用變更</code></span>
+    <span>HSLR Music & SFX MOD Guide</span>
+    <span><code>Edit → Save Settings → Apply Changes</code></span>
   </footer>
 
   </main>
@@ -784,7 +782,7 @@ footer code{color:var(--ink-soft)}
 
 <div class="lb" id="lightbox" hidden>
   <img id="lightboxImg" alt="">
-  <div class="hint">點任一處或按 Esc 關閉</div>
+  <div class="hint">Click anywhere or press Esc to close</div>
 </div>
 
 <script>
