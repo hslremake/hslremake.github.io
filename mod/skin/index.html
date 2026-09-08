@@ -426,7 +426,7 @@ footer code{color:var(--ink-soft)}
 }
 </style>
 </head>
-<body><script>(function(){try{var p=localStorage.getItem('hslr-lang');if(!p)p=(navigator.language||'').toLowerCase().indexOf('zh')===0?'zh':'en';if(p==='en')location.replace("/en/mod/skin/");}catch(e){}})();</script>
+<body><script>(function(){try{var m={zh:'/mod/',cn:'/cn/mod/',en:'/en/mod/'},s='zh',sub='skin/';var p=localStorage.getItem('hslr-lang');if(!p){var l=(navigator.language||'').toLowerCase();p=l.indexOf('zh')===0?((l.indexOf('cn')>=0||l.indexOf('sg')>=0||l.indexOf('hans')>=0||l.indexOf('chs')>=0)?'cn':'zh'):'en';}if(p!==s&&m[p])location.replace(m[p]+sub);}catch(e){}})();</script>
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
   gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
@@ -441,12 +441,13 @@ footer code{color:var(--ink-soft)}
 .hslrnav-dl:hover{background:#E0A02A;color:#1B1520!important}
 .hslrnav-lang{border:1px solid #5A4B68;font-weight:600;min-width:44px;text-align:center}
 .hslrnav-lang:hover{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important}
+.hslrnav-lang-cur{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important;cursor:default}
 .hslrwip{margin:0;padding:9px 14px;background:#FDF3D6;color:#6B5312;font-size:13px;
   border-bottom:1px solid #E8D9A8;
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav hslrnav-cur" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang" href="/en/mod/skin/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/mod/">幻世錄 MOD 指南</a><a class="hslrnav hslrnav-cur" href="/mod/skin/">外觀</a><a class="hslrnav" href="/mod/font/">字型</a><a class="hslrnav" href="/mod/bgm/">音樂音效</a><a class="hslrnav" href="/mod/voice/">配音</a><a class="hslrnav" href="/mod/lang/">翻譯</a><a class="hslrnav" href="/mod/equip/">裝備</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/mod/#downloads">下載範例包</a><a class="hslrnav-lang hslrnav-lang-cur" href="/mod/skin/" data-hslr-lang="zh" title="切換為繁體中文">繁</a><a class="hslrnav-lang" href="/cn/mod/skin/" data-hslr-lang="cn" title="切换为简体中文">简</a><a class="hslrnav-lang" href="/en/mod/skin/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="wrap">
 
 <header class="hero">
@@ -626,13 +627,13 @@ footer code{color:var(--ink-soft)}
     <h3>路線二：自己新增圖檔</h3>
     <p>
       要放自己畫的角色，就照下面的規格做圖。每個角色只要
-      <strong>10 張</strong>就夠湊出 13 個動作——左走用右走鏡像，不必另外畫。
-      每張圖是一個動作的完整序列，把每一幀<strong>等距排成一列</strong>。
+      <strong>10 張圖可以</strong>湊出 13 個動作（左走可用右走鏡像）。
+      每張圖是一個動作的完整序列。
     </p>
 
     <div class="tw">
       <table>
-        <thead><tr><th>這張圖是</th><th>對應動作</th><th class="num">幀數</th><th>必填？</th></tr></thead>
+        <thead><tr><th>角色動作</th><th>對應定義名</th><th class="num">幀數</th><th>必填/選填</th></tr></thead>
         <tbody>
           <tr><td>待機</td><td><code>wait</code></td><td class="num">8</td><td>必填</td></tr>
           <tr><td>向下（面向鏡頭）走</td><td><code>b_walk</code> 下走</td><td class="num">8</td><td>必填</td></tr>
@@ -661,13 +662,13 @@ footer code{color:var(--ink-soft)}
     <h4>檔名怎麼取都行，但取好一點</h4>
     <p>
       編輯器是從清單裡挑圖，檔名不影響功能。不過素材庫是所有 MOD 共用的，
-      圖一多就很難找——建議照範例用 <code>角色_動作</code> 的命名，在清單裡一眼認得出來。
+      圖一多就很難找，建議照範例用 <code>角色_動作</code> 的命名，在清單裡一眼認得出來。
     </p>
 
     <h3>把一張圖切開來看</h3>
     <p>
       下面是範例素材的 <code>p400_spec_01.png</code>，5 幀。
-      紫色虛線就是遊戲切開它的位置——這也是下一步要填的三個數字的由來：
+      紫色虛線就是遊戲切開它的位置，這也是下一步要填的三個數字的由來：
     </p>
 
     <div class="dissect" id="dissect">
@@ -687,8 +688,8 @@ footer code{color:var(--ink-soft)}
     <div class="sec-head"><span class="sec-num">04</span><h2>素材庫：讓遊戲看懂你的圖</h2></div>
     <p>
       素材庫是<strong>所有 MOD 共用</strong>的一個資料夾。
-      你在編輯頁挑素材，按下「儲存設定」時才會把真正用到的檔案複製進目標包——
-      所以發佈出去的包一定是自足的，不會少檔。
+      你在編輯頁挑素材，按下「儲存設定」時才會把真正用到的檔案複製進目標包，
+      所以發佈出去的包一定是完整的，不會少檔。
     </p>
 
     <div class="step">
@@ -747,7 +748,7 @@ footer code{color:var(--ink-soft)}
         </li>
         <li>
           按那一列的紅色「<strong>產生</strong>」。「排列」會自動變成 <strong>5 × 1</strong>，
-          「配置」欄跳出綠色的 <code>tex_kf_063.cfg</code>，按鈕也變成「更新」——
+          「配置」欄跳出綠色的 <code>tex_kf_063.cfg</code>，按鈕也變成「更新」
           這張圖就設定完成了。
           <figure class="shot">
             <img data-shot="lib2" alt="p400_spec_01 填入 5 / 168 / 169 並按下產生後，排列變成 5 x 1、配置顯示 tex_kf_063.cfg">
@@ -837,7 +838,7 @@ footer code{color:var(--ink-soft)}
       <p>操作是固定的兩下，重複到所有動作都指派完：</p>
       <ol class="substeps">
         <li>
-          在<strong>右側「可用圖素」</strong>勾選一張圖素——就是剛剛在素材庫按過「產生」的那些。
+          在<strong>右側「可用圖素」</strong>勾選一張圖素（剛剛在素材庫按過「產生」的那些）。
           勾中的那一列會變成粉紅底，同時左邊動作列表的「套用」按鈕會從淡粉色<strong>變成實心紅色</strong>
           （沒勾圖素時是不能按的）。
         </li>
@@ -884,7 +885,7 @@ footer code{color:var(--ink-soft)}
         </table>
       </div>
       <p>
-        數字看不懂沒關係——按 <strong>◎</strong> 會打開「<strong>站位設定</strong>」，
+        按 <strong>◎</strong> 會打開「<strong>站位設定</strong>」，
         直接把角色<strong>拖到綠線上</strong>就好。綠線是「腳底目標」，
         腳底對到綠線就等於站進格子裡；方向鍵可以微調 1px。
       </p>
@@ -909,7 +910,7 @@ footer code{color:var(--ink-soft)}
       同一個槽在不同角色是完全不同的演出，而且<strong>全遊戲只有兩個角色會播</strong>：
       <strong>緹娜</strong>（順繩下降 / 落地）與<strong>漢克斯</strong>（二轉起的四向偷襲）。
       其他角色就算做了圖也<strong>永遠不會出現</strong>。<br><br>
-      判斷方法很簡單：<strong>編輯器會自動把用不到的槽藏起來</strong>——
+      判斷方法很簡單：<strong>編輯器會自動把用不到的槽藏起來</strong>，
       在動作列表裡看不到 spec 那幾列，就代表這個角色不用做。
       看得到的話，列名會直接寫出它的實際用途（例如「偷襲・向下」），
       下面還有一行說明什麼時候會播。
@@ -1023,7 +1024,7 @@ footer code{color:var(--ink-soft)}
       </figure>
       <p>
         頁面下方還有一顆「<strong>匯出 Atlas 模板</strong>」，
-        會把遊戲原始的半身像 atlas 匯出成 PNG 模板——
+        會把遊戲原始的半身像 atlas 匯出成 PNG 模板，
         想走「簡單（Atlas 替換）」的話，照這張模板的版面畫就不會跑位。
       </p>
     </div>
@@ -1032,7 +1033,7 @@ footer code{color:var(--ink-soft)}
       <h4><span class="n">Step 7</span>挑替換貼圖</h4>
       <p>
         「<strong>替換貼圖</strong>」下拉會列出當前包 <code>skin\</code> 加上共用素材夾的所有 PNG，
-        選要用的那張。也可以直接在右側「可用圖素」勾——兩邊是連動的。
+        選要用的那張。也可以直接在右側「可用圖素」打勾（兩邊是連動的）。
       </p>
       <p>丟了新圖進資料夾之後，按「重新讀取」刷新清單，不必關掉重進。</p>
       <figure class="shot">
@@ -1062,7 +1063,7 @@ footer code{color:var(--ink-soft)}
       </div>
       <p>
         先調縮放讓大小對，再用位置微調對齊。
-        <strong>放大會糊</strong>——縮放要拉到 1.5 以上才夠大的話，比較好的做法是回頭重畫大一點的原圖。
+        <strong>放大會糊</strong>，縮放要拉到 1.5 以上才夠大的話，比較好的做法是回頭重畫大一點的原圖。
       </p>
       <div class="note">
         <b>尺寸上限</b>
@@ -1132,14 +1133,14 @@ footer code{color:var(--ink-soft)}
         跟半身像同一套規則：整張圖直接貼上，不吃原本的 atlas 版面。
       </div>
       <p>
-        另外三個模式的用途跟半身像完全一樣——
+        另外三個模式的用途跟半身像完全一樣，
         <strong>簡單（Atlas 替換）</strong>沿用原本骨架只換貼圖、
         <strong>序列圖（動畫）</strong>做逐格動畫、
         <strong>外部 Spine（4.2）</strong>掛自己的骨骼動畫。
       </p>
       <p>
         頁面下方還有一顆「<strong>匯出 Atlas 模板</strong>」，
-        會把遊戲原始的頭像 atlas 匯出成 PNG 模板——
+        會把遊戲原始的頭像 atlas 匯出成 PNG 模板，
         想走「簡單（Atlas 替換）」的話，照這張模板的版面畫就不會跑位。
       </p>
       <figure class="shot">
@@ -1180,7 +1181,7 @@ footer code{color:var(--ink-soft)}
       <li>在編輯頁按「<strong>儲存設定</strong>」／「<strong>儲存</strong>」（每一頁右上角都有）</li>
       <li>左上角「<strong>&lt; 返回</strong>」回到模組管理員，進「<strong>模組管理</strong>」</li>
       <li>在「已安裝的 MOD」清單找到你的包，把<strong>「是否載入遊戲」打勾</strong></li>
-      <li>按右上角紅色的「<strong>套用變更</strong>」——遊戲即時重新載入，<strong>不需要重開</strong></li>
+      <li>按右上角紅色的「<strong>套用變更</strong>」，遊戲即時重新載入，<strong>不需要重開</strong></li>
       <li>回到遊戲就看得到成果</li>
     </ol>
     <figure class="shot">
@@ -1261,7 +1262,7 @@ footer code{color:var(--ink-soft)}
       </table>
     </div>
     <p>
-      選填的動作缺了不會出錯，遊戲會靜靜退回用「待機」——
+      選填的動作缺了不會出錯，遊戲會靜靜退回用「待機」，
       所以如果你看到角色「站著不動就打到人」，多半是那個動作沒指派。
     </p>
   </section>
@@ -1299,7 +1300,7 @@ footer code{color:var(--ink-soft)}
           <tr data-t="skin"><td>播到後面出現空白</td><td>幀數填得比實際多</td></tr>
           <tr data-t="skin"><td>小人浮在半空／陷進地板</td><td>按 ◎ 開站位設定，把腳底拖到綠線上</td></tr>
           <tr data-t="skin"><td>往左走時角色朝向不對</td><td>「左走」那列忘了勾鏡像</td></tr>
-          <tr data-t="skin"><td>做了 spec 圖卻從來沒看過</td><td>那個角色本來就沒有專用演出槽——動作列表裡看不到就是不用做</td></tr>
+          <tr data-t="skin"><td>做了 spec 圖卻從來沒看過</td><td>那個角色本來就沒有專用演出槽，動作列表裡看不到就是不用做</td></tr>
           <tr data-t="skin"><td>半身像／頭像沒換</td><td>替換模式沒選「單圖（直接顯示）」，或立繪沒放進 <code>image\</code></td></tr>
           <tr data-t="skin"><td>立繪太小 / 位置不對</td><td>調「等比縮放」與「位置微調 X / Y」</td></tr>
           </tbody>
@@ -1309,10 +1310,10 @@ footer code{color:var(--ink-soft)}
 
   <div class="cutline"></div>
   <section id="a4">
-    <div class="sec-head"><span class="sec-num plain">D</span><h2>編輯器寫了什麼</h2></div>
+    <div class="sec-head"><span class="sec-num plain">D</span><h2>設定檔案内容</h2></div>
     <p>
-      這一節純粹是給好奇的人看的——<strong>你不需要手動改這些檔案</strong>，
-      編輯器會全部處理好。知道它長什麼樣，只是出問題時比較好判斷。
+      <strong>無需手動修改設定檔案</strong>，
+      編輯器會全部處理好。
     </p>
 
     <div class="tree">
@@ -1634,8 +1635,8 @@ function makeSprite(pre, action, mirror, scale){
 (function(){
   const tb = document.getElementById('idTable');
   const SPEC_TEXT = {
-    399: '有 — 順繩下降 / 落地',
-    499: '有 — 四向偷襲（二轉起）'
+    399: '有 ： 順繩下降 / 落地',
+    499: '有 ：四向偷襲（二轉起）'
   };
   DATA.chars.forEach(c => {
     const tr = document.createElement('tr');

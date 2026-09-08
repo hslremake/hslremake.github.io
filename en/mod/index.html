@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <link rel="alternate" hreflang="zh-Hant" href="https://hslremake.github.io/mod/">
+<link rel="alternate" hreflang="zh-Hans" href="https://hslremake.github.io/cn/mod/">
+<link rel="alternate" hreflang="en" href="https://hslremake.github.io/en/mod/">
 <title>HSLR MOD Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +61,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
 @media(max-width:560px){.hero h1{font-size:26px}}
 </style>
 </head>
-<body>
+<body><script>(function(){try{var m={zh:'/mod/',cn:'/cn/mod/',en:'/en/mod/'},s='en',sub='';var p=localStorage.getItem('hslr-lang');if(!p){var l=(navigator.language||'').toLowerCase();p=l.indexOf('zh')===0?((l.indexOf('cn')>=0||l.indexOf('sg')>=0||l.indexOf('hans')>=0||l.indexOf('chs')>=0)?'cn':'zh'):'en';}if(p!==s&&m[p])location.replace(m[p]+sub);}catch(e){}})();</script>
 
 <style id="hslrnav-style">
 .hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
@@ -75,12 +77,13 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
 .hslrnav-dl:hover{background:#E0A02A;color:#1B1520!important}
 .hslrnav-lang{border:1px solid #5A4B68;font-weight:600;min-width:44px;text-align:center}
 .hslrnav-lang:hover{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important}
+.hslrnav-lang-cur{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important;cursor:default}
 .hslrwip{margin:0;padding:9px 14px;background:#FDF3D6;color:#6B5312;font-size:13px;
   border-bottom:1px solid #E8D9A8;
   font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
 @media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
 </style>
-<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/" data-hslr-lang="zh" title="切換為繁體中文">繁中</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<nav class="hslrnav"><a class="hslrnav-home" href="/en/mod/">HSLR MOD Guide</a><a class="hslrnav" href="/en/mod/skin/">Skins</a><a class="hslrnav" href="/en/mod/font/">Fonts</a><a class="hslrnav" href="/en/mod/bgm/">Music</a><a class="hslrnav" href="/en/mod/voice/">Voice</a><a class="hslrnav" href="/en/mod/lang/">Translation</a><a class="hslrnav" href="/en/mod/equip/">Equipment</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/en/mod/#downloads">Sample packs</a><a class="hslrnav-lang" href="/mod/" data-hslr-lang="zh" title="切換為繁體中文">繁</a><a class="hslrnav-lang" href="/cn/mod/" data-hslr-lang="cn" title="切换为简体中文">简</a><a class="hslrnav-lang hslrnav-lang-cur" href="/en/mod/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
 <div class="hero"><div class="hero-in">
   <div class="kicker">HSLR · MOD</div>
   <h1>HSLR MOD Guide</h1>

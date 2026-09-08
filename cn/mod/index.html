@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="alternate" hreflang="zh-Hant" href="https://hslremake.github.io/mod/">
+<link rel="alternate" hreflang="zh-Hans" href="https://hslremake.github.io/cn/mod/">
+<link rel="alternate" hreflang="en" href="https://hslremake.github.io/en/mod/">
+<title>幻世录 MOD 指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+TC:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#1B1520;--ink-soft:#4A3F52;--ink-mute:#7A6E84;--paper:#FBF7F2;--card:#fff;
+  --sunk:#F2ECE4;--rule:#DED5CB;--violet:#7B54C8;--violet-soft:#EDE4FB;--gold:#C98A16}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:15px/1.7 "IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 72px}
+.hero{background:var(--ink);color:#fff;padding:56px 20px 48px;margin-bottom:40px}
+.hero-in{max-width:920px;margin:0 auto}
+.hero h1{margin:0 0 6px;font-size:34px;letter-spacing:.02em;font-weight:800}
+.hero p{margin:0;color:#C9BFD4;font-size:16px;max-width:44em}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.18em;font-weight:600;margin-bottom:12px}
+h2{font-size:22px;margin:44px 0 4px;font-weight:700}
+h2+.sub{margin:0 0 20px;color:var(--ink-mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
+.card{display:block;background:var(--card);border:1px solid var(--rule);border-radius:12px;
+  padding:18px 20px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:var(--violet);box-shadow:0 4px 16px rgba(123,84,200,.14);transform:translateY(-2px)}
+.card .n{font-size:11px;letter-spacing:.16em;color:var(--violet);font-weight:600}
+.card .t{font-size:18px;font-weight:700;margin:4px 0 5px}
+.card .d{font-size:13.5px;color:var(--ink-mute);line-height:1.55}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;background:var(--card)}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{background:var(--sunk);font-size:12px;letter-spacing:.08em;color:var(--ink-soft);font-weight:600}
+td.sz{white-space:nowrap;color:var(--ink-mute);font-variant-numeric:tabular-nums}
+td .nm{font-weight:600}
+td .ds{font-size:12.5px;color:var(--ink-mute);line-height:1.5;margin-top:3px;white-space:pre-line}
+td .ds a{color:var(--violet);font-weight:600;text-decoration:none;border-bottom:1px solid var(--violet-soft)}
+td .ds a:hover{border-bottom-color:var(--violet)}
+.dl{display:inline-block;background:var(--violet);color:#fff;text-decoration:none;
+  padding:6px 14px;border-radius:7px;font-size:13px;font-weight:600;white-space:nowrap}
+.dl:hover{background:#6844b4}
+/* 附加素材包：次要样式，跟本体 zip 在视觉上分得开 */
+.dl2{background:transparent;color:var(--violet);border:1px solid var(--violet);
+  margin-top:8px;font-weight:500}
+.dl2:hover{background:var(--violet-soft);color:var(--violet)}
+.dl2 .dlsz{color:var(--ink-mute);font-weight:400;font-size:12px}
+td .dl2+.ds{max-width:19em}
+.note{background:var(--violet-soft);border-left:4px solid var(--violet);
+  padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;font-size:14px}
+.note b{display:block;margin-bottom:5px}
+.note ol{margin:8px 0 0;padding-left:20px}
+.note code{background:#fff;padding:1px 6px;border-radius:4px;font-size:12.5px;
+  font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
+  color:var(--ink-mute);font-size:12.5px}
+.tw{overflow-x:auto}
+@media(max-width:560px){.hero h1{font-size:26px}}
+</style>
+</head>
+<body><script>(function(){try{var m={zh:'/mod/',cn:'/cn/mod/',en:'/en/mod/'},s='cn',sub='';var p=localStorage.getItem('hslr-lang');if(!p){var l=(navigator.language||'').toLowerCase();p=l.indexOf('zh')===0?((l.indexOf('cn')>=0||l.indexOf('sg')>=0||l.indexOf('hans')>=0||l.indexOf('chs')>=0)?'cn':'zh'):'en';}if(p!==s&&m[p])location.replace(m[p]+sub);}catch(e){}})();</script>
+
+<style id="hslrnav-style">
+.hslrnav{position:sticky;top:0;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;
+  gap:2px;padding:8px 14px;background:#1B1520;box-shadow:0 1px 6px rgba(0,0,0,.28);
+  font:13px/1.4 "IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
+.hslrnav a{color:#C9BFD4;text-decoration:none;padding:5px 10px;border-radius:6px;white-space:nowrap}
+.hslrnav a:hover{background:#33293C;color:#fff}
+.hslrnav a.hslrnav-cur{background:#7B54C8;color:#fff;font-weight:600}
+.hslrnav-home{color:#fff!important;font-weight:700;margin-right:10px;padding-left:0!important}
+.hslrnav-home:hover{background:transparent!important;color:#C98A16!important}
+.hslrnav-right{margin-left:auto;display:flex;gap:6px;align-items:center}
+.hslrnav-dl{background:#C98A16;color:#1B1520!important;font-weight:600}
+.hslrnav-dl:hover{background:#E0A02A;color:#1B1520!important}
+.hslrnav-lang{border:1px solid #5A4B68;font-weight:600;min-width:44px;text-align:center}
+.hslrnav-lang:hover{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important}
+.hslrnav-lang-cur{background:#7B54C8!important;border-color:#7B54C8;color:#fff!important;cursor:default}
+.hslrwip{margin:0;padding:9px 14px;background:#FDF3D6;color:#6B5312;font-size:13px;
+  border-bottom:1px solid #E8D9A8;
+  font-family:"IBM Plex Sans TC",system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif}
+@media(max-width:640px){.hslrnav-right{margin-left:0;width:100%;justify-content:flex-end}}
+</style>
+<nav class="hslrnav"><a class="hslrnav-home" href="/cn/mod/">幻世录 MOD 指南</a><a class="hslrnav" href="/cn/mod/skin/">外观</a><a class="hslrnav" href="/cn/mod/font/">字型</a><a class="hslrnav" href="/cn/mod/bgm/">音乐音效</a><a class="hslrnav" href="/cn/mod/voice/">配音</a><a class="hslrnav" href="/cn/mod/lang/">翻译</a><a class="hslrnav" href="/cn/mod/equip/">装备</a><span class="hslrnav-right"><a class="hslrnav-dl" href="/cn/mod/#downloads">下载范例包</a><a class="hslrnav-lang" href="/mod/" data-hslr-lang="zh" title="切換為繁體中文">繁</a><a class="hslrnav-lang hslrnav-lang-cur" href="/cn/mod/" data-hslr-lang="cn" title="切换为简体中文">简</a><a class="hslrnav-lang" href="/en/mod/" data-hslr-lang="en" title="Switch to English">EN</a></span></nav><script>document.querySelectorAll('[data-hslr-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('hslr-lang',a.dataset.hslrLang);}catch(e){}});});</script>
+<div class="hero"><div class="hero-in">
+  <div class="kicker">HSLR · MOD</div>
+  <h1>幻世录 MOD 指南</h1>
+  <p>游戏里就有 MOD 编辑器，换角色外观、换字型、换音乐、换配音、翻译文本、改装备，六类内容全部在同一个界面里，不需要写程序，也不用手改配置文件。</p>
+</div></div>
+
+<div class="wrap">
+
+<h2>六类 MOD</h2>
+<p class="sub">每一章都可以单独看，不必照顺序。第一次做建议从「外观」开始。</p>
+<div class="grid"><a class="card" href="skin/"><div class="n">01</div><div class="t">外观教学</div><div class="d">换战场小人、半身像、头像</div></a><a class="card" href="font/"><div class="n">02</div><div class="t">字型教学</div><div class="d">替换整个游戏界面的文本字型</div></a><a class="card" href="bgm/"><div class="n">03</div><div class="t">音乐音效教学</div><div class="d">换背景音乐与音效</div></a><a class="card" href="voice/"><div class="n">04</div><div class="t">配音教学</div><div class="d">替换角色语音</div></a><a class="card" href="lang/"><div class="n">05</div><div class="t">翻译教学</div><div class="d">把游戏文本翻成其他语言</div></a><a class="card" href="equip/"><div class="n">06</div><div class="t">装备教学</div><div class="d">改装备数值、做新装备</div></a></div>
+
+<h2 id="downloads">范例包下载</h2>
+<p class="sub">官方做好的成品，拆开来对照指南看最快。</p>
+
+<div class="note">
+<b>这些 zip 是给想学做 MOD 的人拆解用的教材，不是一般玩家的安装档。</b>
+只想玩 MOD 的话，请直接在 Steam 创意工坊订阅，游戏会自动安装。真的要手动安装的话：
+<ol>
+<li>解压缩，会得到一个 MOD 文件夹</li>
+<li>把整个文件夹放进 <code>%USERPROFILE%\AppData\LocalLow\UserJoy\HSLR\Mods\</code></li>
+<li>回游戏开「模组管理」，勾选后按「应用变更」</li>
+</ol>
+</div>
+
+<div class="tw">
+<table>
+<thead><tr><th>范例包</th><th>对应章节</th>
+<th>大小</th><th></th></tr></thead>
+<tbody><tr><td><div class="nm">[官方模组]饭友小人外观</div><div class="ds">战场小人外观 MOD — 克罗蒂、嚎、汉克斯、琥、缇娜、雪拉、雷欧纳德、雷特。
+Battle sprite skins for eight characters.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/skin/">https://hslremake.github.io/cn/mod/skin/</a></div></td><td class="sz">外观</td><td class="sz">17.9 MB</td><td><a class="dl" href="/mod/dl/sample-skin-fanyou.zip" download>下载 zip</a><a class="dl dl2" href="/mod/dl/sample-skin-fanyou-art.zip" download>素材图 zip <span class="dlsz">17.7 MB</span></a><div class="ds">80 张战场小人序列图 ＋ 8 张半身立绘，照「外观教学」路线一直接取用</div></td></tr><tr><td><div class="nm">[官方模组]字型替换</div><div class="ds">圆润好读的粉圆体，替换游戏全部界面文本。繁中／日文／英文覆盖 99% 以上。
+简体中文仅约 74%，缺字会自动以游戏原本字型显示（韩文同理）。
+jf open huninn 2.1 by justfont — SIL OFL 1.1
+
+Rounded, highly readable font replacing all in-game UI text. Over 99% coverage for Traditional Chinese, Japanese and English; about 74% for Simplified Chinese. Missing characters fall back to the game's original font.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/font/">https://hslremake.github.io/cn/mod/font/</a></div></td><td class="sz">字型</td><td class="sz">2.8 MB</td><td><a class="dl" href="/mod/dl/sample-font-huninn.zip" download>下载 zip</a></td></tr><tr><td><div class="nm">[官方模组]修改主画面音乐</div><div class="ds">替换主画面背景音乐。
+Replaces the title screen music.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/bgm/">https://hslremake.github.io/cn/mod/bgm/</a></div></td><td class="sz">音乐音效</td><td class="sz">19.6 MB</td><td><a class="dl" href="/mod/dl/sample-bgm-title.zip" download>下载 zip</a></td></tr><tr><td><div class="nm">[官方模组]Full Russian language</div><div class="ds">Русская локализация — 俄文语系包 Full Russian localization. Set the game language to English to play in Russian. Untranslated lines stay in English.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/lang/">https://hslremake.github.io/cn/mod/lang/</a></div></td><td class="sz">翻译</td><td class="sz">1.1 MB</td><td><a class="dl" href="/mod/dl/sample-lang-ru.zip" download>下载 zip</a></td></tr><tr><td><div class="nm">[官方模组]100%CounterAttack</div><div class="ds">所有角色都能反击。「修改装备」分页的范例包，示范怎么改动技能与装备数值。
+All characters can counterattack. A sample MOD for the Equipment page.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/equip/">https://hslremake.github.io/cn/mod/equip/</a></div></td><td class="sz">装备</td><td class="sz">265 KB</td><td><a class="dl" href="/mod/dl/sample-equip-counter.zip" download>下载 zip</a></td></tr><tr><td><div class="nm">[官方模组]黄金首饰+100%偷取几率</div><div class="ds">黄金首饰 ＋100% 偷取几率，并额外增加 300% 回 SP 效果。
+Gold accessory with a 100% steal rate and +300% SP recovery.
+
+教学 / Guide: <a href="https://hslremake.github.io/cn/mod/equip/">https://hslremake.github.io/cn/mod/equip/</a></div></td><td class="sz">装备</td><td class="sz">210 KB</td><td><a class="dl" href="/mod/dl/sample-equip-gold.zip" download>下载 zip</a></td></tr></tbody>
+</table>
+</div>
+<p style="color:var(--ink-mute);font-size:13px;margin-top:10px">（配音 目前没有官方范例包，请直接看指南操作。）</p>
+
+<footer>
+幻世录 Remake · MOD 指南　|　本页与范例包由官方提供，内容对应游戏内置的 MOD 编辑器。<br>
+字型范例包内含 jf open huninn 2.1 by justfont（SIL OFL 1.1），再散布请保留授权档。
+</footer>
+
+</div>
+</body>
+</html>
